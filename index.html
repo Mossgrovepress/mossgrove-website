@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mossgrove Press</title>
+<meta name="description" content="Mossgrove Press — cozy, richly-illustrated coloring books from the alpine village of Edelhollow.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#3a2a22;
+    --cream:#f8e9d5;
+    --paper:#fffaf2;
+    --accent:#6b8e5a;
+    --gold:#c98a3b;
+    --muted:#7a6a5c;
+    --border:#e6d6bd;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'EB Garamond', Georgia, serif;
+    background:var(--paper);
+    color:var(--ink);
+    font-size:19px;
+    line-height:1.6;
+  }
+  h1,h2,h3,.wordmark,.lang-btn,.btn{
+    font-family:'Baloo 2', system-ui, sans-serif;
+  }
+  a{color:inherit;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+
+  header{
+    padding:28px 0 18px;
+    border-bottom:1px solid var(--border);
+  }
+  .header-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  .site-nav{
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    font-size:14px;
+  }
+  .site-nav a{
+    color:var(--muted);
+    text-decoration:none;
+    padding:4px 0;
+    border-bottom:2px solid transparent;
+  }
+  .site-nav a:hover{color:var(--ink);border-color:var(--gold);}
+  .wordmark{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:800;
+    font-size:22px;
+    letter-spacing:0.5px;
+    color:var(--ink);
+    text-decoration:none;
+  }
+  .wordmark img{width:28px;height:28px;}
+
+  .lang-switch{
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+  }
+  .lang-btn{
+    border:1px solid var(--border);
+    background:var(--paper);
+    color:var(--muted);
+    padding:6px 12px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .lang-btn:hover{border-color:var(--gold);color:var(--ink);}
+  .lang-btn.active{
+    background:var(--ink);
+    border-color:var(--ink);
+    color:var(--cream);
+  }
+
+  main{padding:48px 0 20px;}
+
+  .hero{
+    display:flex;
+    flex-direction:column;
+    gap:36px;
+  }
+  .hero-content{
+    max-width:680px;
+  }
+  .hero-cover img{
+    width:100%;
+    border-radius:14px;
+    box-shadow:0 18px 40px rgba(58,42,34,0.18);
+    display:block;
+  }
+  .kicker{
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:13px;
+    color:var(--accent);
+    font-weight:700;
+    font-family:'Baloo 2',sans-serif;
+    margin-bottom:10px;
+  }
+  h1{
+    font-size:38px;
+    line-height:1.15;
+    margin:0 0 6px;
+    color:var(--ink);
+  }
+  .subtitle{
+    font-style:italic;
+    color:var(--muted);
+    font-size:19px;
+    margin:0 0 20px;
+  }
+  .desc{margin:0 0 22px;}
+  .bullets{list-style:none;margin:0 0 28px;padding:0;}
+  .bullets li{
+    position:relative;
+    padding-left:26px;
+    margin-bottom:10px;
+    font-size:17px;
+  }
+  .bullets li::before{
+    content:"❋";
+    position:absolute;
+    left:0;
+    color:var(--gold);
+  }
+
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:13px 22px;
+    border-radius:10px;
+    font-weight:700;
+    font-size:16px;
+    text-decoration:none;
+    border:2px solid transparent;
+    cursor:pointer;
+  }
+  .btn-primary{
+    background:var(--ink);
+    color:var(--cream);
+  }
+  .btn-primary:hover{background:#2a1e18;}
+  .btn-disabled{
+    background:transparent;
+    border-color:var(--border);
+    color:var(--muted);
+    cursor:default;
+  }
+
+  main section{
+    margin-top:64px;
+    padding-top:36px;
+    border-top:1px solid var(--border);
+    scroll-margin-top:24px;
+  }
+  main section h2{
+    font-size:22px;
+    margin:0 0 6px;
+  }
+  main section > p.lede{color:var(--muted);margin:0 0 20px;max-width:640px;}
+
+  .download-grid{
+    display:flex;
+    gap:32px;
+    flex-wrap:wrap;
+    align-items:flex-start;
+  }
+  .download-grid figure{margin:0;flex:0 0 300px;}
+  .download-grid img{
+    width:100%;
+    border-radius:12px;
+    border:1px solid var(--border);
+    display:block;
+  }
+  .download-grid figcaption{
+    font-size:13px;
+    color:var(--muted);
+    margin-top:8px;
+    text-align:center;
+  }
+  .download-copy{flex:1 1 320px;min-width:260px;}
+
+  .cast-teaser{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+    border:1px dashed var(--border);
+    border-radius:12px;
+    padding:20px 22px;
+    color:var(--muted);
+  }
+  .cast-teaser .names{color:var(--ink);font-weight:600;}
+  .platform-row{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .platform{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:12px 16px;
+    color:var(--muted);
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    font-size:14px;
+  }
+  .platform .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--border);
+  }
+  .soon{
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--gold);
+    border:1px solid var(--gold);
+    padding:2px 8px;
+    border-radius:999px;
+  }
+
+  footer{
+    margin-top:60px;
+    padding:28px 0 40px;
+    border-top:1px solid var(--border);
+    color:var(--muted);
+    font-size:14px;
+  }
+  footer a{color:var(--muted);text-decoration:underline;}
+
+  @media (max-width:720px){
+    h1{font-size:30px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <a class="wordmark" href="#">
+      <img src="covers/edelweiss.png" alt="">
+      Mossgrove Press
+    </a>
+    <nav class="site-nav">
+      <a href="#book">The Book</a>
+      <a href="#download">Free Download</a>
+      <a href="#etsy">Print-at-Home</a>
+      <a href="#characters">Meet the Cast</a>
+      <a href="#follow">Follow</a>
+    </nav>
+    <div class="lang-switch" id="langSwitch">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="it">IT</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero" id="book">
+    <div class="hero-content">
+
+      <!-- ENGLISH -->
+      <div class="lang-block" data-lang="en">
+        <div class="kicker">A Mossgrove Press Original</div>
+        <h1>Cozy Mornings in Edelhollow</h1>
+        <p class="subtitle">A Cozy Alpine Coloring Book for Kids and Grown-Ups</p>
+        <p class="desc">Welcome to Edelhollow, a cozy alpine village where fourteen animal friends are waiting to meet you. <em>Cozy Mornings in Edelhollow</em> is a gentle, richly-illustrated coloring book that follows a full day in a small Swiss-alpine village — from sunrise to starlight.</p>
+        <ul class="bullets">
+          <li>51 warm, whimsical scenes covering a full dawn-to-dusk day in the village.</li>
+          <li>A hidden game on every page: find the tiny edelweiss tucked into every scene.</li>
+          <li>Fourteen friends to fall in love with, each with a signature look and gentle personality.</li>
+          <li>Single-sided pages, so markers and crayons won't bleed through.</li>
+        </ul>
+        <div class="cta-row">
+          <!-- TODO: replace with the live Amazon.com URL once the listing clears review -->
+          <span class="btn btn-disabled">Coming soon to Amazon</span>
+        </div>
+      </div>
+
+      <!-- GERMAN -->
+      <div class="lang-block" data-lang="de" hidden>
+        <div class="kicker">Ein Mossgrove Press Original</div>
+        <h1>Gemütliche Morgen in Edelhollow</h1>
+        <p class="subtitle">Ein gemütliches Alpen-Malbuch für Kinder und Erwachsene</p>
+        <p class="desc">Willkommen in Edelhollow, einem gemütlichen Alpendorf, in dem vierzehn tierische Freunde auf dich warten. „Gemütliche Morgen in Edelhollow" ist ein liebevoll gezeichnetes Ausmalbuch, das einen ganzen Tag in einem kleinen Schweizer Alpendorf begleitet.</p>
+        <ul class="bullets">
+          <li>51 warme, verspielte Szenen von Sonnenaufgang bis Sonnenuntergang.</li>
+          <li>Ein kleines Suchspiel auf jeder Seite: Findest du das winzige Edelweiß?</li>
+          <li>Vierzehn Freunde zum Liebgewinnen, jeder mit eigenem Charakter.</li>
+          <li>Einseitig bedruckte Seiten, damit Filzstifte nicht durchdrücken.</li>
+        </ul>
+        <div class="cta-row">
+          <!-- TODO: replace with the live Amazon.de URL once this edition is published -->
+          <span class="btn btn-disabled">Demnächst bei Amazon</span>
+        </div>
+      </div>
+
+      <!-- SPANISH -->
+      <div class="lang-block" data-lang="es" hidden>
+        <div class="kicker">Un original de Mossgrove Press</div>
+        <h1>Mañanas Acogedoras en Edelhollow</h1>
+        <p class="subtitle">Un libro para colorear acogedor de los Alpes para niños y adultos</p>
+        <p class="desc">Bienvenidos a Edelhollow, un acogedor pueblo alpino donde catorce amigos animales os están esperando. "Mañanas Acogedoras en Edelhollow" es un libro para colorear tierno y ricamente ilustrado que sigue un día completo en un pequeño pueblo alpino suizo.</p>
+        <ul class="bullets">
+          <li>51 escenas cálidas que abarcan un día completo, de la mañana a la noche.</li>
+          <li>Un juego escondido en cada página: encuentra la diminuta flor de edelweiss.</li>
+          <li>Catorce amigos para querer, cada uno con su propia personalidad.</li>
+          <li>Páginas impresas a una sola cara, para que los rotuladores no traspasen.</li>
+        </ul>
+        <div class="cta-row">
+          <!-- TODO: replace with the live Amazon.es URL once this edition is published -->
+          <span class="btn btn-disabled">Próximamente en Amazon</span>
+        </div>
+      </div>
+
+      <!-- ITALIAN -->
+      <div class="lang-block" data-lang="it" hidden>
+        <div class="kicker">Un originale Mossgrove Press</div>
+        <h1>Le piacevoli mattine a Edelhollow</h1>
+        <p class="subtitle">Un libro da colorare cozy delle Alpi per bambini e adulti</p>
+        <p class="desc">Benvenuti a Edelhollow, un accogliente villaggio alpino dove quattordici amici animali vi stanno aspettando. "Le piacevoli mattine a Edelhollow" è un libro da colorare dolce e riccamente illustrato che segue un'intera giornata in un piccolo villaggio alpino svizzero.</p>
+        <ul class="bullets">
+          <li>51 scene calde che coprono un'intera giornata, dall'alba al tramonto.</li>
+          <li>Un gioco nascosto in ogni pagina: trova il minuscolo fiore di stella alpina.</li>
+          <li>Quattordici amici da amare, ognuno con la propria personalità.</li>
+          <li>Pagine stampate su un solo lato, così pennarelli e pastelli non passano.</li>
+        </ul>
+        <div class="cta-row">
+          <!-- TODO: replace with the live Amazon.it URL once this edition is published -->
+          <span class="btn btn-disabled">Prossimamente su Amazon</span>
+        </div>
+      </div>
+
+      <!-- FRENCH -->
+      <div class="lang-block" data-lang="fr" hidden>
+        <div class="kicker">Un original de Mossgrove Press</div>
+        <h1>Matins Cosy à Edelhollow</h1>
+        <p class="subtitle">Un livre de coloriage cosy des Alpes pour enfants et adultes</p>
+        <p class="desc">Bienvenue à Edelhollow, un village alpin cosy où quatorze amis se réunissent pour vous accueillir. « Matins Cosy à Edelhollow » est un livre de coloriage doux et richement illustré qui suit une journée complète dans un petit village alpin suisse.</p>
+        <ul class="bullets">
+          <li>51 scènes chaleureuses qui couvrent une journée entière, de l'aube au crépuscule.</li>
+          <li>Un jeu caché sur chaque page : trouverez-vous la minuscule edelweiss ?</li>
+          <li>Quatorze amis attachants, chacun avec sa personnalité bien à lui.</li>
+          <li>Pages imprimées d'un seul côté, pour que les feutres ne traversent pas.</li>
+        </ul>
+        <div class="cta-row">
+          <!-- TODO: replace with the live Amazon.fr URL once this edition is published -->
+          <span class="btn btn-disabled">Bientôt sur Amazon</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-cover">
+      <img id="coverImg" src="covers/en_wrap.jpg" alt="Cozy Mornings in Edelhollow — full wraparound cover with the whole cast">
+    </div>
+  </div>
+
+  <section id="download">
+    <h2>Free Edelhollow Download</h2>
+    <p class="lede">One page from <em>Cozy Mornings in Edelhollow</em>, yours free, so you can try the style before you buy the book.</p>
+    <div class="download-grid">
+      <figure>
+        <img src="covers/sneak_peek_preview.jpg" alt="Preview of a free Edelhollow coloring page — a nighttime picnic-table scene">
+        <figcaption>Preview shown with a watermark — your free copy prints clean.</figcaption>
+      </figure>
+      <div class="download-copy">
+        <p>A quiet evening at the picnic table, Burdock keeping watch, Pip serving supper, a lantern lit against the dark. It's page 49 of the book, one full-size coloring page, ready to print at home.</p>
+        <div class="cta-row">
+          <!-- TODO: swap for the email-gated version once the signup form + Apps Script are wired up. Direct download for now so this ships working today. -->
+          <a class="btn btn-primary" href="downloads/Edelhollow_Free_Coloring_Page.pdf" download>Download the free page</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="etsy">
+    <h2>Print-at-Home Pages</h2>
+    <p class="lede">Single pages and small bundles from the Edelhollow world, for whenever you just want one more page to color.</p>
+    <div class="platform-row">
+      <div class="platform"><span class="dot"></span> Etsy Shop <span class="soon">Soon</span></div>
+    </div>
+  </section>
+
+  <section id="characters">
+    <h2>Meet the Cast</h2>
+    <p class="lede">Fourteen friends live in Edelhollow, each with their own corner of the village and their own way of caring for the rest. Full character profiles are on their way.</p>
+    <div class="cast-teaser">
+      <span class="names">Rosa &middot; Bo &middot; Bernard &middot; Muri &middot; Emily &middot; Wystan &middot; Pip &middot; Olwen &middot; Old Anton &middot; Professor Quill &middot; Tansy &middot; Hazel &middot; Burdock &middot; Nutmeg</span>
+      <span class="soon">Soon</span>
+    </div>
+  </section>
+
+  <section id="follow">
+    <h2>Follow Edelhollow</h2>
+    <p class="lede">New pages, behind-the-scenes art, and news of the next book — check back soon for where to follow along.</p>
+    <div class="platform-row">
+      <!-- TODO: turn these into real links as each channel goes live -->
+      <div class="platform"><span class="dot"></span> TikTok <span class="soon">Soon</span></div>
+      <div class="platform"><span class="dot"></span> Instagram <span class="soon">Soon</span></div>
+      <div class="platform"><span class="dot"></span> Facebook <span class="soon">Soon</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    &copy; 2026 Mossgrove Press &middot; <a href="mailto:hello@mossgrovepress.com">hello@mossgrovepress.com</a>
+  </div>
+</footer>
+
+<script>
+  const buttons = document.querySelectorAll('.lang-btn');
+  const blocks = document.querySelectorAll('.lang-block');
+  const coverImg = document.getElementById('coverImg');
+  const covers = {en:'covers/en_wrap.jpg', de:'covers/de_wrap.jpg', es:'covers/es_wrap.jpg', it:'covers/it_wrap.jpg', fr:'covers/fr_wrap.jpg'};
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      buttons.forEach(b => b.classList.toggle('active', b === btn));
+      blocks.forEach(b => b.hidden = (b.dataset.lang !== lang));
+      coverImg.src = covers[lang];
+      coverImg.alt = 'Book cover (' + lang.toUpperCase() + ')';
+      document.documentElement.lang = lang;
+    });
+  });
+</script>
+
+</body>
+</html>
