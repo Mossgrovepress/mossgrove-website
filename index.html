@@ -437,6 +437,7 @@
                     </table>
                   </div>
                 </div>
+                <iframe name="_zcSignup" style="display:none; width:0; height:0; border:0;" title="signup response"></iframe>
                 <form method="POST" id="zcampaignOptinForm" style="margin: 0px; width: 100%" action="https://zcv2-zcmp.maillist-manage.eu/weboptin.zc" target="_zcSignup">
                   <div style="background-color: rgb(255, 235, 232); padding: 10px; color: rgb(210, 0, 0); font-size: 11px; margin: 20px 10px 0px; border: 1px solid rgb(255, 217, 211); opacity: 1; display: none" id="errorMsgDiv">Please correct the marked field(s) below.</div>
                   <div style="position: relative; width: 240px; height: 40px; margin-top: 24px; display: inline-block">
@@ -451,9 +452,10 @@
                     <label for="marketingConsent">Yes, I'd like to receive occasional Edelhollow news, free printables and new book announcements. See our <a href="privacy.html" target="_blank">Privacy Policy</a>.</label>
                   </div>
                   <div id="consentError">Please check the box above to continue.</div>
+                  <div id="customSuccessMsg" style="display:none; max-width:300px; margin:14px auto 0; padding:12px; background:var(--paper); border:1px solid var(--accent); border-radius:10px; font-family:'EB Garamond', serif; font-size:14px; color:var(--ink);">Thank you! Check your inbox (and spam folder) for an email asking you to confirm your subscription.</div>
 
                   <div style="position: relative; width: 240px; height: 40px; margin: 16px 0 25px; display: inline-block">
-                    <input type="button" style="text-align: center; width: 100%; height: 100%; z-index: 5; border: 0; color: var(--cream); cursor: pointer; outline: none; font-size: 15px; font-family: 'Baloo 2', sans-serif; font-weight:700; background-color: var(--ink); border-radius: 10px" name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin" value="Get My Free Coloring Page">
+                    <input type="button" style="text-align: center; width: 100%; height: 100%; z-index: 5; border: 0; color: var(--cream); cursor: pointer; outline: none; font-size: 15px; font-family: 'Baloo 2', sans-serif; font-weight:700; background-color: var(--ink); border-radius: 10px" name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin" value="Get My Free Colouring Page">
                   </div>
                   <input type="hidden" id="fieldBorder" value="">
                   <input type="hidden" id="submitType" name="submitType" value="optinCustomView">
@@ -495,6 +497,8 @@
             var btn = document.getElementById('zcWebOptin');
             var consent = document.getElementById('marketingConsent');
             var err = document.getElementById('consentError');
+            var success = document.getElementById('customSuccessMsg');
+            var emailField = document.getElementById('EMBED_FORM_EMAIL_LABEL');
             if(btn && consent){
               btn.addEventListener('click', function(e){
                 if(!consent.checked){
@@ -502,8 +506,12 @@
                   e.stopImmediatePropagation();
                   err.style.display = 'block';
                   consent.focus();
+                } else if(!emailField.value || emailField.value.indexOf('@') === -1){
+                  // let Zoho's own validation handle a missing/invalid email, don't show success yet
+                  err.style.display = 'none';
                 } else {
                   err.style.display = 'none';
+                  success.style.display = 'block';
                 }
               }, true);
             }
