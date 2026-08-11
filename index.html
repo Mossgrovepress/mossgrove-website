@@ -416,6 +416,7 @@
         </style>
         <!--Zoho Campaigns Web-Optin Form's Header Code Ends Here-->
         <!--Zoho Campaigns Web-Optin Form Starts Here-->
+        <iframe name="_zcSignup" style="display:none; width:0; height:0; border:0;" title="signup response"></iframe>
         <div id="sf3z52c03c0b7178d4a0797fad161361cf5ef8af0be575d38926e29ec1846d54fc0e" data-type="signupform" style="opacity: 1;">
           <div id="customForm">
             <div class="quick_form_16_css" style="background-color: var(--paper); width: 100%; max-width: 320px; margin: 0; z-index: 2; font-family: 'EB Garamond', serif; border: 1px solid var(--border); border-radius: 14px; overflow: hidden" name="SIGNUP_BODY">
@@ -437,7 +438,6 @@
                     </table>
                   </div>
                 </div>
-                <iframe name="_zcSignup" style="display:none; width:0; height:0; border:0;" title="signup response"></iframe>
                 <form method="POST" id="zcampaignOptinForm" style="margin: 0px; width: 100%" action="https://zcv2-zcmp.maillist-manage.eu/weboptin.zc" target="_zcSignup">
                   <div style="background-color: rgb(255, 235, 232); padding: 10px; color: rgb(210, 0, 0); font-size: 11px; margin: 20px 10px 0px; border: 1px solid rgb(255, 217, 211); opacity: 1; display: none" id="errorMsgDiv">Please correct the marked field(s) below.</div>
                   <div style="position: relative; width: 240px; height: 40px; margin-top: 24px; display: inline-block">
@@ -512,6 +512,11 @@
                 } else {
                   err.style.display = 'none';
                   success.style.display = 'block';
+                  // Belt-and-suspenders: block any popup window Zoho's script might try to open,
+                  // the on-page confirmation message above already covers this.
+                  var realOpen = window.open;
+                  window.open = function(){ return null; };
+                  setTimeout(function(){ window.open = realOpen; }, 4000);
                 }
               }, true);
             }
