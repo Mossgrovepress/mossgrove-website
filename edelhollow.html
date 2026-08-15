@@ -550,6 +550,14 @@
                   // Without this line, clicks showed the success message but sent nothing.
                   btn.disabled = true; // prevent double submissions
                   document.getElementById('zcampaignOptinForm').submit();
+                  // After a successful submit, hide the input fields and dead button —
+                  // only the confirmation message should remain visible.
+                  emailField.parentElement.style.display = 'none';
+                  var nameField = document.getElementById('FIRSTNAME');
+                  if (nameField) nameField.parentElement.style.display = 'none';
+                  var crow = document.querySelector('.consent-row');
+                  if (crow) crow.style.display = 'none';
+                  btn.parentElement.style.display = 'none';
                 }
               }, true);
             }
@@ -573,7 +581,7 @@
     <img src="img/cast_color_labeled.png" alt="The fourteen Edelhollow characters in color, lined up with their names" style="width:100%;border:1px solid var(--border);border-radius:12px;display:block;">
     <p style="margin-top:14px;">
       <a class="btn btn-primary" href="downloads/Edelhollow_Meet_the_Cast.pdf" download data-i18n="cast.download">Download the cast poster (free PDF)</a>
-      <a class="btn btn-primary" href="#download" data-i18n="top.cta" style="margin-left:8px;">Get your free coloring page</a>
+      <a class="btn btn-primary" href="#download" data-i18n="cast.coloring" style="margin-left:8px;">Get the cast coloring page (free PDF)</a>
     </p>
   </section>
 
@@ -624,6 +632,7 @@
       'cast.h2':'Meet the Cast',
       'cast.lede':'Fourteen friends live in Edelhollow, each with their own corner of the village and their own way of caring for the rest. Full character profiles are on their way.',
       'cast.download':'Download the cast poster (free PDF)',
+      'cast.coloring':'Get the cast coloring page (free PDF)',
       'follow.h2':'Follow Edelhollow',
       'follow.lede':'New pages, behind-the-scenes art, and news of the next book — check back soon for where to follow along.',
       'soon':'Soon'
@@ -648,6 +657,7 @@
       'cast.h2':'Die Charaktere',
       'cast.lede':'In Edelhollow leben vierzehn Freunde, jeder mit seiner eigenen Ecke im Dorf und seiner eigenen Art, für die anderen da zu sein. Ausführliche Charakterprofile folgen bald.',
       'cast.download':'Charakter-Poster herunterladen (gratis PDF)',
+      'cast.coloring':'Die Charaktere als Ausmalseite (gratis PDF)',
       'follow.h2':'Edelhollow folgen',
       'follow.lede':'Neue Seiten, Einblicke hinter die Kulissen und Neuigkeiten zum nächsten Buch. Schau bald wieder vorbei.',
       'soon':'Bald'
@@ -672,6 +682,7 @@
       'cast.h2':'Conoce a los personajes',
       'cast.lede':'En Edelhollow viven catorce amigos, cada uno con su rincón del pueblo y su manera de cuidar de los demás. Muy pronto tendrás los perfiles completos de cada personaje.',
       'cast.download':'Descarga el póster de los personajes (PDF gratis)',
+      'cast.coloring':'Consigue la página para colorear de los personajes (PDF gratis)',
       'follow.h2':'Sigue a Edelhollow',
       'follow.lede':'Nuevas páginas, arte entre bastidores y noticias del próximo libro. Vuelve pronto para saber dónde seguirnos.',
       'soon':'Pronto'
@@ -696,6 +707,7 @@
       'cast.h2':'I personaggi',
       'cast.lede':'A Edelhollow vivono quattordici amici, ognuno con il proprio angolo di villaggio e il proprio modo di prendersi cura degli altri. I profili completi dei personaggi sono in arrivo.',
       'cast.download':'Scarica il poster dei personaggi (PDF gratuito)',
+      'cast.coloring':'La pagina da colorare dei personaggi (PDF gratuito)',
       'follow.h2':'Segui Edelhollow',
       'follow.lede':'Nuove pagine, dietro le quinte e notizie sul prossimo libro. Torna presto per sapere dove seguirci.',
       'soon':'Presto'
@@ -720,6 +732,7 @@
       'cast.h2':'Les personnages',
       'cast.lede':'Quatorze amis vivent à Edelhollow, chacun avec son coin du village et sa façon de prendre soin des autres. Les portraits complets des personnages arrivent bientôt.',
       'cast.download':'Télécharger le poster des personnages (PDF gratuit)',
+      'cast.coloring':'La page de coloriage des personnages (PDF gratuit)',
       'follow.h2':'Suivez Edelhollow',
       'follow.lede':'De nouvelles pages, les coulisses et les nouvelles du prochain livre. Revenez bientôt pour savoir où nous suivre.',
       'soon':'Bientôt'
