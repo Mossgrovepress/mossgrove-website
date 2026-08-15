@@ -271,7 +271,7 @@
       Edelhollow
     </a>
     <nav class="site-nav">
-      <a href="#book" data-i18n="nav.book">The Book</a>
+      <a href="#book" data-i18n="nav.book">Books</a>
       <a href="#download" data-i18n="nav.download">Free Download</a>
       <a href="#etsy" data-i18n="nav.etsy">Print-at-Home</a>
       <a href="#characters" data-i18n="nav.cast">Meet the Cast</a>
@@ -289,11 +289,9 @@
 
 <main class="wrap">
 
-  <div id="cast-top" style="text-align:center;margin-bottom:56px;">
+  <div id="cast-top" style="text-align:center;margin-bottom:44px;">
     <h1 data-i18n="top.welcome" style="margin-bottom:4px;">Welcome to Edelhollow</h1>
-    <p class="subtitle" data-i18n="top.sub" style="margin-bottom:22px;">Fourteen friends, one cozy alpine village.</p>
-    <img src="img/cast_color_labeled.png" alt="The fourteen Edelhollow characters in color, lined up with their names" style="width:100%;border-radius:14px;border:1px solid var(--border);display:block;margin-bottom:20px;">
-    <a class="btn btn-primary" href="#download" data-i18n="top.cta">Get your free coloring page</a>
+    <p class="subtitle" data-i18n="top.sub" style="margin-bottom:0;">Fourteen friends, one cozy alpine village.</p>
   </div>
 
   <div class="hero" id="book">
@@ -392,6 +390,20 @@
 
     <div class="hero-cover">
       <img id="coverImg" src="covers/en_wrap.jpg" alt="Cozy Mornings in Edelhollow — full wraparound cover with the whole cast">
+    </div>
+
+    <div id="more-books" style="margin-top:8px;">
+      <h2 data-i18n="books.more" style="font-size:22px;margin:0 0 16px;">More books from Edelhollow</h2>
+      <div style="display:flex;gap:24px;flex-wrap:wrap;">
+        <figure style="margin:0;flex:0 0 200px;">
+          <img src="covers/cb002_front.jpg" alt="Market Day in Edelhollow — cover" style="width:100%;border-radius:10px;box-shadow:0 10px 24px rgba(58,42,34,0.15);display:block;">
+          <figcaption style="text-align:center;margin-top:10px;font-size:15px;"><em>Market Day in Edelhollow</em><br><span class="soon" data-i18n="soon">Soon</span></figcaption>
+        </figure>
+        <figure style="margin:0;flex:0 0 200px;">
+          <img src="covers/cb004_front.jpg" alt="The Edelhollow Express — cover" style="width:100%;border-radius:10px;box-shadow:0 10px 24px rgba(58,42,34,0.15);display:block;">
+          <figcaption style="text-align:center;margin-top:10px;font-size:15px;"><em>The Edelhollow Express</em><br><span class="soon" data-i18n="soon">Soon</span></figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 
@@ -550,11 +562,10 @@
   <section id="characters">
     <h2 data-i18n="cast.h2">Meet the Cast</h2>
     <p class="lede" data-i18n="cast.lede">Fourteen friends live in Edelhollow, each with their own corner of the village and their own way of caring for the rest. Full character profiles are on their way.</p>
-    <a href="downloads/Edelhollow_Meet_the_Cast.pdf" download style="display:block;max-width:688px;">
-      <img src="img/cast_list_preview.png" alt="The fourteen Edelhollow characters lined up tallest to smallest, with names" style="width:100%;border:1px solid var(--border);border-radius:12px;display:block;">
-    </a>
+    <img src="img/cast_color_labeled.png" alt="The fourteen Edelhollow characters in color, lined up with their names" style="width:100%;border:1px solid var(--border);border-radius:12px;display:block;">
     <p style="margin-top:14px;">
       <a class="btn btn-primary" href="downloads/Edelhollow_Meet_the_Cast.pdf" download data-i18n="cast.download">Download the cast poster (free PDF)</a>
+      <a class="btn btn-primary" href="#download" data-i18n="top.cta" style="margin-left:8px;">Get your free coloring page</a>
     </p>
   </section>
 
@@ -586,7 +597,8 @@
 
   const I18N = {
     en: {
-      'nav.book':'The Book',
+      'nav.book':'Books',
+      'books.more':'More books from Edelhollow',
       'top.welcome':'Welcome to Edelhollow', 'top.sub':'Fourteen friends, one cozy alpine village.', 'top.cta':'Get your free coloring page', 'nav.download':'Free Download', 'nav.etsy':'Print-at-Home', 'nav.cast':'Meet the Cast', 'nav.follow':'Follow',
       'dl.h2':'Free Edelhollow Download',
       'dl.lede':'One page from <em>Cozy Mornings in Edelhollow</em>, yours free, so you can try the style before you buy the book.',
@@ -609,7 +621,8 @@
       'soon':'Soon'
     },
     de: {
-      'nav.book':'Das Buch',
+      'nav.book':'Bücher',
+      'books.more':'Weitere Bücher aus Edelhollow',
       'top.welcome':'Willkommen in Edelhollow', 'top.sub':'Vierzehn Freunde, ein gemütliches Alpendorf.', 'top.cta':'Hol dir deine gratis Ausmalseite', 'nav.download':'Gratis-Download', 'nav.etsy':'Zum Selbstdrucken', 'nav.cast':'Die Charaktere', 'nav.follow':'Folgen',
       'dl.h2':'Kostenlose Edelhollow-Ausmalseite',
       'dl.lede':'Eine Seite aus <em>Gemütliche Morgen in Edelhollow</em>, geschenkt, damit du den Stil ausprobieren kannst, bevor du das Buch kaufst.',
@@ -632,7 +645,8 @@
       'soon':'Bald'
     },
     es: {
-      'nav.book':'El libro',
+      'nav.book':'Libros',
+      'books.more':'Más libros de Edelhollow',
       'top.welcome':'Bienvenido a Edelhollow', 'top.sub':'Catorce amigos, un acogedor pueblo alpino.', 'top.cta':'Consigue tu página para colorear gratis', 'nav.download':'Descarga gratis', 'nav.etsy':'Imprimir en casa', 'nav.cast':'Conoce a los personajes', 'nav.follow':'Síguenos',
       'dl.h2':'Descarga gratuita de Edelhollow',
       'dl.lede':'Una página de <em>Las agradables mañanas en Edelhollow</em>, gratis, para que pruebes el estilo antes de comprar el libro.',
@@ -655,7 +669,8 @@
       'soon':'Pronto'
     },
     it: {
-      'nav.book':'Il libro',
+      'nav.book':'Libri',
+      'books.more':'Altri libri da Edelhollow',
       'top.welcome':'Benvenuti a Edelhollow', 'top.sub':'Quattordici amici, un accogliente villaggio alpino.', 'top.cta':'Prendi la tua pagina da colorare gratis', 'nav.download':'Download gratuito', 'nav.etsy':'Stampa a casa', 'nav.cast':'I personaggi', 'nav.follow':'Seguici',
       'dl.h2':'Download gratuito di Edelhollow',
       'dl.lede':'Una pagina di <em>Le piacevoli mattine a Edelhollow</em>, in regalo, così puoi provare lo stile prima di comprare il libro.',
@@ -678,7 +693,8 @@
       'soon':'Presto'
     },
     fr: {
-      'nav.book':'Le livre',
+      'nav.book':'Livres',
+      'books.more':'D\'autres livres d\'Edelhollow',
       'top.welcome':'Bienvenue à Edelhollow', 'top.sub':'Quatorze amis, un village alpin douillet.', 'top.cta':'Recevez votre coloriage gratuit', 'nav.download':'Téléchargement gratuit', 'nav.etsy':'À imprimer chez soi', 'nav.cast':'Les personnages', 'nav.follow':'Suivez-nous',
       'dl.h2':"Téléchargement gratuit d'Edelhollow",
       'dl.lede':'Une page de <em>Matins Cosy à Edelhollow</em>, offerte, pour essayer le style avant d\'acheter le livre.',
