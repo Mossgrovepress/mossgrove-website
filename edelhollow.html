@@ -518,6 +518,11 @@
                   var realOpen = window.open;
                   window.open = function(){ return null; };
                   setTimeout(function(){ window.open = realOpen; }, 4000);
+                  // FIX 2026-08-15: Zoho's own click handler never attaches to this button,
+                  // so submit the form explicitly (POST to weboptin.zc via the hidden iframe).
+                  // Without this line, clicks showed the success message but sent nothing.
+                  btn.disabled = true; // prevent double submissions
+                  document.getElementById('zcampaignOptinForm').submit();
                 }
               }, true);
             }
@@ -544,10 +549,6 @@
     <p style="margin-top:14px;">
       <a class="btn btn-primary" href="downloads/Edelhollow_Meet_the_Cast.pdf" download data-i18n="cast.download">Download the cast poster (free PDF)</a>
     </p>
-    <div class="cast-teaser" style="margin-top:22px;">
-      <span class="names">Rosa &middot; Bo &middot; Bernard &middot; Muri &middot; Emily &middot; Wystan &middot; Pip &middot; Olwen &middot; Old Anton &middot; Professor Quill &middot; Tansy &middot; Hazel &middot; Burdock &middot; Nutmeg</span>
-      <span class="soon" data-i18n="soon">Soon</span>
-    </div>
   </section>
 
   <section id="follow">
