@@ -100,12 +100,20 @@
 
   .hero{
     display:flex;
-    flex-direction:column;
-    gap:36px;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:40px;
+    align-items:flex-start;
   }
   .hero-content{
-    max-width:680px;
+    flex:1 1 420px;
+    min-width:300px;
   }
+  .hero-cover{
+    flex:0 1 340px;
+    min-width:260px;
+  }
+  #more-books{flex-basis:100%;}
   .hero-cover img{
     width:100%;
     border-radius:14px;
@@ -389,7 +397,7 @@
     </div>
 
     <div class="hero-cover">
-      <img id="coverImg" src="covers/en_wrap.jpg" alt="Cozy Mornings in Edelhollow — full wraparound cover with the whole cast">
+      <img id="coverImg" src="covers/en_front.jpg" alt="Cozy Mornings in Edelhollow — front cover">
     </div>
 
     <div id="more-books" style="margin-top:8px;">
@@ -593,7 +601,7 @@
   const buttons = document.querySelectorAll('.lang-btn');
   const blocks = document.querySelectorAll('.lang-block');
   const coverImg = document.getElementById('coverImg');
-  const covers = {en:'covers/en_wrap.jpg', de:'covers/de_wrap.jpg', es:'covers/es_wrap.jpg', it:'covers/it_wrap.jpg', fr:'covers/fr_wrap.jpg'};
+  const covers = {en:'covers/en_front.jpg', de:'covers/de_front.jpg', es:'covers/es_front.jpg', it:'covers/it_front.jpg', fr:'covers/fr_front.jpg'};
 
   const I18N = {
     en: {
