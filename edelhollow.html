@@ -113,7 +113,12 @@
     flex:0 1 340px;
     min-width:260px;
   }
-  #more-books{flex-basis:100%;}
+  #more-books{margin-top:58px;}
+  .book-2{
+    margin-top:56px;
+    padding-top:48px;
+    border-top:1px solid var(--border);
+  }
   .hero-cover img{
     width:100%;
     border-radius:14px;
@@ -307,7 +312,7 @@
 
       <!-- ENGLISH -->
       <div class="lang-block" data-lang="en">
-        <div class="kicker">A Mossgrove Press Original</div>
+        <div class="kicker">Book One &middot; A Mossgrove Press Original</div>
         <h1>Cozy Mornings in Edelhollow</h1>
         <p class="subtitle">A Cozy Alpine Coloring Book for Kids and Grown-Ups</p>
         <p class="desc">Welcome to Edelhollow, a cozy alpine village where fourteen animal friends are waiting to meet you. <em>Cozy Mornings in Edelhollow</em> is a gentle, richly-illustrated coloring book that follows a full day in a small Swiss-alpine village — from sunrise to starlight.</p>
@@ -324,7 +329,7 @@
 
       <!-- GERMAN -->
       <div class="lang-block" data-lang="de" hidden>
-        <div class="kicker">Ein Mossgrove Press Original</div>
+        <div class="kicker">Band Eins &middot; Ein Mossgrove Press Original</div>
         <h1>Gemütliche Morgen in Edelhollow</h1>
         <p class="subtitle">Ein gemütliches Alpen-Malbuch für Kinder und Erwachsene</p>
         <p class="desc">Willkommen in Edelhollow, einem gemütlichen Alpendorf, in dem vierzehn tierische Freunde auf dich warten. „Gemütliche Morgen in Edelhollow" ist ein liebevoll gezeichnetes Ausmalbuch, das einen ganzen Tag in einem kleinen Schweizer Alpendorf begleitet.</p>
@@ -341,7 +346,7 @@
 
       <!-- SPANISH -->
       <div class="lang-block" data-lang="es" hidden>
-        <div class="kicker">Un original de Mossgrove Press</div>
+        <div class="kicker">Libro Uno &middot; Un original de Mossgrove Press</div>
         <h1>Las agradables mañanas en Edelhollow</h1>
         <p class="subtitle">Un libro para colorear acogedor de los Alpes para niños y adultos</p>
         <p class="desc">Bienvenidos a Edelhollow, un acogedor pueblo alpino donde catorce amigos animales os están esperando. "Las agradables mañanas en Edelhollow" es un libro para colorear tierno y ricamente ilustrado que sigue un día completo en un pequeño pueblo alpino suizo.</p>
@@ -359,7 +364,7 @@
 
       <!-- ITALIAN -->
       <div class="lang-block" data-lang="it" hidden>
-        <div class="kicker">Un originale Mossgrove Press</div>
+        <div class="kicker">Libro Uno &middot; Un originale Mossgrove Press</div>
         <h1>Le piacevoli mattine a Edelhollow</h1>
         <p class="subtitle">Un libro da colorare cozy delle Alpi per bambini e adulti</p>
         <p class="desc">Benvenuti a Edelhollow, un accogliente villaggio alpino dove quattordici amici animali vi stanno aspettando. "Le piacevoli mattine a Edelhollow" è un libro da colorare dolce e riccamente illustrato che segue un'intera giornata in un piccolo villaggio alpino svizzero.</p>
@@ -376,7 +381,7 @@
 
       <!-- FRENCH -->
       <div class="lang-block" data-lang="fr" hidden>
-        <div class="kicker">Un original de Mossgrove Press</div>
+        <div class="kicker">Tome 1 &middot; Un original de Mossgrove Press</div>
         <h1>Matins Cosy à Edelhollow</h1>
         <p class="subtitle">Un livre de coloriage cosy des Alpes pour enfants et adultes</p>
         <p class="desc">Bienvenue à Edelhollow, un village alpin cosy où quatorze amis se réunissent pour vous accueillir. « Matins Cosy à Edelhollow » est un livre de coloriage doux et richement illustré qui suit une journée complète dans un petit village alpin suisse.</p>
@@ -398,18 +403,115 @@
       <a href="#etsy" class="btn btn-primary" data-i18n="hero.watch" style="display:block;text-align:center;margin-top:14px;">▶ Watch the film</a>
     </div>
 
-    <div id="more-books" style="margin-top:8px;">
-      <h2 data-i18n="books.more" style="font-size:22px;margin:0 0 16px;">More books from Edelhollow</h2>
-      <div style="display:flex;gap:24px;flex-wrap:wrap;">
-        <figure style="margin:0;flex:0 0 200px;">
-          <img src="covers/cb002_front.jpg" alt="Market Day in Edelhollow — cover" style="width:100%;border-radius:10px;box-shadow:0 10px 24px rgba(58,42,34,0.15);display:block;">
-          <figcaption style="text-align:center;margin-top:10px;font-size:15px;"><em>Market Day in Edelhollow</em><br><span class="soon" data-i18n="soon">Soon</span></figcaption>
-        </figure>
-        <figure style="margin:0;flex:0 0 200px;">
-          <img src="covers/cb004_front.jpg" alt="The Edelhollow Express — cover" style="width:100%;border-radius:10px;box-shadow:0 10px 24px rgba(58,42,34,0.15);display:block;">
-          <figcaption style="text-align:center;margin-top:10px;font-size:15px;"><em>The Edelhollow Express</em><br><span class="soon" data-i18n="soon">Soon</span></figcaption>
-        </figure>
+  </div>
+
+  <!-- ============ BOOK TWO — CB-002, English edition live since 2026-08-24 ============ -->
+  <div class="hero book-2" id="book2">
+    <div class="hero-content">
+
+      <!-- ENGLISH -->
+      <div class="lang-block" data-lang="en">
+        <div class="kicker">Book Two &middot; A Mossgrove Press Original</div>
+        <h1>Market Day in Edelhollow</h1>
+        <p class="subtitle">A Cozy Alpine Coloring Book for Kids and Grown-Ups</p>
+        <p class="desc">Welcome back to Edelhollow. Today is Market Day, and the whole village is out in the square — Pip lighting his oven before dawn, Nutmeg racing along the rooftops with a forgotten basket, Rosa parading a prize pumpkin, and Emily watching the first streetlamp come on as the day winds down.</p>
+        <ul class="bullets">
+          <li>50 warm, whimsical scenes covering one full market day in the village.</li>
+          <li>A hidden game on every page: find the tiny edelweiss tucked into every scene.</li>
+          <li>The same fourteen friends from Book One, out among the market stalls.</li>
+          <li>Single-sided pages, so markers and crayons won't bleed through.</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://www.amazon.com/dp/B0HGBSCZXH" target="_blank" rel="noopener">Buy on Amazon.com</a>
+        </div>
       </div>
+
+      <!-- GERMAN -->
+      <div class="lang-block" data-lang="de" hidden>
+        <div class="kicker">Band Zwei &middot; Ein Mossgrove Press Original</div>
+        <h1>Markttag in Edelhollow</h1>
+        <p class="subtitle">Ein gemütliches Alpen-Malbuch für Kinder und Erwachsene</p>
+        <p class="desc">Willkommen zurück in Edelhollow. Heute ist Markttag, und das ganze Dorf ist auf dem Platz unterwegs: Der Igel Pip heizt vor Sonnenaufgang seinen Ofen an, das Eichhörnchen Nutmeg saust mit einem vergessenen Korb über die Dächer, Rosa führt ihren Preiskürbis stolz durchs Dorf, und Emily beobachtet vom Dach aus, wie die erste Laterne angeht.</p>
+        <ul class="bullets">
+          <li>50 warme, verspielte Szenen, die einen ganzen Markttag im Dorf zeigen.</li>
+          <li>Ein kleines Suchspiel auf jeder Seite: Findest du das winzige Edelweiss?</li>
+          <li>Vierzehn Freunde zum Liebgewinnen, jeder mit eigenem Charakter.</li>
+          <li>Einseitig bedruckte Seiten, damit Filzstifte nicht durchdrücken.</li>
+        </ul>
+        <div class="cta-row">
+          <!-- TODO: replace with the live Amazon.de URL once the German edition is published (SHIP-7) -->
+          <span class="btn btn-disabled">Bald bei Amazon.de</span>
+        </div>
+      </div>
+
+      <!-- SPANISH -->
+      <div class="lang-block" data-lang="es" hidden>
+        <div class="kicker">Libro Dos &middot; Un original de Mossgrove Press</div>
+        <h1>Día de mercado en Edelhollow</h1>
+        <p class="subtitle">Un libro para colorear acogedor de los Alpes para niños y adultos</p>
+        <p class="desc">Bienvenidos de nuevo a Edelhollow. Hoy es día de mercado, y todo el pueblo está en la plaza.</p>
+        <ul class="bullets">
+          <li>50 escenas cálidas que abarcan un día completo de mercado en el pueblo.</li>
+          <li>Un juego escondido en cada página: encuentra la diminuta flor de edelweiss.</li>
+          <li>Catorce amigos para querer, cada uno con su propia personalidad.</li>
+          <li>Páginas impresas a una sola cara, para que los rotuladores no traspasen.</li>
+        </ul>
+        <div class="cta-row">
+          <!-- TODO: replace with the live Amazon.es URL once the Spanish edition is published (SHIP-7) -->
+          <span class="btn btn-disabled">Próximamente en Amazon.es</span>
+        </div>
+      </div>
+
+      <!-- ITALIAN -->
+      <div class="lang-block" data-lang="it" hidden>
+        <div class="kicker">Libro Due &middot; Un originale Mossgrove Press</div>
+        <h1>Giorno di mercato a Edelhollow</h1>
+        <p class="subtitle">Un libro da colorare cozy delle Alpi per bambini e adulti</p>
+        <p class="desc">Bentornati a Edelhollow. Oggi è giorno di mercato, e tutto il villaggio è in piazza.</p>
+        <ul class="bullets">
+          <li>50 scene calde che coprono un'intera giornata di mercato nel villaggio.</li>
+          <li>Un gioco nascosto in ogni pagina: trova il minuscolo fiore di stella alpina.</li>
+          <li>Quattordici amici da amare, ognuno con la propria personalità.</li>
+          <li>Pagine stampate su un solo lato, così pennarelli e pastelli non passano.</li>
+        </ul>
+        <div class="cta-row">
+          <!-- TODO: replace with the live Amazon.it URL once the Italian edition is published (SHIP-7) -->
+          <span class="btn btn-disabled">Presto su Amazon.it</span>
+        </div>
+      </div>
+
+      <!-- FRENCH -->
+      <div class="lang-block" data-lang="fr" hidden>
+        <div class="kicker">Tome 2 &middot; Un original de Mossgrove Press</div>
+        <h1>Jour de marché à Edelhollow</h1>
+        <p class="subtitle">Un livre de coloriage cosy des Alpes pour enfants et adultes</p>
+        <p class="desc">Bienvenue de nouveau à Edelhollow. C'est aujourd'hui le jour de marché, et tout le village est dehors sur la place.</p>
+        <ul class="bullets">
+          <li>50 scènes chaleureuses qui couvrent une journée entière de marché au village.</li>
+          <li>Un jeu caché sur chaque page : trouverez-vous la minuscule edelweiss ?</li>
+          <li>Quatorze amis attachants, chacun avec sa personnalité bien à lui.</li>
+          <li>Pages imprimées d'un seul côté, pour que les feutres ne traversent pas.</li>
+        </ul>
+        <div class="cta-row">
+          <!-- TODO: replace with the live Amazon.fr URL once the French edition is published (SHIP-7) -->
+          <span class="btn btn-disabled">Bientôt sur Amazon.fr</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-cover">
+      <img id="coverImg2" src="covers/cb002_front.jpg" alt="Market Day in Edelhollow — front cover">
+    </div>
+  </div>
+
+  <div id="more-books">
+    <h2 data-i18n="books.more" style="font-size:22px;margin:0 0 16px;">More books from Edelhollow</h2>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;">
+      <figure style="margin:0;flex:0 0 200px;">
+        <img src="covers/cb004_front.jpg" alt="The Edelhollow Express — cover" style="width:100%;border-radius:10px;box-shadow:0 10px 24px rgba(58,42,34,0.15);display:block;">
+        <figcaption style="text-align:center;margin-top:10px;font-size:15px;"><em>The Edelhollow Express</em><br><span class="soon" data-i18n="soon">Soon</span></figcaption>
+      </figure>
     </div>
   </div>
 
@@ -611,7 +713,9 @@
   const buttons = document.querySelectorAll('.lang-btn');
   const blocks = document.querySelectorAll('.lang-block');
   const coverImg = document.getElementById('coverImg');
+  const coverImg2 = document.getElementById('coverImg2');
   const covers = {en:'covers/en_front.jpg', de:'covers/de_front.jpg', es:'covers/es_front.jpg', it:'covers/it_front.jpg', fr:'covers/fr_front.jpg'};
+  const covers2 = {en:'covers/cb002_front.jpg', de:'covers/cb002_de_front.jpg', es:'covers/cb002_es_front.jpg', it:'covers/cb002_it_front.jpg', fr:'covers/cb002_fr_front.jpg'};
 
   const I18N = {
     en: {
@@ -779,8 +883,14 @@
       const lang = btn.dataset.lang;
       buttons.forEach(b => b.classList.toggle('active', b === btn));
       blocks.forEach(b => b.hidden = (b.dataset.lang !== lang));
-      coverImg.src = covers[lang];
-      coverImg.alt = 'Book cover (' + lang.toUpperCase() + ')';
+      if (coverImg){
+        coverImg.src = covers[lang];
+        coverImg.alt = 'Cozy Mornings in Edelhollow — cover (' + lang.toUpperCase() + ')';
+      }
+      if (coverImg2){
+        coverImg2.src = covers2[lang];
+        coverImg2.alt = 'Market Day in Edelhollow — cover (' + lang.toUpperCase() + ')';
+      }
       document.documentElement.lang = lang;
       applyLang(lang);
     });
