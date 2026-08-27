@@ -286,6 +286,7 @@
     <nav class="site-nav">
       <a href="#book" data-i18n="nav.book">Books</a>
       <a href="#download" data-i18n="nav.download">Free Download</a>
+      <a href="#films" data-i18n="nav.films">Films</a>
       <a href="#etsy" data-i18n="nav.etsy">Print-at-Home</a>
       <a href="#characters" data-i18n="nav.cast">Meet the Cast</a>
       <a href="#follow" data-i18n="nav.follow">Follow</a>
@@ -400,7 +401,7 @@
 
     <div class="hero-cover">
       <img id="coverImg" src="covers/en_front.jpg" alt="Cozy Mornings in Edelhollow — front cover">
-      <a href="#etsy" class="btn btn-primary" data-i18n="hero.watch" style="display:block;text-align:center;margin-top:14px;">▶ Watch the film</a>
+      <a href="#films" class="btn btn-primary" data-i18n="hero.watch" style="display:block;text-align:center;margin-top:14px;">▶ Watch the film</a>
     </div>
 
   </div>
@@ -667,6 +668,16 @@
     </div>
   </section>
 
+  <section id="films">
+    <h2 data-i18n="films.h2">Edelhollow Films</h2>
+    <p class="lede" data-i18n="films.lede">Short wordless cartoons from the village. Every one ends on a colouring page from the books — pause it, print it, colour it.</p>
+    <div style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;border-radius:12px;border:1px solid var(--border);overflow:hidden;margin-bottom:12px;">
+      <iframe src="https://www.youtube-nocookie.com/embed/Ri_cvngtcjc" title="The Hiccups — an Edelhollow short" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <p style="margin-bottom:6px;"><strong data-i18n="films.hiccups">The Hiccups</strong> — <span data-i18n="films.hiccups.lede">Bo has the hiccups. Rosa decides they are a guest, and a guest must be seen off properly.</span></p>
+    <p><a class="btn btn-primary" href="https://youtu.be/Ri_cvngtcjc" target="_blank" rel="noopener" data-i18n="films.watch">▶ Watch on YouTube</a></p>
+  </section>
+
   <section id="etsy">
     <h2 data-i18n="etsy.h2">Print-at-Home Pages</h2>
     <p class="lede" data-i18n="etsy.lede">Single pages and small bundles from the Edelhollow world, for whenever you just want one more page to color.</p>
@@ -694,8 +705,8 @@
     <p class="lede" data-i18n="follow.lede">New pages, behind-the-scenes art, and news of the next book — check back soon for where to follow along.</p>
     <div class="platform-row">
       <!-- TODO: turn these into real links as each channel goes live -->
-      <div class="platform"><span class="dot"></span> TikTok <span class="soon" data-i18n="soon">Soon</span></div>
-      <div class="platform"><span class="dot"></span> Instagram <span class="soon" data-i18n="soon">Soon</span></div>
+      <a class="platform" href="https://www.tiktok.com/@edelhollow" target="_blank" rel="noopener" style="text-decoration:none;"><span class="dot" style="background:var(--gold);"></span> TikTok</a>
+      <a class="platform" href="https://www.instagram.com/edelhollow" target="_blank" rel="noopener" style="text-decoration:none;"><span class="dot" style="background:var(--gold);"></span> Instagram</a>
       <div class="platform"><span class="dot"></span> Facebook <span class="soon" data-i18n="soon">Soon</span></div>
     </div>
   </section>
@@ -737,6 +748,8 @@
       'etsy.h2':'Print-at-Home Pages',
       'etsy.lede':'Single pages and small bundles from the Edelhollow world, for whenever you just want one more page to color.',
       'etsy.kofi':'Ko-fi Shop',
+      'nav.films':'Films',
+      'films.h2':'Edelhollow Films','films.lede':'Short wordless cartoons from the village. Every one ends on a colouring page from the books — pause it, print it, colour it.','films.hiccups':'The Hiccups','films.hiccups.lede':'Bo has the hiccups. Rosa decides they are a guest, and a guest must be seen off properly.','films.watch':'▶ Watch on YouTube',
       'cast.h2':'Meet the Cast',
       'cast.lede':'Fourteen friends live in Edelhollow, each with their own corner of the village and their own way of caring for the rest. Full character profiles are on their way.',
       'cast.download':'Download the cast poster (free PDF)',
@@ -764,6 +777,8 @@
       'etsy.h2':'Seiten zum Selbstdrucken',
       'etsy.lede':'Einzelne Seiten und kleine Pakete aus der Welt von Edelhollow, für alle, die einfach noch eine Seite ausmalen möchten.',
       'etsy.kofi':'Ko-fi Shop',
+      'nav.films':'Filme',
+      'films.h2':'Edelhollow-Filme','films.lede':'Kurze Zeichentrickfilme ohne Worte aus dem Dorf. Jeder endet auf einer Ausmalseite aus den Büchern – anhalten, ausdrucken, ausmalen.','films.hiccups':'Der Schluckauf','films.hiccups.lede':'Bo hat Schluckauf. Rosa beschliesst, dass er ein Gast ist – und ein Gast wird anständig verabschiedet.','films.watch':'▶ Auf YouTube ansehen',
       'cast.h2':'Die Charaktere',
       'cast.lede':'In Edelhollow leben vierzehn Freunde, jeder mit seiner eigenen Ecke im Dorf und seiner eigenen Art, für die anderen da zu sein. Ausführliche Charakterprofile folgen bald.',
       'cast.download':'Charakter-Poster herunterladen (gratis PDF)',
@@ -791,6 +806,8 @@
       'etsy.h2':'Páginas para imprimir en casa',
       'etsy.lede':'Páginas sueltas y pequeños paquetes del mundo de Edelhollow, para cuando te apetezca colorear una página más.',
       'etsy.kofi':'Tienda en Ko-fi',
+      'nav.films':'Películas',
+      'films.h2':'Películas de Edelhollow','films.lede':'Cortos de animación sin palabras desde el pueblo. Cada uno termina en una página para colorear de los libros: pausa, imprime y colorea.','films.hiccups':'El hipo','films.hiccups.lede':'Bo tiene hipo. Rosa decide que es un invitado, y a un invitado hay que despedirlo como es debido.','films.watch':'▶ Ver en YouTube',
       'cast.h2':'Conoce a los personajes',
       'cast.lede':'En Edelhollow viven catorce amigos, cada uno con su rincón del pueblo y su manera de cuidar de los demás. Muy pronto tendrás los perfiles completos de cada personaje.',
       'cast.download':'Descarga el póster de los personajes (PDF gratis)',
@@ -818,6 +835,8 @@
       'etsy.h2':'Pagine da stampare a casa',
       'etsy.lede':'Pagine singole e piccoli pacchetti dal mondo di Edelhollow, per quando hai voglia di colorare ancora una pagina.',
       'etsy.kofi':'Negozio su Ko-fi',
+      'nav.films':'Film',
+      'films.h2':'I film di Edelhollow','films.lede':'Brevi cartoni animati senza parole dal villaggio. Ognuno finisce su una pagina da colorare dei libri: metti in pausa, stampa, colora.','films.hiccups':'Il singhiozzo','films.hiccups.lede':'Bo ha il singhiozzo. Rosa decide che è un ospite, e un ospite va salutato come si deve.','films.watch':'▶ Guarda su YouTube',
       'cast.h2':'I personaggi',
       'cast.lede':'A Edelhollow vivono quattordici amici, ognuno con il proprio angolo di villaggio e il proprio modo di prendersi cura degli altri. I profili completi dei personaggi sono in arrivo.',
       'cast.download':'Scarica il poster dei personaggi (PDF gratuito)',
@@ -845,6 +864,8 @@
       'etsy.h2':'Pages à imprimer chez soi',
       'etsy.lede':"Des pages à l'unité et de petits lots de l'univers d'Edelhollow, pour quand vous avez envie d'une page de plus à colorier.",
       'etsy.kofi':'Boutique Ko-fi',
+      'nav.films':'Films',
+      'films.h2':"Les films d'Edelhollow",'films.lede':'De courts dessins animés sans paroles, venus du village. Chacun se termine sur une page à colorier tirée des livres : mettez sur pause, imprimez, coloriez.','films.hiccups':'Le hoquet','films.hiccups.lede':"Bo a le hoquet. Rosa décide que c'est un invité, et qu'un invité doit être raccompagné comme il se doit.",'films.watch':'▶ Voir sur YouTube',
       'cast.h2':'Les personnages',
       'cast.lede':'Quatorze amis vivent à Edelhollow, chacun avec son coin du village et sa façon de prendre soin des autres. Les portraits complets des personnages arrivent bientôt.',
       'cast.download':'Télécharger le poster des personnages (PDF gratuit)',
