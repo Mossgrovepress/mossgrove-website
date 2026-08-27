@@ -219,6 +219,11 @@
   }
   .download-copy{flex:1 1 320px;min-width:260px;}
 
+  .bundle-grid{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:16px;}
+  .bundle-grid figure{margin:0;flex:0 0 150px;}
+  .bundle-grid img{width:100%;border-radius:10px;border:1px solid var(--border);display:block;}
+  .bundle-grid figcaption{font-size:13px;color:var(--muted);margin-top:6px;text-align:center;line-height:1.35;}
+
   .cast-teaser{
     display:flex;
     align-items:center;
@@ -676,14 +681,22 @@
     </div>
     <p style="margin-bottom:6px;"><strong data-i18n="films.hiccups">The Hiccups</strong> — <span data-i18n="films.hiccups.lede">Bo has the hiccups. Rosa decides they are a guest, and a guest must be seen off properly.</span></p>
     <p><a class="btn btn-primary" href="https://youtu.be/Ri_cvngtcjc" target="_blank" rel="noopener" data-i18n="films.watch">▶ Watch on YouTube</a></p>
+    <video id="onedayVideo" controls preload="metadata" poster="img/video_poster.jpg" style="width:100%;max-width:640px;border-radius:12px;border:1px solid var(--border);display:block;margin:28px 0 12px;">
+      <source src="One_Day_in_Edelhollow_FINAL.mp4" type="video/mp4">
+    </video>
+    <p><strong data-i18n="films.oneday">One Day in Edelhollow</strong> — <span data-i18n-html="films.oneday.lede">Dawn to dusk in the village, page by page. The book trailer for <em>Cozy Mornings in Edelhollow</em>.</span></p>
   </section>
 
   <section id="etsy">
     <h2 data-i18n="etsy.h2">Print-at-Home Pages</h2>
     <p class="lede" data-i18n="etsy.lede">Single pages and small bundles from the Edelhollow world, for whenever you just want one more page to color.</p>
-    <video id="etsyVideo" controls preload="metadata" poster="img/video_poster.jpg" style="width:100%;max-width:640px;border-radius:12px;border:1px solid var(--border);display:block;margin-bottom:20px;">
-      <source src="One_Day_in_Edelhollow_FINAL.mp4" type="video/mp4">
-    </video>
+    <div class="bundle-grid">
+      <figure><img src="img/bundles/the-village-market.jpg" alt="The Village Market — 9 digital coloring pages" loading="lazy"><figcaption><em>The Village Market</em><br><span data-i18n="etsy.pages9">9 pages</span></figcaption></figure>
+      <figure><img src="img/bundles/dawn-at-the-bakehouse.jpg" alt="Dawn at the Bakehouse — 8 digital coloring pages" loading="lazy"><figcaption><em>Dawn at the Bakehouse</em><br><span data-i18n="etsy.pages8">8 pages</span></figcaption></figure>
+      <figure><img src="img/bundles/an-afternoon-in-the-meadow.jpg" alt="An Afternoon in the Meadow — 9 digital coloring pages" loading="lazy"><figcaption><em>An Afternoon in the Meadow</em><br><span data-i18n="etsy.pages9">9 pages</span></figcaption></figure>
+      <figure><img src="img/bundles/evening-at-the-picnic-table.jpg" alt="Evening at the Picnic Table — 8 digital coloring pages" loading="lazy"><figcaption><em>Evening at the Picnic Table</em><br><span data-i18n="etsy.pages8">8 pages</span></figcaption></figure>
+    </div>
+    <p data-i18n-html="etsy.bundles" style="max-width:640px;">Four bundles from <em>Cozy Mornings in Edelhollow</em>, 34 pages in all, as PDFs in A4 and US Letter. An edelweiss is hiding on every page.</p>
     <div class="platform-row">
       <a class="platform" href="https://ko-fi.com/edelhollow/shop" target="_blank" rel="noopener" style="text-decoration:none;"><span class="dot" style="background:var(--gold);"></span> <span data-i18n="etsy.kofi">Ko-fi Shop</span></a>
       <div class="platform"><span class="dot"></span> Etsy Shop <span class="soon" data-i18n="soon">Soon</span></div>
@@ -749,7 +762,7 @@
       'etsy.lede':'Single pages and small bundles from the Edelhollow world, for whenever you just want one more page to color.',
       'etsy.kofi':'Ko-fi Shop',
       'nav.films':'Films',
-      'films.h2':'Edelhollow Films','films.lede':'Short wordless cartoons from the village. Every one ends on a colouring page from the books — pause it, print it, colour it.','films.hiccups':'The Hiccups','films.hiccups.lede':'Bo has the hiccups. Rosa decides they are a guest, and a guest must be seen off properly.','films.watch':'▶ Watch on YouTube',
+      'films.h2':'Edelhollow Films','films.lede':'Short wordless cartoons from the village. Every one ends on a colouring page from the books — pause it, print it, colour it.','films.hiccups':'The Hiccups','films.hiccups.lede':'Bo has the hiccups. Rosa decides they are a guest, and a guest must be seen off properly.','films.watch':'▶ Watch on YouTube','films.oneday':'One Day in Edelhollow','films.oneday.lede':'Dawn to dusk in the village, page by page. The book trailer for <em>Cozy Mornings in Edelhollow</em>.','etsy.pages8':'8 pages','etsy.pages9':'9 pages','etsy.bundles':'Four bundles from <em>Cozy Mornings in Edelhollow</em>, 34 pages in all, as PDFs in A4 and US Letter. An edelweiss is hiding on every page.',
       'cast.h2':'Meet the Cast',
       'cast.lede':'Fourteen friends live in Edelhollow, each with their own corner of the village and their own way of caring for the rest. Full character profiles are on their way.',
       'cast.download':'Download the cast poster (free PDF)',
@@ -778,7 +791,7 @@
       'etsy.lede':'Einzelne Seiten und kleine Pakete aus der Welt von Edelhollow, für alle, die einfach noch eine Seite ausmalen möchten.',
       'etsy.kofi':'Ko-fi Shop',
       'nav.films':'Filme',
-      'films.h2':'Edelhollow-Filme','films.lede':'Kurze Zeichentrickfilme ohne Worte aus dem Dorf. Jeder endet auf einer Ausmalseite aus den Büchern – anhalten, ausdrucken, ausmalen.','films.hiccups':'Der Schluckauf','films.hiccups.lede':'Bo hat Schluckauf. Rosa beschliesst, dass er ein Gast ist – und ein Gast wird anständig verabschiedet.','films.watch':'▶ Auf YouTube ansehen',
+      'films.h2':'Edelhollow-Filme','films.lede':'Kurze Zeichentrickfilme ohne Worte aus dem Dorf. Jeder endet auf einer Ausmalseite aus den Büchern – anhalten, ausdrucken, ausmalen.','films.hiccups':'Der Schluckauf','films.hiccups.lede':'Bo hat Schluckauf. Rosa beschliesst, dass er ein Gast ist – und ein Gast wird anständig verabschiedet.','films.watch':'▶ Auf YouTube ansehen','films.oneday':'Ein Tag in Edelhollow','films.oneday.lede':'Vom Morgen bis zum Abend im Dorf, Seite für Seite. Der Buchtrailer zu <em>Cozy Mornings in Edelhollow</em>.','etsy.pages8':'8 Seiten','etsy.pages9':'9 Seiten','etsy.bundles':'Vier Pakete aus <em>Cozy Mornings in Edelhollow</em>, insgesamt 34 Seiten, als PDF in A4 und US Letter. Auf jeder Seite versteckt sich ein Edelweiss.',
       'cast.h2':'Die Charaktere',
       'cast.lede':'In Edelhollow leben vierzehn Freunde, jeder mit seiner eigenen Ecke im Dorf und seiner eigenen Art, für die anderen da zu sein. Ausführliche Charakterprofile folgen bald.',
       'cast.download':'Charakter-Poster herunterladen (gratis PDF)',
@@ -807,7 +820,7 @@
       'etsy.lede':'Páginas sueltas y pequeños paquetes del mundo de Edelhollow, para cuando te apetezca colorear una página más.',
       'etsy.kofi':'Tienda en Ko-fi',
       'nav.films':'Películas',
-      'films.h2':'Películas de Edelhollow','films.lede':'Cortos de animación sin palabras desde el pueblo. Cada uno termina en una página para colorear de los libros: pausa, imprime y colorea.','films.hiccups':'El hipo','films.hiccups.lede':'Bo tiene hipo. Rosa decide que es un invitado, y a un invitado hay que despedirlo como es debido.','films.watch':'▶ Ver en YouTube',
+      'films.h2':'Películas de Edelhollow','films.lede':'Cortos de animación sin palabras desde el pueblo. Cada uno termina en una página para colorear de los libros: pausa, imprime y colorea.','films.hiccups':'El hipo','films.hiccups.lede':'Bo tiene hipo. Rosa decide que es un invitado, y a un invitado hay que despedirlo como es debido.','films.watch':'▶ Ver en YouTube','films.oneday':'Un día en Edelhollow','films.oneday.lede':'Del amanecer al anochecer en el pueblo, página a página. El tráiler del libro <em>Cozy Mornings in Edelhollow</em>.','etsy.pages8':'8 páginas','etsy.pages9':'9 páginas','etsy.bundles':'Cuatro paquetes de <em>Cozy Mornings in Edelhollow</em>, 34 páginas en total, en PDF A4 y carta US. En cada página se esconde una edelweiss.',
       'cast.h2':'Conoce a los personajes',
       'cast.lede':'En Edelhollow viven catorce amigos, cada uno con su rincón del pueblo y su manera de cuidar de los demás. Muy pronto tendrás los perfiles completos de cada personaje.',
       'cast.download':'Descarga el póster de los personajes (PDF gratis)',
@@ -836,7 +849,7 @@
       'etsy.lede':'Pagine singole e piccoli pacchetti dal mondo di Edelhollow, per quando hai voglia di colorare ancora una pagina.',
       'etsy.kofi':'Negozio su Ko-fi',
       'nav.films':'Film',
-      'films.h2':'I film di Edelhollow','films.lede':'Brevi cartoni animati senza parole dal villaggio. Ognuno finisce su una pagina da colorare dei libri: metti in pausa, stampa, colora.','films.hiccups':'Il singhiozzo','films.hiccups.lede':'Bo ha il singhiozzo. Rosa decide che è un ospite, e un ospite va salutato come si deve.','films.watch':'▶ Guarda su YouTube',
+      'films.h2':'I film di Edelhollow','films.lede':'Brevi cartoni animati senza parole dal villaggio. Ognuno finisce su una pagina da colorare dei libri: metti in pausa, stampa, colora.','films.hiccups':'Il singhiozzo','films.hiccups.lede':'Bo ha il singhiozzo. Rosa decide che è un ospite, e un ospite va salutato come si deve.','films.watch':'▶ Guarda su YouTube','films.oneday':'Un giorno a Edelhollow','films.oneday.lede':"Dall'alba al tramonto nel villaggio, pagina dopo pagina. Il trailer del libro <em>Cozy Mornings in Edelhollow</em>.",'etsy.pages8':'8 pagine','etsy.pages9':'9 pagine','etsy.bundles':'Quattro pacchetti da <em>Cozy Mornings in Edelhollow</em>, 34 pagine in tutto, in PDF A4 e US Letter. Su ogni pagina si nasconde una stella alpina.',
       'cast.h2':'I personaggi',
       'cast.lede':'A Edelhollow vivono quattordici amici, ognuno con il proprio angolo di villaggio e il proprio modo di prendersi cura degli altri. I profili completi dei personaggi sono in arrivo.',
       'cast.download':'Scarica il poster dei personaggi (PDF gratuito)',
@@ -865,7 +878,7 @@
       'etsy.lede':"Des pages à l'unité et de petits lots de l'univers d'Edelhollow, pour quand vous avez envie d'une page de plus à colorier.",
       'etsy.kofi':'Boutique Ko-fi',
       'nav.films':'Films',
-      'films.h2':"Les films d'Edelhollow",'films.lede':'De courts dessins animés sans paroles, venus du village. Chacun se termine sur une page à colorier tirée des livres : mettez sur pause, imprimez, coloriez.','films.hiccups':'Le hoquet','films.hiccups.lede':"Bo a le hoquet. Rosa décide que c'est un invité, et qu'un invité doit être raccompagné comme il se doit.",'films.watch':'▶ Voir sur YouTube',
+      'films.h2':"Les films d'Edelhollow",'films.lede':'De courts dessins animés sans paroles, venus du village. Chacun se termine sur une page à colorier tirée des livres : mettez sur pause, imprimez, coloriez.','films.hiccups':'Le hoquet','films.hiccups.lede':"Bo a le hoquet. Rosa décide que c'est un invité, et qu'un invité doit être raccompagné comme il se doit.",'films.watch':'▶ Voir sur YouTube','films.oneday':'Un jour à Edelhollow','films.oneday.lede':"De l'aube au crépuscule dans le village, page après page. La bande-annonce du livre <em>Cozy Mornings in Edelhollow</em>.",'etsy.pages8':'8 pages','etsy.pages9':'9 pages','etsy.bundles':"Quatre lots tirés de <em>Cozy Mornings in Edelhollow</em>, 34 pages en tout, en PDF A4 et US Letter. Un edelweiss se cache sur chaque page.",
       'cast.h2':'Les personnages',
       'cast.lede':'Quatorze amis vivent à Edelhollow, chacun avec son coin du village et sa façon de prendre soin des autres. Les portraits complets des personnages arrivent bientôt.',
       'cast.download':'Télécharger le poster des personnages (PDF gratuit)',
