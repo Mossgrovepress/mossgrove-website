@@ -198,6 +198,13 @@
   }
   main section > p.lede{color:var(--muted);margin:0 0 20px;max-width:640px;}
 
+  .free-cards{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0 26px;}
+  .free-card{flex:1 1 200px;min-width:180px;border:1px solid var(--border);border-radius:12px;background:#fff;padding:12px;text-align:center;}
+  .free-card img{width:100%;height:auto;border-radius:8px;display:block;margin-bottom:10px;}
+  .free-card h3{margin:0 0 4px;font-size:19px;}
+  .free-card p{margin:0 0 10px;font-size:15px;color:var(--muted);}
+  .free-card .btn{font-size:15px;padding:9px 16px;}
+  .free-card .tag{display:inline-block;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);font-weight:700;}
   .download-grid{
     display:flex;
     gap:32px;
@@ -341,7 +348,7 @@
         <p class="desc">Willkommen in Edelhollow, einem gemütlichen Alpendorf, in dem vierzehn tierische Freunde auf dich warten. „Gemütliche Morgen in Edelhollow" ist ein liebevoll gezeichnetes Ausmalbuch, das einen ganzen Tag in einem kleinen Schweizer Alpendorf begleitet.</p>
         <ul class="bullets">
           <li>51 warme, verspielte Szenen von Sonnenaufgang bis Sonnenuntergang.</li>
-          <li>Ein kleines Suchspiel auf jeder Seite: Findest du das winzige Edelweiß?</li>
+          <li>Ein kleines Suchspiel auf jeder Seite: Findest du das winzige Edelweiss?</li>
           <li>Vierzehn Freunde zum Liebgewinnen, jeder mit eigenem Charakter.</li>
           <li>Einseitig bedruckte Seiten. Kräftige Stifte können trotzdem durchdrücken, am besten vorher testen.</li>
         </ul>
@@ -523,8 +530,31 @@
 
   <section id="download">
     <h2 data-i18n="dl.h2">Free Edelhollow Download</h2>
-    <p class="lede" data-i18n-html="dl.lede">One page from <em>Cozy Mornings in Edelhollow</em>, yours free, so you can try the style before you buy the book.</p>
-    <div class="download-grid">
+    <p class="lede" data-i18n-html="dl.lede">Three free pages from the village: the coloured cast poster to download straight away, and two colouring pages that arrive by email when you sign up below.</p>
+    <div class="free-cards">
+      <div class="free-card">
+        <img src="img/cast_color_labeled.png" alt="Meet the Cast of Edelhollow, colour poster">
+        <span class="tag" data-i18n="free.direct">Download now</span>
+        <h3 data-i18n="free.poster">Cast poster, in colour</h3>
+        <p data-i18n="free.poster.p">All fourteen friends with their names.</p>
+        <a class="btn btn-primary" href="downloads/Edelhollow_Meet_the_Cast.pdf" download data-i18n="free.poster.btn">Download PDF</a>
+      </div>
+      <div class="free-card">
+        <img src="img/cast_list_preview.png" alt="Meet the Cast of Edelhollow, colouring page">
+        <span class="tag" data-i18n="free.email">By email</span>
+        <h3 data-i18n="free.cast">Cast colouring page</h3>
+        <p data-i18n="free.cast.p">The same fourteen friends, ready to colour.</p>
+        <a class="btn btn-primary" href="#signup" data-i18n="free.signup.btn">Sign up below</a>
+      </div>
+      <div class="free-card">
+        <img src="covers/sneak_peek_preview.jpg" alt="Evening at the picnic table, colouring page">
+        <span class="tag" data-i18n="free.email">By email</span>
+        <h3 data-i18n="free.p49">Evening at the picnic table</h3>
+        <p data-i18n-html="free.p49.p">Page 49 of <em>Cozy Mornings</em>, full size.</p>
+        <a class="btn btn-primary" href="#signup" data-i18n="free.signup.btn">Sign up below</a>
+      </div>
+    </div>
+    <div class="download-grid" id="signup">
       <figure>
         <img src="covers/sneak_peek_preview.jpg" alt="Preview of a free Edelhollow coloring page — a nighttime picnic-table scene">
         <figcaption data-i18n="dl.caption">Preview shown with a watermark — your free copy prints clean.</figcaption>
@@ -708,8 +738,7 @@
     <p class="lede" data-i18n="cast.lede">Fourteen friends live in Edelhollow, each with their own corner of the village and their own way of caring for the rest. Full character profiles are on their way.</p>
     <img src="img/cast_color_labeled.png" alt="The fourteen Edelhollow characters in color, lined up with their names" style="width:100%;border:1px solid var(--border);border-radius:12px;display:block;">
     <p style="margin-top:14px;">
-      <a class="btn btn-primary" href="downloads/Edelhollow_Meet_the_Cast.pdf" download data-i18n="cast.download">Download the cast poster (free PDF)</a>
-      <a class="btn btn-primary" href="#download" data-i18n="cast.coloring" style="margin-left:8px;">Get the cast coloring page (free PDF)</a>
+      <a class="btn btn-primary" href="#download" data-i18n="cast.free">Get the free cast pages</a>
     </p>
   </section>
 
@@ -747,16 +776,18 @@
       'books.more':'More books from Edelhollow',
       'top.welcome':'Welcome to Edelhollow', 'top.sub':'Fourteen friends, one cozy alpine village.', 'top.cta':'Get your free coloring page', 'nav.download':'Free Download', 'nav.etsy':'Print-at-Home', 'nav.cast':'Meet the Cast', 'nav.follow':'Follow',
       'hero.watch':'▶ Watch the film',
-      'dl.h2':'Free Edelhollow Download',
-      'dl.lede':'One page from <em>Cozy Mornings in Edelhollow</em>, yours free, so you can try the style before you buy the book.',
+      'dl.h2':'Free Edelhollow Pages',
+      'dl.lede':"Three free pages from the village: the coloured cast poster to download straight away, and two colouring pages that arrive by email when you sign up below.",
+      'free.direct':'Download now','free.email':'By email','free.poster':'Cast poster, in colour','free.poster.p':'All fourteen friends with their names.','free.poster.btn':'Download PDF',
+      'free.cast':'Cast colouring page','free.cast.p':'The same fourteen friends, ready to colour.','free.p49':'Evening at the picnic table','free.p49.p':'Page 49 of <em>Cozy Mornings</em>, full size.','free.signup.btn':'Sign up below','cast.free':'Get the free cast pages',
       'dl.caption':'Preview shown with a watermark — your free copy prints clean.',
-      'dl.body':"A quiet evening at the picnic table, Bernard keeping watch, Pip serving supper, a lantern lit against the dark. It's page 49 of the book, one full-size coloring page, ready to print at home. Pop in your name and email and we'll send it straight over.",
+      'dl.body':"A quiet evening at the picnic table, Bernard keeping watch, Pip serving supper, a lantern lit against the dark. It's page 49 of the book, full size and ready to print at home. Sign up once and both colouring pages, this one and the cast page, arrive in the same email.",
       'form.heading':'A Little Gift from Edelhollow',
       'form.email':'Email', 'form.name':'First Name',
       'form.consent':'Yes, I\'d like to receive occasional Edelhollow news, free printables and new book announcements. See our <a href="privacy.html" target="_blank">Privacy Policy</a>.',
       'form.consentError':'Please check the box above to continue.',
       'form.success':'Thank you! Check your inbox (and spam folder) for an email asking you to confirm your subscription.',
-      'form.button':'Get My Free Colouring Page',
+      'form.button':'Get My Free Colouring Pages',
       'form.fieldError':'Please correct the marked field(s) below.',
       'etsy.h2':'Print-at-Home Pages',
       'etsy.lede':'Single pages and small bundles from the Edelhollow world, for whenever you just want one more page to color.',
@@ -776,16 +807,18 @@
       'books.more':'Weitere Bücher aus Edelhollow',
       'top.welcome':'Willkommen in Edelhollow', 'top.sub':'Vierzehn Freunde, ein gemütliches Alpendorf.', 'top.cta':'Hol dir deine gratis Ausmalseite', 'nav.download':'Gratis-Download', 'nav.etsy':'Zum Selbstdrucken', 'nav.cast':'Die Charaktere', 'nav.follow':'Folgen',
       'hero.watch':'▶ Den Film ansehen',
-      'dl.h2':'Kostenlose Edelhollow-Ausmalseite',
-      'dl.lede':'Eine Seite aus <em>Gemütliche Morgen in Edelhollow</em>, geschenkt, damit du den Stil ausprobieren kannst, bevor du das Buch kaufst.',
+      'dl.h2':'Gratis-Seiten aus Edelhollow',
+      'dl.lede':"Drei Gratis-Seiten aus dem Dorf: das farbige Charakter-Poster zum sofortigen Herunterladen, und zwei Ausmalseiten, die per E-Mail kommen, wenn du dich unten anmeldest.",
+      'free.direct':'Jetzt herunterladen','free.email':'Per E-Mail','free.poster':'Charakter-Poster, in Farbe','free.poster.p':'Alle vierzehn Freunde mit ihren Namen.','free.poster.btn':'PDF herunterladen',
+      'free.cast':'Charaktere als Ausmalseite','free.cast.p':'Dieselben vierzehn Freunde, zum Ausmalen.','free.p49':'Abend am Picknicktisch','free.p49.p':'Seite 49 aus <em>Gemütliche Morgen</em>, in voller Grösse.','free.signup.btn':'Unten anmelden','cast.free':'Zu den Gratis-Seiten',
       'dl.caption':'Vorschau mit Wasserzeichen, deine Gratis-Seite kommt natürlich ohne.',
-      'dl.body':'Ein stiller Abend am Picknicktisch: Bernard hält Wache, Pip serviert das Abendessen, eine Laterne leuchtet in die Dunkelheit. Es ist Seite 49 des Buches, eine Ausmalseite in voller Größe, bereit zum Ausdrucken zu Hause. Trag einfach Namen und E-Mail ein und wir schicken sie dir direkt zu.',
+      'dl.body':'Ein stiller Abend am Picknicktisch: Bernard hält Wache, Pip serviert das Abendessen, eine Laterne leuchtet in die Dunkelheit. Es ist Seite 49 des Buches, in voller Grösse, bereit zum Ausdrucken zu Hause. Einmal anmelden, und beide Ausmalseiten, diese und die Charakter-Seite, kommen in derselben E-Mail.',
       'form.heading':'Ein kleines Geschenk aus Edelhollow',
       'form.email':'E-Mail', 'form.name':'Vorname',
       'form.consent':'Ja, ich möchte gelegentlich Edelhollow-Neuigkeiten, kostenlose Ausmalseiten und Ankündigungen neuer Bücher erhalten. Siehe unsere <a href="privacy.html" target="_blank">Datenschutzerklärung</a>.',
       'form.consentError':'Bitte setze zuerst das Häkchen oben.',
       'form.success':'Danke! Schau in dein Postfach (und in den Spam-Ordner): Dort wartet eine E-Mail, mit der du deine Anmeldung bestätigst.',
-      'form.button':'Meine Gratis-Ausmalseite holen',
+      'form.button':'Meine Gratis-Ausmalseiten holen',
       'form.fieldError':'Bitte korrigiere die markierten Felder.',
       'etsy.h2':'Seiten zum Selbstdrucken',
       'etsy.lede':'Einzelne Seiten und kleine Pakete aus der Welt von Edelhollow, für alle, die einfach noch eine Seite ausmalen möchten.',
@@ -805,16 +838,18 @@
       'books.more':'Más libros de Edelhollow',
       'top.welcome':'Bienvenido a Edelhollow', 'top.sub':'Catorce amigos, un acogedor pueblo alpino.', 'top.cta':'Consigue tu página para colorear gratis', 'nav.download':'Descarga gratis', 'nav.etsy':'Imprimir en casa', 'nav.cast':'Conoce a los personajes', 'nav.follow':'Síguenos',
       'hero.watch':'▶ Ver la película',
-      'dl.h2':'Descarga gratuita de Edelhollow',
-      'dl.lede':'Una página de <em>Las agradables mañanas en Edelhollow</em>, gratis, para que pruebes el estilo antes de comprar el libro.',
+      'dl.h2':'Páginas gratis de Edelhollow',
+      'dl.lede':"Tres páginas gratis del pueblo: el póster del elenco a color para descargar ahora mismo, y dos páginas para colorear que llegan por correo al apuntarte abajo.",
+      'free.direct':'Descargar ahora','free.email':'Por correo','free.poster':'Póster del elenco, a color','free.poster.p':'Los catorce amigos con sus nombres.','free.poster.btn':'Descargar PDF',
+      'free.cast':'Página del elenco para colorear','free.cast.p':'Los mismos catorce amigos, listos para colorear.','free.p49':'Tarde en la mesa de pícnic','free.p49.p':'Página 49 de <em>Las agradables mañanas</em>, a tamaño completo.','free.signup.btn':'Apúntate abajo','cast.free':'Ir a las páginas gratis',
       'dl.caption':'La vista previa lleva marca de agua; tu copia gratuita se imprime limpia.',
-      'dl.body':'Una tarde tranquila en la mesa de pícnic: Bernard vigila, Pip sirve la cena y un farolillo brilla en la oscuridad. Es la página 49 del libro, una página para colorear a tamaño completo, lista para imprimir en casa. Escribe tu nombre y tu correo y te la enviamos directamente.',
+      'dl.body':'Una tarde tranquila en la mesa de pícnic: Bernard vigila, Pip sirve la cena y un farolillo brilla en la oscuridad. Es la página 49 del libro, a tamaño completo y lista para imprimir en casa. Apúntate una vez y las dos páginas para colorear, esta y la del elenco, llegan en el mismo correo.',
       'form.heading':'Un pequeño regalo de Edelhollow',
       'form.email':'Correo electrónico', 'form.name':'Nombre',
       'form.consent':'Sí, quiero recibir de vez en cuando noticias de Edelhollow, imprimibles gratis y anuncios de nuevos libros. Consulta nuestra <a href="privacy.html" target="_blank">Política de privacidad</a>.',
       'form.consentError':'Marca la casilla de arriba para continuar.',
       'form.success':'¡Gracias! Revisa tu bandeja de entrada (y la carpeta de spam): te hemos enviado un correo para confirmar tu suscripción.',
-      'form.button':'Quiero mi página gratis',
+      'form.button':'Quiero mis páginas gratis',
       'form.fieldError':'Corrige los campos marcados.',
       'etsy.h2':'Páginas para imprimir en casa',
       'etsy.lede':'Páginas sueltas y pequeños paquetes del mundo de Edelhollow, para cuando te apetezca colorear una página más.',
@@ -834,16 +869,18 @@
       'books.more':'Altri libri da Edelhollow',
       'top.welcome':'Benvenuti a Edelhollow', 'top.sub':'Quattordici amici, un accogliente villaggio alpino.', 'top.cta':'Prendi la tua pagina da colorare gratis', 'nav.download':'Download gratuito', 'nav.etsy':'Stampa a casa', 'nav.cast':'I personaggi', 'nav.follow':'Seguici',
       'hero.watch':'▶ Guarda il film',
-      'dl.h2':'Download gratuito di Edelhollow',
-      'dl.lede':'Una pagina di <em>Le piacevoli mattine a Edelhollow</em>, in regalo, così puoi provare lo stile prima di comprare il libro.',
+      'dl.h2':'Pagine gratuite di Edelhollow',
+      'dl.lede':"Tre pagine gratuite dal villaggio: il poster del cast a colori da scaricare subito, e due pagine da colorare che arrivano via email quando ti iscrivi qui sotto.",
+      'free.direct':'Scarica ora','free.email':'Via email','free.poster':'Poster del cast, a colori','free.poster.p':'Tutti i quattordici amici con i loro nomi.','free.poster.btn':'Scarica il PDF',
+      'free.cast':'Pagina del cast da colorare','free.cast.p':'Gli stessi quattordici amici, pronti da colorare.','free.p49':'Sera al tavolo da picnic','free.p49.p':'Pagina 49 di <em>Le piacevoli mattine</em>, a grandezza naturale.','free.signup.btn':'Iscriviti qui sotto','cast.free':'Vai alle pagine gratuite',
       'dl.caption':"L'anteprima ha una filigrana; la tua copia gratuita si stampa pulita.",
-      'dl.body':'Una sera tranquilla al tavolo da picnic: Bernard fa la guardia, Pip serve la cena e una lanterna brilla nel buio. È la pagina 49 del libro, una pagina da colorare a grandezza intera, pronta da stampare a casa. Inserisci nome ed email e te la mandiamo subito.',
+      'dl.body':'Una sera tranquilla al tavolo da picnic: Bernard fa la guardia, Pip serve la cena, una lanterna brilla nel buio. È la pagina 49 del libro, a grandezza naturale, pronta da stampare a casa. Iscriviti una volta sola e le due pagine da colorare, questa e quella del cast, arrivano nella stessa email.',
       'form.heading':'Un piccolo regalo da Edelhollow',
       'form.email':'Email', 'form.name':'Nome',
       'form.consent':'Sì, voglio ricevere ogni tanto novità da Edelhollow, pagine gratuite da stampare e annunci di nuovi libri. Leggi la nostra <a href="privacy.html" target="_blank">Informativa sulla privacy</a>.',
       'form.consentError':'Spunta la casella qui sopra per continuare.',
       'form.success':"Grazie! Controlla la tua casella di posta (anche lo spam): ti abbiamo inviato un'email per confermare l'iscrizione.",
-      'form.button':'Voglio la mia pagina gratis',
+      'form.button':'Voglio le mie pagine gratuite',
       'form.fieldError':'Correggi i campi segnalati.',
       'etsy.h2':'Pagine da stampare a casa',
       'etsy.lede':'Pagine singole e piccoli pacchetti dal mondo di Edelhollow, per quando hai voglia di colorare ancora una pagina.',
@@ -863,16 +900,18 @@
       'books.more':'D\'autres livres d\'Edelhollow',
       'top.welcome':'Bienvenue à Edelhollow', 'top.sub':'Quatorze amis, un village alpin douillet.', 'top.cta':'Recevez votre coloriage gratuit', 'nav.download':'Téléchargement gratuit', 'nav.etsy':'À imprimer chez soi', 'nav.cast':'Les personnages', 'nav.follow':'Suivez-nous',
       'hero.watch':'▶ Voir le film',
-      'dl.h2':"Téléchargement gratuit d'Edelhollow",
-      'dl.lede':'Une page de <em>Matins Cosy à Edelhollow</em>, offerte, pour essayer le style avant d\'acheter le livre.',
+      'dl.h2':"Pages gratuites d'Edelhollow",
+      'dl.lede':"Trois pages gratuites du village : le poster des personnages en couleur à télécharger tout de suite, et deux pages à colorier qui arrivent par e-mail quand vous vous inscrivez ci-dessous.",
+      'free.direct':'Télécharger','free.email':'Par e-mail','free.poster':'Poster des personnages, en couleur','free.poster.p':'Les quatorze amis avec leurs noms.','free.poster.btn':'Télécharger le PDF',
+      'free.cast':'Page des personnages à colorier','free.cast.p':'Les mêmes quatorze amis, prêts à colorier.','free.p49':'Soir à la table de pique-nique','free.p49.p':'Page 49 de <em>Matins Cosy</em>, en pleine taille.','free.signup.btn':'Inscrivez-vous ci-dessous','cast.free':'Voir les pages gratuites',
       'dl.caption':"Aperçu avec filigrane ; votre exemplaire gratuit s'imprime sans.",
-      'dl.body':"Un soir paisible à la table de pique-nique : Bernard monte la garde, Pip sert le dîner, une lanterne éclaire la nuit. C'est la page 49 du livre, une page de coloriage en pleine taille, prête à imprimer chez vous. Indiquez votre prénom et votre e-mail et nous vous l'envoyons aussitôt.",
+      'dl.body':"Un soir paisible à la table de pique-nique : Bernard veille, Pip sert le souper, une lanterne brille dans la nuit. C'est la page 49 du livre, en pleine taille, prête à imprimer chez vous. Inscrivez-vous une seule fois et les deux pages à colorier, celle-ci et celle des personnages, arrivent dans le même e-mail.",
       'form.heading':"Un petit cadeau d'Edelhollow",
       'form.email':'E-mail', 'form.name':'Prénom',
       'form.consent':'Oui, je souhaite recevoir de temps en temps des nouvelles d\'Edelhollow, des coloriages gratuits et les annonces de nouveaux livres. Voir notre <a href="privacy.html" target="_blank">Politique de confidentialité</a>.',
       'form.consentError':'Cochez la case ci-dessus pour continuer.',
       'form.success':'Merci ! Vérifiez votre boîte de réception (et vos spams) : un e-mail vous demande de confirmer votre inscription.',
-      'form.button':'Recevoir ma page gratuite',
+      'form.button':'Recevoir mes pages gratuites',
       'form.fieldError':'Corrigez les champs signalés.',
       'etsy.h2':'Pages à imprimer chez soi',
       'etsy.lede':"Des pages à l'unité et de petits lots de l'univers d'Edelhollow, pour quand vous avez envie d'une page de plus à colorier.",
