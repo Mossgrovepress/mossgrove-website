@@ -26,9 +26,12 @@
   /* Amazon store flags (added 2026-09-27) */
   .amz-label{margin:0 0 8px;font-weight:700;}
   .amz-flags{display:flex;flex-wrap:wrap;gap:10px;}
-  .amz-flags a{display:inline-flex;border-radius:4px;overflow:hidden;box-shadow:0 0 0 1px var(--border),0 2px 6px rgba(0,0,0,.14);transition:transform .15s;}
+  .amz-flags a{position:relative;display:inline-flex;border-radius:4px;box-shadow:0 0 0 1px var(--border),0 2px 6px rgba(0,0,0,.14);transition:transform .15s;}
+  .amz-flags a::after{content:attr(data-label);position:absolute;left:50%;bottom:calc(100% + 7px);transform:translateX(-50%);background:#2b2b2b;color:#fff;font-size:12px;font-weight:600;line-height:1;padding:5px 8px;border-radius:5px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .12s;z-index:5;}
+  .amz-flags a:hover::after,.amz-flags a:focus-visible::after{opacity:1;}
+  .amz-aff{margin:6px 0 0;font-size:13px;font-style:italic;color:var(--muted);}
   .amz-flags a:hover,.amz-flags a:focus-visible{transform:translateY(-2px);}
-  .amz .amz-flags img{display:block;width:44px;height:33px;margin:0;border-radius:0;box-shadow:none;}
+  .amz .amz-flags img{display:block;width:44px;height:33px;margin:0;border-radius:4px;box-shadow:none;}
   .amz-note{margin:10px 0 0;font-size:14px;color:var(--muted);}
   .amz img.amz-inline{display:inline;width:20px;height:15px;margin:0;vertical-align:-2px;border-radius:2px;box-shadow:0 0 0 1px var(--border);}
   .amz-disc{font-size:13px;color:var(--muted);}
@@ -42,16 +45,17 @@
   <div class="amz" style="text-align:left;display:inline-block">
     <p class="amz-label">Available on Amazon. Choose your store:</p>
     <div class="amz-flags">
-      <a href="https://www.amazon.de/dp/B0HJHQ85NM?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" title="Amazon.de" aria-label="Amazon.de"><img src="../../img/flags/de.svg" alt="" width="44" height="33"></a>
-      <a href="https://www.amazon.com/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" title="Amazon.com" aria-label="Amazon.com"><img src="../../img/flags/us.svg" alt="" width="44" height="33"></a>
-      <a href="https://www.amazon.ca/dp/B0HJHQ85NM?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" title="Amazon.ca" aria-label="Amazon.ca"><img src="../../img/flags/ca.svg" alt="" width="44" height="33"></a>
-      <a href="https://www.amazon.co.uk/dp/B0HJHQ85NM" target="_blank" rel="sponsored noopener" title="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="../../img/flags/gb.svg" alt="" width="44" height="33"></a>
-      <a href="https://www.amazon.ie/dp/B0HJHQ85NM" target="_blank" rel="sponsored noopener" title="Amazon.ie" aria-label="Amazon.ie"><img src="../../img/flags/ie.svg" alt="" width="44" height="33"></a>
-      <a href="https://www.amazon.fr/dp/B0HJHQ85NM" target="_blank" rel="sponsored noopener" title="Amazon.fr" aria-label="Amazon.fr"><img src="../../img/flags/fr.svg" alt="" width="44" height="33"></a>
-      <a href="https://www.amazon.it/dp/B0HJHQ85NM" target="_blank" rel="sponsored noopener" title="Amazon.it" aria-label="Amazon.it"><img src="../../img/flags/it.svg" alt="" width="44" height="33"></a>
-      <a href="https://www.amazon.es/dp/B0HJHQ85NM?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" title="Amazon.es" aria-label="Amazon.es"><img src="../../img/flags/es.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.de/dp/B0HJHQ85NM?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="../../img/flags/de.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.com/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="../../img/flags/us.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.ca/dp/B0HJHQ85NM?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="../../img/flags/ca.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.co.uk/dp/B0HJHQ85NM" target="_blank" rel="sponsored noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="../../img/flags/gb.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.ie/dp/B0HJHQ85NM" target="_blank" rel="sponsored noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="../../img/flags/ie.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.fr/dp/B0HJHQ85NM" target="_blank" rel="sponsored noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="../../img/flags/fr.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.it/dp/B0HJHQ85NM" target="_blank" rel="sponsored noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="../../img/flags/it.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.es/dp/B0HJHQ85NM?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="../../img/flags/es.svg" alt="" width="44" height="33"></a>
     </div>
     <p class="amz-note">In Switzerland or Austria? Choose Germany <img class="amz-inline" src="../../img/flags/de.svg" alt=""></p>
+    <p class="amz-aff">These are affiliate links: if you buy through them, we earn a small commission at no extra cost to you.</p>
   </div>
   <p class="small amz-disc">As an Amazon Associate I earn from qualifying purchases.</p>
 </div>
