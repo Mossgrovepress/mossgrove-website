@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get Market Day in Edelhollow — Mossgrove Press</title>
+<title>Get Cozy Cottagecore — Mossgrove Press</title>
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/png" sizes="64x64" href="../../img/favicon-64.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
 <style>
-  :root{--ink:#3a2a22;--paper:#fffaf2;--slate:#2a1e18;--accent:#6b8e5a;--gold:#c98a3b;--muted:#7a6a5c;--border:#e6d6bd;}
+  :root{--ink:#33393f;--paper:#fbf9f4;--slate:#5b7285;--terracotta:#c1694f;--sage:#8a9b6e;--muted:#6f6a5f;--border:#e3ded2;}
   *{box-sizing:border-box;}
-  body{margin:0;font-family:'EB Garamond',Georgia,serif;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;}
-  h1,.btn,.amz-label{font-family:'Baloo 2',system-ui,sans-serif;font-weight:800;}
+  body{margin:0;font-family:'Poppins',system-ui,sans-serif;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;}
+  h1,.btn{font-weight:900;}
   a{color:inherit;}
   .card{max-width:480px;margin:9vh auto 0;padding:0 24px;text-align:center;}
   .card img{width:min(300px,75vw);height:auto;border-radius:10px;box-shadow:0 14px 34px rgba(51,57,63,0.18);margin-bottom:18px;}
@@ -41,25 +41,24 @@
 </head>
 <body>
 <div class="card">
-  <img src="../../covers/cb002_front.jpg" alt="Market Day in Edelhollow cover">
-  <h1>Market Day in Edelhollow</h1>
-  <p>A cozy alpine coloring book for kids and grown-ups: 50 scenes from one busy market day in the village, with a tiny edelweiss hidden on every page.</p>
+  <img src="../../covers/CP-001_cozy_cottagecore_front_600.jpg" alt="Cozy Cottagecore">
+  <h1>Cozy Cottagecore</h1>
+  <p>Fifty repeating patterns to color, from Cozy Patterns by Mossgrove Press.</p>
   <div class="amz">
     <p class="amz-label">Available on Amazon. Choose your store:</p>
     <div class="amz-flags">
-      <a href="https://www.amazon.de/dp/B0HGBSCZXH?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="../../img/flags/de.svg" alt="" width="44" height="33"></a>
-      <a href="https://www.amazon.com/dp/B0HGBSCZXH?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="../../img/flags/us.svg" alt="" width="44" height="33"></a>
-      <a href="https://www.amazon.ca/dp/B0HGBSCZXH?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="../../img/flags/ca.svg" alt="" width="44" height="33"></a>
-      <a href="https://www.amazon.co.uk/dp/B0HGBSCZXH" target="_blank" rel="sponsored noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="../../img/flags/gb.svg" alt="" width="44" height="33"></a>
-      <a href="https://www.amazon.ie/dp/B0HGBSCZXH" target="_blank" rel="sponsored noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="../../img/flags/ie.svg" alt="" width="44" height="33"></a>
-      <a href="https://www.amazon.fr/dp/B0HGBSCZXH" target="_blank" rel="sponsored noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="../../img/flags/fr.svg" alt="" width="44" height="33"></a>
-      <a href="https://www.amazon.it/dp/B0HGBSCZXH" target="_blank" rel="sponsored noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="../../img/flags/it.svg" alt="" width="44" height="33"></a>
-      <a href="https://www.amazon.es/dp/B0HGBSCZXH?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="../../img/flags/es.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.de/dp/B0HJHQ85NM?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="../../img/flags/de.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.com/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="../../img/flags/us.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.ca/dp/B0HJHQ85NM?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="../../img/flags/ca.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.co.uk/dp/B0HJHQ85NM" target="_blank" rel="sponsored noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="../../img/flags/gb.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.ie/dp/B0HJHQ85NM" target="_blank" rel="sponsored noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="../../img/flags/ie.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.fr/dp/B0HJHQ85NM" target="_blank" rel="sponsored noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="../../img/flags/fr.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.it/dp/B0HJHQ85NM" target="_blank" rel="sponsored noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="../../img/flags/it.svg" alt="" width="44" height="33"></a>
+      <a href="https://www.amazon.es/dp/B0HJHQ85NM?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="../../img/flags/es.svg" alt="" width="44" height="33"></a>
     </div>
     <p class="amz-note">In Switzerland or Austria? Choose Germany <img class="amz-inline" src="../../img/flags/de.svg" alt=""></p>
+    <p class="amz-aff">These are affiliate links: if you buy through them, we earn a small commission at no extra cost to you.</p>
   </div>
-  <p style="margin:26px 0 0;"><a class="btn" href="../../edelhollow.html#download">🎨 Free coloring pages</a></p>
-  <p class="small"><a href="../../edelhollow.html">More from Edelhollow</a></p>
   <p class="small amz-disc">As an Amazon Associate I earn from qualifying purchases.</p>
 </div>
 </body>
