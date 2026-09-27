@@ -285,6 +285,16 @@
   @media (max-width:720px){
     h1{font-size:30px;}
   }
+
+  /* Amazon store flags (added 2026-09-27) */
+  .amz-label{margin:0 0 8px;font-weight:700;}
+  .amz-flags{display:flex;flex-wrap:wrap;gap:10px;}
+  .amz-flags a{display:inline-flex;border-radius:4px;overflow:hidden;box-shadow:0 0 0 1px var(--border),0 2px 6px rgba(0,0,0,.14);transition:transform .15s;}
+  .amz-flags a:hover,.amz-flags a:focus-visible{transform:translateY(-2px);}
+  .amz .amz-flags img{display:block;width:44px;height:33px;margin:0;border-radius:0;box-shadow:none;}
+  .amz-note{margin:10px 0 0;font-size:14px;color:var(--muted);}
+  .amz img.amz-inline{display:inline;width:20px;height:15px;margin:0;vertical-align:-2px;border-radius:2px;box-shadow:0 0 0 1px var(--border);}
+  .amz-disc{font-size:13px;color:var(--muted);}
 </style>
 </head>
 <body>
@@ -336,8 +346,19 @@
           <li>Fourteen friends to fall in love with, each with a signature look and gentle personality.</li>
           <li>Single-sided pages. Heavy markers may still bleed through, so test first.</li>
         </ul>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://www.amazon.com/dp/B0HF7SYFY9" target="_blank" rel="noopener">Buy on Amazon.com</a>
+        <div class="amz">
+          <p class="amz-label">Available on Amazon. Choose your store:</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HF7SYFY9?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" title="Amazon.de" aria-label="Amazon.de"><img src="img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HF7SYFY9?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" title="Amazon.com" aria-label="Amazon.com"><img src="img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HF7SYFY9?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" title="Amazon.ca" aria-label="Amazon.ca"><img src="img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HF7SYFY9" target="_blank" rel="sponsored noopener" title="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HF7SYFY9" target="_blank" rel="sponsored noopener" title="Amazon.ie" aria-label="Amazon.ie"><img src="img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HF7SYFY9" target="_blank" rel="sponsored noopener" title="Amazon.fr" aria-label="Amazon.fr"><img src="img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HF7SYFY9" target="_blank" rel="sponsored noopener" title="Amazon.it" aria-label="Amazon.it"><img src="img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HF7SYFY9?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" title="Amazon.es" aria-label="Amazon.es"><img src="img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note">In Switzerland or Austria? Choose Germany <img class="amz-inline" src="img/flags/de.svg" alt=""></p>
         </div>
       </div>
 
@@ -353,8 +374,19 @@
           <li>Vierzehn Freunde zum Liebgewinnen, jeder mit eigenem Charakter.</li>
           <li>Einseitig bedruckte Seiten. Kräftige Stifte können trotzdem durchdrücken, am besten vorher testen.</li>
         </ul>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://www.amazon.de/dp/B0HFFRRL9L" target="_blank" rel="noopener">Bei Amazon.de kaufen</a>
+        <div class="amz">
+          <p class="amz-label">Erhältlich bei Amazon. Wähle deinen Shop:</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HFFRRL9L?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" title="Amazon.de" aria-label="Amazon.de"><img src="img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HFFRRL9L?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" title="Amazon.com" aria-label="Amazon.com"><img src="img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HFFRRL9L?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" title="Amazon.ca" aria-label="Amazon.ca"><img src="img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HFFRRL9L" target="_blank" rel="sponsored noopener" title="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HFFRRL9L" target="_blank" rel="sponsored noopener" title="Amazon.ie" aria-label="Amazon.ie"><img src="img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HFFRRL9L" target="_blank" rel="sponsored noopener" title="Amazon.fr" aria-label="Amazon.fr"><img src="img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HFFRRL9L" target="_blank" rel="sponsored noopener" title="Amazon.it" aria-label="Amazon.it"><img src="img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HFFRRL9L?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" title="Amazon.es" aria-label="Amazon.es"><img src="img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note">In der Schweiz oder in Österreich? Wähle Deutschland <img class="amz-inline" src="img/flags/de.svg" alt=""></p>
         </div>
       </div>
 
@@ -370,9 +402,19 @@
           <li>Catorce amigos para querer, cada uno con su propia personalidad.</li>
           <li>Páginas impresas a una sola cara. Los rotuladores fuertes pueden traspasar, así que pruébalos antes.</li>
         </ul>
-        <div class="cta-row">
-          <!-- TODO: replace with the live Amazon.es URL once this edition is published -->
-          <span class="btn btn-disabled">Próximamente en Amazon.es</span>
+        <div class="amz">
+          <p class="amz-label">Disponible en Amazon. Elige tu tienda:</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HG4Y8ML9?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" title="Amazon.de" aria-label="Amazon.de"><img src="img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HG4Y8ML9?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" title="Amazon.com" aria-label="Amazon.com"><img src="img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HG4Y8ML9?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" title="Amazon.ca" aria-label="Amazon.ca"><img src="img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HG4Y8ML9" target="_blank" rel="sponsored noopener" title="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HG4Y8ML9" target="_blank" rel="sponsored noopener" title="Amazon.ie" aria-label="Amazon.ie"><img src="img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HG4Y8ML9" target="_blank" rel="sponsored noopener" title="Amazon.fr" aria-label="Amazon.fr"><img src="img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HG4Y8ML9" target="_blank" rel="sponsored noopener" title="Amazon.it" aria-label="Amazon.it"><img src="img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HG4Y8ML9?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" title="Amazon.es" aria-label="Amazon.es"><img src="img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note">¿En Suiza o en Austria? Elige Alemania <img class="amz-inline" src="img/flags/de.svg" alt=""></p>
         </div>
       </div>
 
@@ -388,8 +430,19 @@
           <li>Quattordici amici da amare, ognuno con la propria personalità.</li>
           <li>Pagine stampate su un solo lato, così pennarelli e pastelli non passano.</li>
         </ul>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://www.amazon.it/dp/B0HFFS7C76" target="_blank" rel="noopener">Acquista su Amazon.it</a>
+        <div class="amz">
+          <p class="amz-label">Disponibile su Amazon. Scegli il tuo negozio:</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HFFS7C76?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" title="Amazon.de" aria-label="Amazon.de"><img src="img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HFFS7C76?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" title="Amazon.com" aria-label="Amazon.com"><img src="img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HFFS7C76?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" title="Amazon.ca" aria-label="Amazon.ca"><img src="img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HFFS7C76" target="_blank" rel="sponsored noopener" title="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HFFS7C76" target="_blank" rel="sponsored noopener" title="Amazon.ie" aria-label="Amazon.ie"><img src="img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HFFS7C76" target="_blank" rel="sponsored noopener" title="Amazon.fr" aria-label="Amazon.fr"><img src="img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HFFS7C76" target="_blank" rel="sponsored noopener" title="Amazon.it" aria-label="Amazon.it"><img src="img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HFFS7C76?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" title="Amazon.es" aria-label="Amazon.es"><img src="img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note">In Svizzera o in Austria? Scegli la Germania <img class="amz-inline" src="img/flags/de.svg" alt=""></p>
         </div>
       </div>
 
@@ -405,8 +458,19 @@
           <li>Quatorze amis attachants, chacun avec sa personnalité bien à lui.</li>
           <li>Pages imprimées d'un seul côté. Les feutres forts peuvent quand même traverser, mieux vaut tester avant.</li>
         </ul>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://www.amazon.fr/dp/B0HFFWNQFX" target="_blank" rel="noopener">Acheter sur Amazon.fr</a>
+        <div class="amz">
+          <p class="amz-label">Disponible sur Amazon. Choisissez votre boutique :</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HFFWNQFX?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" title="Amazon.de" aria-label="Amazon.de"><img src="img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HFFWNQFX?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" title="Amazon.com" aria-label="Amazon.com"><img src="img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HFFWNQFX?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" title="Amazon.ca" aria-label="Amazon.ca"><img src="img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HFFWNQFX" target="_blank" rel="sponsored noopener" title="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HFFWNQFX" target="_blank" rel="sponsored noopener" title="Amazon.ie" aria-label="Amazon.ie"><img src="img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HFFWNQFX" target="_blank" rel="sponsored noopener" title="Amazon.fr" aria-label="Amazon.fr"><img src="img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HFFWNQFX" target="_blank" rel="sponsored noopener" title="Amazon.it" aria-label="Amazon.it"><img src="img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HFFWNQFX?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" title="Amazon.es" aria-label="Amazon.es"><img src="img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note">En Suisse ou en Autriche ? Choisissez l'Allemagne <img class="amz-inline" src="img/flags/de.svg" alt=""></p>
         </div>
       </div>
 
@@ -435,8 +499,19 @@
           <li>The same fourteen friends from Book One, out among the market stalls.</li>
           <li>Single-sided pages. Heavy markers may still bleed through, so test first.</li>
         </ul>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://www.amazon.com/dp/B0HGBSCZXH" target="_blank" rel="noopener">Buy on Amazon.com</a>
+        <div class="amz">
+          <p class="amz-label">Available on Amazon. Choose your store:</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HGBSCZXH?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" title="Amazon.de" aria-label="Amazon.de"><img src="img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HGBSCZXH?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" title="Amazon.com" aria-label="Amazon.com"><img src="img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HGBSCZXH?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" title="Amazon.ca" aria-label="Amazon.ca"><img src="img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HGBSCZXH" target="_blank" rel="sponsored noopener" title="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HGBSCZXH" target="_blank" rel="sponsored noopener" title="Amazon.ie" aria-label="Amazon.ie"><img src="img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HGBSCZXH" target="_blank" rel="sponsored noopener" title="Amazon.fr" aria-label="Amazon.fr"><img src="img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HGBSCZXH" target="_blank" rel="sponsored noopener" title="Amazon.it" aria-label="Amazon.it"><img src="img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HGBSCZXH?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" title="Amazon.es" aria-label="Amazon.es"><img src="img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note">In Switzerland or Austria? Choose Germany <img class="amz-inline" src="img/flags/de.svg" alt=""></p>
         </div>
       </div>
 
@@ -452,9 +527,19 @@
           <li>Vierzehn Freunde zum Liebgewinnen, jeder mit eigenem Charakter.</li>
           <li>Einseitig bedruckte Seiten. Kräftige Stifte können trotzdem durchdrücken, am besten vorher testen.</li>
         </ul>
-        <div class="cta-row">
-          <!-- TODO: replace with the live Amazon.de URL once the German edition is published (SHIP-7) -->
-          <span class="btn btn-disabled">Bald bei Amazon.de</span>
+        <div class="amz">
+          <p class="amz-label">Erhältlich bei Amazon. Wähle deinen Shop:</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HHX73DSJ?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" title="Amazon.de" aria-label="Amazon.de"><img src="img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HHX73DSJ?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" title="Amazon.com" aria-label="Amazon.com"><img src="img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HHX73DSJ?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" title="Amazon.ca" aria-label="Amazon.ca"><img src="img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HHX73DSJ" target="_blank" rel="sponsored noopener" title="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HHX73DSJ" target="_blank" rel="sponsored noopener" title="Amazon.ie" aria-label="Amazon.ie"><img src="img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HHX73DSJ" target="_blank" rel="sponsored noopener" title="Amazon.fr" aria-label="Amazon.fr"><img src="img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HHX73DSJ" target="_blank" rel="sponsored noopener" title="Amazon.it" aria-label="Amazon.it"><img src="img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HHX73DSJ?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" title="Amazon.es" aria-label="Amazon.es"><img src="img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note">In der Schweiz oder in Österreich? Wähle Deutschland <img class="amz-inline" src="img/flags/de.svg" alt=""></p>
         </div>
       </div>
 
@@ -759,7 +844,7 @@
 <footer>
   <div class="wrap" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
     <a href="index.html"><img src="img/mossgrove_crest_web.png" alt="Mossgrove Press crest" style="width:110px;height:auto;"></a>
-    <span>Edelhollow is a <a href="index.html">Mossgrove Press</a> world &middot; &copy; 2026 Mossgrove Press &middot; <a href="mailto:hello@mossgrovepress.com">hello@mossgrovepress.com</a></span>
+    <span>Edelhollow is a <a href="index.html">Mossgrove Press</a> world &middot; &copy; 2026 Mossgrove Press &middot; <a href="mailto:hello@mossgrovepress.com">hello@mossgrovepress.com</a><br><span class="amz-disc" data-i18n="aff.disc">As an Amazon Associate I earn from qualifying purchases.</span></span>
   </div>
 </footer>
 
@@ -779,6 +864,7 @@
       'hero.watch':'▶ Watch the film',
       'dl.h2':'Free Edelhollow Pages',
       'dl.lede':"Three free pages from the village: the coloured cast poster to download straight away, and two colouring pages that arrive by email when you sign up below.",
+      'aff.disc':'As an Amazon Associate I earn from qualifying purchases.',
       'free.direct':'Download now','free.email':'By email','free.poster':'Cast poster, in colour','free.poster.p':'All fourteen friends with their names.','free.poster.btn':'Download PDF',
       'free.cast':'Cast colouring page','free.cast.p':'The same fourteen friends, ready to colour.','free.p49':'Evening at the picnic table','free.p49.p':'Page 49 of <em>Cozy Mornings</em>, full size.','free.signup.btn':'Sign up below','cast.free':'Get the free cast pages',
       'dl.caption':'Preview shown with a watermark — your free copy prints clean.',
@@ -810,6 +896,7 @@
       'hero.watch':'▶ Den Film ansehen',
       'dl.h2':'Gratis-Seiten aus Edelhollow',
       'dl.lede':"Drei Gratis-Seiten aus dem Dorf: das farbige Charakter-Poster zum sofortigen Herunterladen, und zwei Ausmalseiten, die per E-Mail kommen, wenn du dich unten anmeldest.",
+      'aff.disc':'Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.',
       'free.direct':'Jetzt herunterladen','free.email':'Per E-Mail','free.poster':'Charakter-Poster, in Farbe','free.poster.p':'Alle vierzehn Freunde mit ihren Namen.','free.poster.btn':'PDF herunterladen',
       'free.cast':'Charaktere als Ausmalseite','free.cast.p':'Dieselben vierzehn Freunde, zum Ausmalen.','free.p49':'Abend am Picknicktisch','free.p49.p':'Seite 49 aus <em>Gemütliche Morgen</em>, in voller Grösse.','free.signup.btn':'Unten anmelden','cast.free':'Zu den Gratis-Seiten',
       'dl.caption':'Vorschau mit Wasserzeichen, deine Gratis-Seite kommt natürlich ohne.',
@@ -841,6 +928,7 @@
       'hero.watch':'▶ Ver la película',
       'dl.h2':'Páginas gratis de Edelhollow',
       'dl.lede':"Tres páginas gratis del pueblo: el póster del elenco a color para descargar ahora mismo, y dos páginas para colorear que llegan por correo al apuntarte abajo.",
+      'aff.disc':'Como Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables.',
       'free.direct':'Descargar ahora','free.email':'Por correo','free.poster':'Póster del elenco, a color','free.poster.p':'Los catorce amigos con sus nombres.','free.poster.btn':'Descargar PDF',
       'free.cast':'Página del elenco para colorear','free.cast.p':'Los mismos catorce amigos, listos para colorear.','free.p49':'Tarde en la mesa de pícnic','free.p49.p':'Página 49 de <em>Las agradables mañanas</em>, a tamaño completo.','free.signup.btn':'Apúntate abajo','cast.free':'Ir a las páginas gratis',
       'dl.caption':'La vista previa lleva marca de agua; tu copia gratuita se imprime limpia.',
@@ -872,6 +960,7 @@
       'hero.watch':'▶ Guarda il film',
       'dl.h2':'Pagine gratuite di Edelhollow',
       'dl.lede':"Tre pagine gratuite dal villaggio: il poster del cast a colori da scaricare subito, e due pagine da colorare che arrivano via email quando ti iscrivi qui sotto.",
+      'aff.disc':'In qualità di Affiliato Amazon, ricevo un guadagno dagli acquisti idonei.',
       'free.direct':'Scarica ora','free.email':'Via email','free.poster':'Poster del cast, a colori','free.poster.p':'Tutti i quattordici amici con i loro nomi.','free.poster.btn':'Scarica il PDF',
       'free.cast':'Pagina del cast da colorare','free.cast.p':'Gli stessi quattordici amici, pronti da colorare.','free.p49':'Sera al tavolo da picnic','free.p49.p':'Pagina 49 di <em>Le piacevoli mattine</em>, a grandezza naturale.','free.signup.btn':'Iscriviti qui sotto','cast.free':'Vai alle pagine gratuite',
       'dl.caption':"L'anteprima ha una filigrana; la tua copia gratuita si stampa pulita.",
@@ -903,6 +992,7 @@
       'hero.watch':'▶ Voir le film',
       'dl.h2':"Pages gratuites d'Edelhollow",
       'dl.lede':"Trois pages gratuites du village : le poster des personnages en couleur à télécharger tout de suite, et deux pages à colorier qui arrivent par e-mail quand vous vous inscrivez ci-dessous.",
+      'aff.disc':'En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.',
       'free.direct':'Télécharger','free.email':'Par e-mail','free.poster':'Poster des personnages, en couleur','free.poster.p':'Les quatorze amis avec leurs noms.','free.poster.btn':'Télécharger le PDF',
       'free.cast':'Page des personnages à colorier','free.cast.p':'Les mêmes quatorze amis, prêts à colorier.','free.p49':'Soir à la table de pique-nique','free.p49.p':'Page 49 de <em>Matins Cosy</em>, en pleine taille.','free.signup.btn':'Inscrivez-vous ci-dessous','cast.free':'Voir les pages gratuites',
       'dl.caption':"Aperçu avec filigrane ; votre exemplaire gratuit s'imprime sans.",
