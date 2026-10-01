@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cozy Patterns — a Mossgrove Press world</title>
-<meta name="description" content="Cozy Patterns — full-page pattern coloring books from Mossgrove Press, starting with Cozy Cottagecore.">
+<title>Cozy Patterns | a Mossgrove Press world</title>
+<meta name="description" content="Cozy Patterns: full-page pattern coloring books from Mossgrove Press, starting with Cozy Cottagecore.">
 <link rel="icon" type="image/png" sizes="64x64" href="../img/favicon-64.png">
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
   .site-nav a{color:var(--muted);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;}
   .site-nav a:hover{color:var(--ink);border-color:var(--terracotta);}
 
-  main{padding:48px 0 20px;}
+  main.wrap{padding:48px 24px 44px;}
   .hero{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start;}
   .hero-cover{flex:0 1 320px;min-width:240px;}
   .hero-cover img{width:100%;border-radius:10px;box-shadow:0 14px 34px rgba(51,57,63,0.18);display:block;}
@@ -87,6 +87,14 @@
   .amz-note{margin:10px 0 0;font-size:14px;color:var(--muted);}
   .amz img.amz-inline{display:inline;width:20px;height:15px;margin:0;vertical-align:-2px;border-radius:2px;box-shadow:0 0 0 1px var(--border);}
   .amz-disc{font-size:13px;color:var(--muted);}
+
+  /* language switch (added 2026-10-01) */
+  .lang-switch{display:flex;gap:6px;flex-wrap:wrap;}
+  .lang-btn{border:1px solid var(--border);background:var(--paper);color:var(--muted);padding:6px 12px;border-radius:999px;font:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:all .15s ease;}
+  .lang-btn:hover{color:var(--ink);border-color:var(--ink);}
+  .lang-btn.active{background:var(--ink);border-color:var(--ink);color:var(--paper);}
+  .lang-note{font-size:14px;font-style:italic;color:var(--muted);}
+  .lang-note:empty{display:none;}
 </style>
 </head>
 <body>
@@ -98,41 +106,49 @@
       Mossgrove Press
     </a>
     <nav class="site-nav">
-      <a href="../index.html#worlds">Our Worlds</a>
-      <a href="thanks/en/">Follow &amp; Reviews</a>
-      <a href="../index.html#contact">Contact</a>
+      <a href="../index.html#worlds" data-i18n="nav.worlds">Our Worlds</a>
+      <a href="thanks/en/" data-i18n="nav.follow">Follow &amp; Reviews</a>
+      <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
     </nav>
+    <div class="lang-switch" id="langSwitch" aria-label="Language">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="it">IT</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+    </div>
   </div>
 </header>
 
 <main class="wrap">
   <div class="hero">
     <div class="hero-cover">
-      <img src="../covers/CP-001_cozy_cottagecore_front.jpg" alt="Cozy Cottagecore — Cozy Patterns Book 1 cover">
+      <img src="../covers/CP-001_cozy_cottagecore_front.jpg" alt="Cozy Cottagecore, Cozy Patterns Book 1 cover">
     </div>
     <div class="hero-content">
-      <p class="kicker">A Mossgrove Press world</p>
+      <p class="kicker" data-i18n="kicker">A Mossgrove Press world</p>
       <h1>Cozy Patterns</h1>
-      <p class="lede">Full-page patterns to color, one cozy world of motifs at a time.</p>
-      <p>Every Cozy Patterns book is black line on white, no frame, art running edge to edge &mdash; fifty patterns that are calm enough for a crayon and detailed enough for an evening with fine-liners, for grown-ups and children coloring the same book differently every time.</p>
-      <a class="badge" style="text-decoration:none;" href="#book-one">Get it on Amazon</a>
+      <p class="lede" data-i18n="lede">Full-page patterns to color, one cozy world of motifs at a time.</p>
+      <p data-i18n="hero.p">Every Cozy Patterns book is black line on white, no frame, art running edge to edge. Fifty patterns that are calm enough for a crayon and detailed enough for an evening with fine-liners, for grown-ups and children coloring the same book differently every time.</p>
+      <a class="badge" style="text-decoration:none;" href="#book-one" data-i18n="badge">Get it on Amazon</a>
     </div>
   </div>
 </main>
 
 <section id="book-one">
   <div class="wrap">
-    <h2>Book One</h2>
+    <h2 data-i18n="book.h2">Book One</h2>
     <div class="book-card">
       <img src="../covers/CP-001_cozy_cottagecore_front.jpg" alt="Cozy Cottagecore cover">
       <div class="book-copy">
         <h3>Cozy Patterns: Cottagecore</h3>
-        <p class="subtitle">50 Patterns to Color, for Grown-Ups and Kids</p>
-        <p class="series">Cozy Patterns, Book 1</p>
-        <p>Fifty patterns of a cottagecore world: mushrooms and toadstools, honeybees and skeps, jam jars, quilts, socks on the line, sleeping bunnies in teacups, and cats on the rooftops among them &mdash; each pattern on its own page with a blank back, so your colors stay on their page.</p>
-        <p class="motif-list">Mushrooms &middot; honey &middot; jam jars &middot; quilts &middot; teacups &middot; bunnies &middot; rooftop cats &middot; and more</p>
+        <p class="subtitle" data-i18n="book.sub">50 Patterns to Color, for Grown-Ups and Kids</p>
+        <p class="series" data-i18n="book.series">Cozy Patterns, Book 1</p>
+        <p data-i18n="book.p">Fifty patterns of a cottagecore world: mushrooms and toadstools, honeybees and skeps, jam jars, quilts, socks on the line, sleeping bunnies in teacups, and cats on the rooftops among them. Each pattern sits on its own page with a blank back, so your colors stay on their page.</p>
+        <p class="motif-list" data-i18n="motifs">Mushrooms &middot; honey &middot; jam jars &middot; quilts &middot; teacups &middot; bunnies &middot; rooftop cats &middot; and more</p>
+        <p class="lang-note" data-i18n="note"></p>
         <div class="amz">
-          <p class="amz-label">Available on Amazon. Choose your store:</p>
+          <p class="amz-label" data-i18n="amz.label">Available on Amazon. Choose your store:</p>
           <div class="amz-flags">
             <a href="https://www.amazon.de/dp/B0HJHQ85NM?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="../img/flags/de.svg" alt="" width="44" height="33"></a>
             <a href="https://www.amazon.com/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="../img/flags/us.svg" alt="" width="44" height="33"></a>
@@ -143,9 +159,9 @@
             <a href="https://www.amazon.it/dp/B0HJHQ85NM" target="_blank" rel="sponsored noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="../img/flags/it.svg" alt="" width="44" height="33"></a>
             <a href="https://www.amazon.es/dp/B0HJHQ85NM?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="../img/flags/es.svg" alt="" width="44" height="33"></a>
           </div>
-          <p class="amz-note">In Switzerland or Austria? Choose Germany <img class="amz-inline" src="../img/flags/de.svg" alt=""></p>
+          <p class="amz-note"><span data-i18n="amz.note">In Switzerland or Austria? Choose Germany</span> <img class="amz-inline" src="../img/flags/de.svg" alt=""></p>
         </div>
-        <p style="margin-top:18px;"><a class="btn btn-ghost" href="thanks/en/">Leave a review &amp; follow along</a></p>
+        <p style="margin-top:18px;"><a class="btn btn-ghost" href="thanks/en/" data-i18n="review">Leave a review &amp; follow along</a></p>
       </div>
     </div>
   </div>
@@ -153,14 +169,144 @@
 
 <section id="about">
   <div class="wrap">
-    <h2>About the line</h2>
-    <p>Cozy Patterns is a separate world from Edelhollow &mdash; its own line of pattern coloring books, starting with Cottagecore and followed by new motif worlds over time. Made in Switzerland, like every Mossgrove Press book.</p>
+    <h2 data-i18n="about.h2">About the line</h2>
+    <p data-i18n="about.p">Cozy Patterns is a separate world from Edelhollow, with its own line of pattern coloring books. It starts with Cottagecore, and new motif worlds will follow over time. Made in Switzerland, like every Mossgrove Press book.</p>
   </div>
 </section>
 
 <footer>
-  <a href="../index.html">Back to Mossgrove Press</a> &middot; &copy; 2026 Mossgrove Press<br><span class="amz-disc">As an Amazon Associate I earn from qualifying purchases.</span>
+  <a href="../index.html" data-i18n="back">Back to Mossgrove Press</a> &middot; &copy; 2026 Mossgrove Press<br><span class="amz-disc" data-i18n="aff.disc">As an Amazon Associate I earn from qualifying purchases.</span>
 </footer>
+
+<script>
+(function(){
+  var I18N={
+ "en": {
+  "nav.worlds": "Our Worlds",
+  "nav.contact": "Contact",
+  "kicker": "A Mossgrove Press world",
+  "book.h2": "Book One",
+  "back": "Back to Mossgrove Press",
+  "nav.follow": "Follow &amp; Reviews",
+  "lede": "Full-page patterns to color, one cozy world of motifs at a time.",
+  "hero.p": "Every Cozy Patterns book is black line on white, no frame, art running edge to edge. Fifty patterns that are calm enough for a crayon and detailed enough for an evening with fine-liners, for grown-ups and children coloring the same book differently every time.",
+  "badge": "Get it on Amazon",
+  "book.sub": "50 Patterns to Color, for Grown-Ups and Kids",
+  "book.series": "Cozy Patterns, Book 1",
+  "book.p": "Fifty patterns of a cottagecore world: mushrooms and toadstools, honeybees and skeps, jam jars, quilts, socks on the line, sleeping bunnies in teacups, and cats on the rooftops among them. Each pattern sits on its own page with a blank back, so your colors stay on their page.",
+  "motifs": "Mushrooms &middot; honey &middot; jam jars &middot; quilts &middot; teacups &middot; bunnies &middot; rooftop cats &middot; and more",
+  "amz.label": "Available on Amazon. Choose your store:",
+  "amz.note": "In Switzerland or Austria? Choose Germany",
+  "review": "Leave a review &amp; follow along",
+  "note": "",
+  "about.h2": "About the line",
+  "about.p": "Cozy Patterns is a separate world from Edelhollow, with its own line of pattern coloring books. It starts with Cottagecore, and new motif worlds will follow over time. Made in Switzerland, like every Mossgrove Press book.",
+  "aff.disc": "As an Amazon Associate I earn from qualifying purchases."
+ },
+ "de": {
+  "nav.worlds": "Unsere Welten",
+  "nav.contact": "Kontakt",
+  "kicker": "Eine Welt von Mossgrove Press",
+  "book.h2": "Buch eins",
+  "back": "Zurück zu Mossgrove Press",
+  "nav.follow": "Folgen &amp; Rezensionen",
+  "lede": "Ganzseitige Muster zum Ausmalen, eine gemütliche Motivwelt nach der anderen.",
+  "hero.p": "Jedes Buch der Reihe Cozy Patterns ist schwarze Linie auf Weiss, ohne Rahmen, das Motiv läuft bis an den Rand. Fünfzig Muster, ruhig genug für Wachsmalstifte und detailreich genug für einen Abend mit Finelinern. Für Erwachsene und Kinder, die dasselbe Buch jedes Mal anders ausmalen.",
+  "badge": "Jetzt bei Amazon",
+  "book.sub": "50 Muster zum Ausmalen, für Erwachsene und Kinder",
+  "book.series": "Cozy Patterns, Band 1",
+  "book.p": "Fünfzig Muster aus der Welt des Cottagecore, darunter Pilze, Honigbienen und Bienenkörbe, Konfitürengläser, Quilts, Socken an der Leine, schlafende Häschen in Teetassen und Katzen auf den Dächern. Jedes Muster steht auf einer eigenen Seite mit leerer Rückseite, so bleiben deine Farben auf ihrer Seite.",
+  "motifs": "Pilze &middot; Honig &middot; Konfitürengläser &middot; Quilts &middot; Teetassen &middot; Häschen &middot; Katzen auf den Dächern &middot; und mehr",
+  "amz.label": "Erhältlich bei Amazon. Wähle deinen Shop:",
+  "amz.note": "In der Schweiz oder in Österreich? Wähle Deutschland",
+  "review": "Rezension schreiben &amp; folgen",
+  "note": "Das Buch selbst ist auf Englisch. Es enthält kaum Text, zum Ausmalen braucht es keine Übersetzung.",
+  "about.h2": "Über die Reihe",
+  "about.p": "Cozy Patterns ist eine eigene Welt neben Edelhollow, mit einer eigenen Reihe von Malbüchern voller Muster. Sie beginnt mit Cottagecore, weitere Motivwelten folgen mit der Zeit. Gemacht in der Schweiz, wie jedes Buch von Mossgrove Press.",
+  "aff.disc": "Als Amazon-Partner verdiene ich an qualifizierten Verkäufen."
+ },
+ "es": {
+  "nav.worlds": "Nuestros mundos",
+  "nav.contact": "Contacto",
+  "kicker": "Un mundo de Mossgrove Press",
+  "book.h2": "Libro uno",
+  "back": "Volver a Mossgrove Press",
+  "nav.follow": "Seguir y reseñas",
+  "lede": "Patrones a página completa para colorear, un mundo acogedor de motivos cada vez.",
+  "hero.p": "Cada libro de Cozy Patterns es línea negra sobre blanco, sin marco, con el dibujo de borde a borde. Cincuenta patrones lo bastante tranquilos para una cera y lo bastante detallados para una tarde con rotuladores finos. Para mayores y niños que colorean el mismo libro de forma distinta cada vez.",
+  "badge": "Consíguelo en Amazon",
+  "book.sub": "50 patrones para colorear, para mayores y niños",
+  "book.series": "Cozy Patterns, libro 1",
+  "book.p": "Cincuenta patrones de un mundo cottagecore, entre ellos setas, abejas y colmenas, tarros de mermelada, colchas, calcetines en el tendedero, conejitos dormidos en tazas de té y gatos en los tejados. Cada patrón ocupa su propia página con el reverso en blanco, así tus colores se quedan en su página.",
+  "motifs": "Setas &middot; miel &middot; tarros de mermelada &middot; colchas &middot; tazas de té &middot; conejitos &middot; gatos en los tejados &middot; y más",
+  "amz.label": "Disponible en Amazon. Elige tu tienda:",
+  "amz.note": "¿En Suiza o en Austria? Elige Alemania",
+  "review": "Deja una reseña y síguenos",
+  "note": "El libro está en inglés. Casi no tiene texto, y para colorear no hace falta traducción.",
+  "about.h2": "Sobre la colección",
+  "about.p": "Cozy Patterns es un mundo aparte de Edelhollow, con su propia colección de libros de patrones para colorear. Empieza con Cottagecore y con el tiempo llegarán nuevos mundos de motivos. Hecho en Suiza, como todos los libros de Mossgrove Press.",
+  "aff.disc": "Como Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables."
+ },
+ "it": {
+  "nav.worlds": "I nostri mondi",
+  "nav.contact": "Contatti",
+  "kicker": "Un mondo di Mossgrove Press",
+  "book.h2": "Libro uno",
+  "back": "Torna a Mossgrove Press",
+  "nav.follow": "Seguici e recensioni",
+  "lede": "Motivi a tutta pagina da colorare, un mondo accogliente alla volta.",
+  "hero.p": "Ogni libro Cozy Patterns è linea nera su bianco, senza cornice, con il disegno che arriva fino al bordo. Cinquanta motivi abbastanza tranquilli per un pastello a cera e abbastanza ricchi di dettagli per una serata con i pennarelli a punta fine. Per grandi e bambini che colorano lo stesso libro ogni volta in modo diverso.",
+  "badge": "Acquistalo su Amazon",
+  "book.sub": "50 motivi da colorare, per grandi e bambini",
+  "book.series": "Cozy Patterns, libro 1",
+  "book.p": "Cinquanta motivi di un mondo cottagecore, tra cui funghi, api e alveari, vasetti di marmellata, trapunte, calzini stesi, coniglietti addormentati nelle tazze da tè e gatti sui tetti. Ogni motivo ha la sua pagina con il retro bianco, così i tuoi colori restano al loro posto.",
+  "motifs": "Funghi &middot; miele &middot; vasetti di marmellata &middot; trapunte &middot; tazze da tè &middot; coniglietti &middot; gatti sui tetti &middot; e altro ancora",
+  "amz.label": "Disponibile su Amazon. Scegli il tuo negozio:",
+  "amz.note": "In Svizzera o in Austria? Scegli la Germania",
+  "review": "Lascia una recensione e seguici",
+  "note": "Il libro è in inglese. Non contiene quasi testo, e per colorare non serve traduzione.",
+  "about.h2": "La collana",
+  "about.p": "Cozy Patterns è un mondo a parte rispetto a Edelhollow, con una sua collana di libri di motivi da colorare. Si parte con Cottagecore e con il tempo arriveranno nuovi mondi di motivi. Realizzato in Svizzera, come ogni libro di Mossgrove Press.",
+  "aff.disc": "In qualità di Affiliato Amazon, ricevo un guadagno dagli acquisti idonei."
+ },
+ "fr": {
+  "nav.worlds": "Nos univers",
+  "nav.contact": "Contact",
+  "kicker": "Un univers de Mossgrove Press",
+  "book.h2": "Premier livre",
+  "back": "Retour à Mossgrove Press",
+  "nav.follow": "Suivre et avis",
+  "lede": "Des motifs pleine page à colorier, un univers douillet à la fois.",
+  "hero.p": "Chaque livre Cozy Patterns est en trait noir sur blanc, sans cadre, avec un dessin qui va jusqu'au bord. Cinquante motifs assez calmes pour un crayon de cire et assez détaillés pour une soirée aux feutres fins. Pour les grands et les enfants, qui colorient le même livre différemment à chaque fois.",
+  "badge": "Disponible sur Amazon",
+  "book.sub": "50 motifs à colorier, pour petits et grands",
+  "book.series": "Cozy Patterns, tome 1",
+  "book.p": "Cinquante motifs d'un univers cottagecore, avec des champignons, des abeilles et des ruches, des pots de confiture, des courtepointes, des chaussettes sur la corde à linge, des lapins endormis dans des tasses à thé et des chats sur les toits. Chaque motif a sa propre page avec un verso blanc, pour que vos couleurs restent à leur place.",
+  "motifs": "Champignons &middot; miel &middot; pots de confiture &middot; courtepointes &middot; tasses à thé &middot; lapins &middot; chats sur les toits &middot; et plus encore",
+  "amz.label": "Disponible sur Amazon. Choisissez votre boutique :",
+  "amz.note": "En Suisse ou en Autriche ? Choisissez l'Allemagne",
+  "review": "Laisser un avis et nous suivre",
+  "note": "Le livre est en anglais. Il contient très peu de texte, et le coloriage se passe de traduction.",
+  "about.h2": "À propos de la collection",
+  "about.p": "Cozy Patterns est un univers à part d'Edelhollow, avec sa propre collection de livres de motifs à colorier. Elle commence avec Cottagecore, et de nouveaux univers de motifs suivront. Fabriqué en Suisse, comme tous les livres de Mossgrove Press.",
+  "aff.disc": "En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises."
+ }
+};
+  var btns=document.querySelectorAll('.lang-btn');
+  function apply(l){
+    if(!I18N[l]) l='en';
+    var t=I18N[l];
+    document.querySelectorAll('[data-i18n]').forEach(function(e){var v=t[e.getAttribute('data-i18n')];if(v!==undefined)e.innerHTML=v;});
+    btns.forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
+    document.documentElement.lang=l;
+    try{localStorage.setItem('mp_lang',l);}catch(e){}
+  }
+  var l=null;
+  try{l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('mp_lang');}catch(e){}
+  if(l&&l!=='en') apply(l);
+  btns.forEach(function(b){b.addEventListener('click',function(){apply(b.dataset.lang);});});
+})();
+</script>
 
 </body>
 </html>
