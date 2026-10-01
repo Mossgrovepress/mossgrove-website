@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edelhollow — a Mossgrove Press world</title>
+<meta name="description" content="Edelhollow — a cozy Swiss-alpine village of fourteen animal friends. Coloring books, free pages, and the whole cast, from Mossgrove Press.">
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#3a2a22;
+    --cream:#f8e9d5;
+    --paper:#fffaf2;
+    --accent:#6b8e5a;
+    --gold:#c98a3b;
+    --muted:#7a6a5c;
+    --border:#e6d6bd;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'EB Garamond', Georgia, serif;
+    background:var(--paper);
+    color:var(--ink);
+    font-size:19px;
+    line-height:1.6;
+  }
+  h1,h2,h3,.wordmark,.lang-btn,.btn{
+    font-family:'Baloo 2', system-ui, sans-serif;
+  }
+  a{color:inherit;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+
+  header{
+    padding:28px 0 18px;
+    border-bottom:1px solid var(--border);
+  }
+  .header-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  .site-nav{
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    font-size:14px;
+  }
+  .site-nav a{
+    color:var(--muted);
+    text-decoration:none;
+    padding:4px 0;
+    border-bottom:2px solid transparent;
+  }
+  .site-nav a:hover{color:var(--ink);border-color:var(--gold);}
+  .wordmark{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:800;
+    font-size:22px;
+    letter-spacing:0.5px;
+    color:var(--ink);
+    text-decoration:none;
+  }
+  .wordmark img{width:28px;height:28px;}
+
+  .lang-switch{
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+  }
+  .lang-btn{
+    border:1px solid var(--border);
+    background:var(--paper);
+    color:var(--muted);
+    padding:6px 12px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .lang-btn:hover{border-color:var(--gold);color:var(--ink);}
+  .lang-btn.active{
+    background:var(--ink);
+    border-color:var(--ink);
+    color:var(--cream);
+  }
+
+  main{padding:48px 0 20px;}
+
+  .hero{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:40px;
+    align-items:flex-start;
+  }
+  .hero-content{
+    flex:1 1 420px;
+    min-width:300px;
+  }
+  .hero-cover{
+    flex:0 1 340px;
+    min-width:260px;
+  }
+  #more-books{margin-top:58px;}
+  .book-2{
+    margin-top:56px;
+    padding-top:48px;
+    border-top:1px solid var(--border);
+  }
+  .hero-cover img{
+    width:100%;
+    border-radius:14px;
+    box-shadow:0 18px 40px rgba(58,42,34,0.18);
+    display:block;
+  }
+  .kicker{
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:13px;
+    color:var(--accent);
+    font-weight:700;
+    font-family:'Baloo 2',sans-serif;
+    margin-bottom:10px;
+  }
+  h1{
+    font-size:38px;
+    line-height:1.15;
+    margin:0 0 6px;
+    color:var(--ink);
+  }
+  .subtitle{
+    font-style:italic;
+    color:var(--muted);
+    font-size:19px;
+    margin:0 0 20px;
+  }
+  .desc{margin:0 0 22px;}
+  .bullets{list-style:none;margin:0 0 28px;padding:0;}
+  .bullets li{
+    position:relative;
+    padding-left:26px;
+    margin-bottom:10px;
+    font-size:17px;
+  }
+  .bullets li::before{
+    content:"❋";
+    position:absolute;
+    left:0;
+    color:var(--gold);
+  }
+
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:13px 22px;
+    border-radius:10px;
+    font-weight:700;
+    font-size:16px;
+    text-decoration:none;
+    border:2px solid transparent;
+    cursor:pointer;
+  }
+  .btn-primary{
+    background:var(--ink);
+    color:var(--cream);
+  }
+  .btn-primary:hover{background:#2a1e18;}
+  .btn-disabled{
+    background:transparent;
+    border-color:var(--border);
+    color:var(--muted);
+    cursor:default;
+  }
+
+  main section{
+    margin-top:64px;
+    padding-top:36px;
+    border-top:1px solid var(--border);
+    scroll-margin-top:24px;
+  }
+  main section h2{
+    font-size:22px;
+    margin:0 0 6px;
+  }
+  main section > p.lede{color:var(--muted);margin:0 0 20px;max-width:640px;}
+
+  .free-cards{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0 26px;}
+  .free-card{flex:1 1 200px;min-width:180px;border:1px solid var(--border);border-radius:12px;background:#fff;padding:12px;text-align:center;}
+  .free-card img{width:100%;height:auto;border-radius:8px;display:block;margin-bottom:10px;}
+  .free-card h3{margin:0 0 4px;font-size:19px;}
+  .free-card p{margin:0 0 10px;font-size:15px;color:var(--muted);}
+  .free-card .btn{font-size:15px;padding:9px 16px;}
+  .free-card .tag{display:inline-block;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);font-weight:700;}
+  .download-grid{
+    display:flex;
+    gap:32px;
+    flex-wrap:wrap;
+    align-items:flex-start;
+  }
+  .download-grid figure{margin:0;flex:0 0 300px;}
+  .download-grid img{
+    width:100%;
+    border-radius:12px;
+    border:1px solid var(--border);
+    display:block;
+  }
+  .download-grid figcaption{
+    font-size:13px;
+    color:var(--muted);
+    margin-top:8px;
+    text-align:center;
+  }
+  .download-copy{flex:1 1 320px;min-width:260px;}
+
+  .bundle-grid{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:16px;}
+  .bundle-grid figure{margin:0;flex:0 0 150px;}
+  .bundle-grid img{width:100%;border-radius:10px;border:1px solid var(--border);display:block;}
+  .bundle-grid figcaption{font-size:13px;color:var(--muted);margin-top:6px;text-align:center;line-height:1.35;}
+
+  .cast-teaser{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+    border:1px dashed var(--border);
+    border-radius:12px;
+    padding:20px 22px;
+    color:var(--muted);
+  }
+  .cast-teaser .names{color:var(--ink);font-weight:600;}
+  .platform-row{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .platform{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:12px 16px;
+    color:var(--muted);
+    font-family:'Baloo 2',sans-serif;
+    font-weight:700;
+    font-size:14px;
+  }
+  .platform .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--border);
+  }
+  .soon{
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--gold);
+    border:1px solid var(--gold);
+    padding:2px 8px;
+    border-radius:999px;
+  }
+
+  footer{
+    margin-top:60px;
+    padding:28px 0 40px;
+    border-top:1px solid var(--border);
+    color:var(--muted);
+    font-size:14px;
+  }
+  footer a{color:var(--muted);text-decoration:underline;}
+
+  @media (max-width:720px){
+    h1{font-size:30px;}
+  }
+
+  /* Amazon store flags (added 2026-09-27) */
+  .amz-label{margin:0 0 8px;font-weight:700;}
+  .amz-flags{display:flex;flex-wrap:wrap;gap:10px;}
+  .amz-flags a{position:relative;display:inline-flex;border-radius:4px;box-shadow:0 0 0 1px var(--border),0 2px 6px rgba(0,0,0,.14);transition:transform .15s;}
+  .amz-flags a::after{content:attr(data-label);position:absolute;left:50%;bottom:calc(100% + 7px);transform:translateX(-50%);background:#2b2b2b;color:#fff;font-size:12px;font-weight:600;line-height:1;padding:5px 8px;border-radius:5px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .12s;z-index:5;}
+  .amz-flags a:hover::after,.amz-flags a:focus-visible::after{opacity:1;}
+  .amz-aff{margin:6px 0 0;font-size:13px;font-style:italic;color:var(--muted);}
+  .amz-flags a:hover,.amz-flags a:focus-visible{transform:translateY(-2px);}
+  .amz .amz-flags img{display:block;width:44px;height:33px;margin:0;border-radius:4px;box-shadow:none;}
+  .amz-note{margin:10px 0 0;font-size:14px;color:var(--muted);}
+  .amz img.amz-inline{display:inline;width:20px;height:15px;margin:0;vertical-align:-2px;border-radius:2px;box-shadow:0 0 0 1px var(--border);}
+  .amz-disc{font-size:13px;color:var(--muted);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <a class="wordmark" href="edelhollow.html">
+      <img src="img/edelweiss_icon.png" alt="">
+      Edelhollow
+    </a>
+    <nav class="site-nav">
+      <a href="#book" data-i18n="nav.book">Books</a>
+      <a href="#download" data-i18n="nav.download">Free Download</a>
+      <a href="#films" data-i18n="nav.films">Films</a>
+      <a href="#etsy" data-i18n="nav.etsy">Print-at-Home</a>
+      <a href="#characters" data-i18n="nav.cast">Meet the Cast</a>
+      <a href="#follow" data-i18n="nav.follow">Follow</a>
+      <a href="edelhollow/thanks/en/" data-i18n="nav.reviews">Reviews</a>
+    </nav>
+    <div class="lang-switch" id="langSwitch">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="it">IT</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div id="cast-top" style="text-align:center;margin-bottom:44px;">
+    <h1 data-i18n="top.welcome" style="margin-bottom:4px;">Welcome to Edelhollow</h1>
+    <p class="subtitle" data-i18n="top.sub" style="margin-bottom:0;">Fourteen friends, one cozy alpine village.</p>
+  </div>
+
+  <div class="hero" id="book">
+    <div class="hero-content">
+
+      <!-- ENGLISH -->
+      <div class="lang-block" data-lang="en">
+        <div class="kicker">Book One &middot; A Mossgrove Press Original</div>
+        <h1>Cozy Mornings in Edelhollow</h1>
+        <p class="subtitle">A Cozy Alpine Coloring Book for Kids and Grown-Ups</p>
+        <p class="desc">Welcome to Edelhollow, a cozy alpine village where fourteen animal friends are waiting to meet you. <em>Cozy Mornings in Edelhollow</em> is a gentle, richly-illustrated coloring book that follows a full day in a small Swiss-alpine village — from sunrise to starlight.</p>
+        <ul class="bullets">
+          <li>51 warm, whimsical scenes covering a full dawn-to-dusk day in the village.</li>
+          <li>A hidden game on every page: find the tiny edelweiss tucked into every scene.</li>
+          <li>Fourteen friends to fall in love with, each with a signature look and gentle personality.</li>
+          <li>Single-sided pages. Heavy markers may still bleed through, so test first.</li>
+        </ul>
+        <div class="amz">
+          <p class="amz-label">Available on Amazon. Choose your store:</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HF7SYFY9?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HF7SYFY9?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HF7SYFY9?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HF7SYFY9" target="_blank" rel="sponsored noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HF7SYFY9" target="_blank" rel="sponsored noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HF7SYFY9" target="_blank" rel="sponsored noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HF7SYFY9" target="_blank" rel="sponsored noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HF7SYFY9?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note">In Switzerland or Austria? Choose Germany <img class="amz-inline" src="img/flags/de.svg" alt=""></p>
+          <p class="amz-aff">These are affiliate links: if you buy through them, we earn a small commission at no extra cost to you.</p>
+        </div>
+      </div>
+
+      <!-- GERMAN -->
+      <div class="lang-block" data-lang="de" hidden>
+        <div class="kicker">Band Eins &middot; Ein Mossgrove Press Original</div>
+        <h1>Gemütliche Morgen in Edelhollow</h1>
+        <p class="subtitle">Ein gemütliches Alpen-Malbuch für Kinder und Erwachsene</p>
+        <p class="desc">Willkommen in Edelhollow, einem gemütlichen Alpendorf, in dem vierzehn tierische Freunde auf dich warten. „Gemütliche Morgen in Edelhollow" ist ein liebevoll gezeichnetes Ausmalbuch, das einen ganzen Tag in einem kleinen Schweizer Alpendorf begleitet.</p>
+        <ul class="bullets">
+          <li>51 warme, verspielte Szenen von Sonnenaufgang bis Sonnenuntergang.</li>
+          <li>Ein kleines Suchspiel auf jeder Seite: Findest du das winzige Edelweiss?</li>
+          <li>Vierzehn Freunde zum Liebgewinnen, jeder mit eigenem Charakter.</li>
+          <li>Einseitig bedruckte Seiten. Kräftige Stifte können trotzdem durchdrücken, am besten vorher testen.</li>
+        </ul>
+        <div class="amz">
+          <p class="amz-label">Erhältlich bei Amazon. Wähle deinen Shop:</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HFFRRL9L?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HFFRRL9L?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HFFRRL9L?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HFFRRL9L" target="_blank" rel="sponsored noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HFFRRL9L" target="_blank" rel="sponsored noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HFFRRL9L" target="_blank" rel="sponsored noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HFFRRL9L" target="_blank" rel="sponsored noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HFFRRL9L?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note">In der Schweiz oder in Österreich? Wähle Deutschland <img class="amz-inline" src="img/flags/de.svg" alt=""></p>
+          <p class="amz-aff">Das sind Affiliate-Links: Wenn du darüber kaufst, erhalten wir eine kleine Provision, für dich ohne Mehrkosten.</p>
+        </div>
+      </div>
+
+      <!-- SPANISH -->
+      <div class="lang-block" data-lang="es" hidden>
+        <div class="kicker">Libro Uno &middot; Un original de Mossgrove Press</div>
+        <h1>Las agradables mañanas en Edelhollow</h1>
+        <p class="subtitle">Un libro para colorear acogedor de los Alpes para niños y adultos</p>
+        <p class="desc">Bienvenidos a Edelhollow, un acogedor pueblo alpino donde catorce amigos animales os están esperando. "Las agradables mañanas en Edelhollow" es un libro para colorear tierno y ricamente ilustrado que sigue un día completo en un pequeño pueblo alpino suizo.</p>
+        <ul class="bullets">
+          <li>51 escenas cálidas que abarcan un día completo, de la mañana a la noche.</li>
+          <li>Un juego escondido en cada página: encuentra la diminuta flor de edelweiss.</li>
+          <li>Catorce amigos para querer, cada uno con su propia personalidad.</li>
+          <li>Páginas impresas a una sola cara. Los rotuladores fuertes pueden traspasar, así que pruébalos antes.</li>
+        </ul>
+        <div class="amz">
+          <p class="amz-label">Disponible en Amazon. Elige tu tienda:</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HG4Y8ML9?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HG4Y8ML9?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HG4Y8ML9?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HG4Y8ML9" target="_blank" rel="sponsored noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HG4Y8ML9" target="_blank" rel="sponsored noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HG4Y8ML9" target="_blank" rel="sponsored noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HG4Y8ML9" target="_blank" rel="sponsored noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HG4Y8ML9?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note">¿En Suiza o en Austria? Elige Alemania <img class="amz-inline" src="img/flags/de.svg" alt=""></p>
+          <p class="amz-aff">Son enlaces de afiliado: si compras a través de ellos, recibimos una pequeña comisión sin coste adicional para ti.</p>
+        </div>
+      </div>
+
+      <!-- ITALIAN -->
+      <div class="lang-block" data-lang="it" hidden>
+        <div class="kicker">Libro Uno &middot; Un originale Mossgrove Press</div>
+        <h1>Le piacevoli mattine a Edelhollow</h1>
+        <p class="subtitle">Un libro da colorare cozy delle Alpi per bambini e adulti</p>
+        <p class="desc">Benvenuti a Edelhollow, un accogliente villaggio alpino dove quattordici amici animali vi stanno aspettando. "Le piacevoli mattine a Edelhollow" è un libro da colorare dolce e riccamente illustrato che segue un'intera giornata in un piccolo villaggio alpino svizzero.</p>
+        <ul class="bullets">
+          <li>51 scene calde che coprono un'intera giornata, dall'alba al tramonto.</li>
+          <li>Un gioco nascosto in ogni pagina: trova il minuscolo fiore di stella alpina.</li>
+          <li>Quattordici amici da amare, ognuno con la propria personalità.</li>
+          <li>Pagine stampate su un solo lato, così pennarelli e pastelli non passano.</li>
+        </ul>
+        <div class="amz">
+          <p class="amz-label">Disponibile su Amazon. Scegli il tuo negozio:</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HFFS7C76?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HFFS7C76?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HFFS7C76?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HFFS7C76" target="_blank" rel="sponsored noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HFFS7C76" target="_blank" rel="sponsored noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HFFS7C76" target="_blank" rel="sponsored noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HFFS7C76" target="_blank" rel="sponsored noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HFFS7C76?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note">In Svizzera o in Austria? Scegli la Germania <img class="amz-inline" src="img/flags/de.svg" alt=""></p>
+          <p class="amz-aff">Sono link di affiliazione: se acquisti tramite questi link, riceviamo una piccola commissione senza costi aggiuntivi per te.</p>
+        </div>
+      </div>
+
+      <!-- FRENCH -->
+      <div class="lang-block" data-lang="fr" hidden>
+        <div class="kicker">Tome 1 &middot; Un original de Mossgrove Press</div>
+        <h1>Matins Cosy à Edelhollow</h1>
+        <p class="subtitle">Un livre de coloriage cosy des Alpes pour enfants et adultes</p>
+        <p class="desc">Bienvenue à Edelhollow, un village alpin cosy où quatorze amis se réunissent pour vous accueillir. « Matins Cosy à Edelhollow » est un livre de coloriage doux et richement illustré qui suit une journée complète dans un petit village alpin suisse.</p>
+        <ul class="bullets">
+          <li>51 scènes chaleureuses qui couvrent une journée entière, de l'aube au crépuscule.</li>
+          <li>Un jeu caché sur chaque page : trouverez-vous la minuscule edelweiss ?</li>
+          <li>Quatorze amis attachants, chacun avec sa personnalité bien à lui.</li>
+          <li>Pages imprimées d'un seul côté. Les feutres forts peuvent quand même traverser, mieux vaut tester avant.</li>
+        </ul>
+        <div class="amz">
+          <p class="amz-label">Disponible sur Amazon. Choisissez votre boutique :</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HFFWNQFX?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HFFWNQFX?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HFFWNQFX?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HFFWNQFX" target="_blank" rel="sponsored noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HFFWNQFX" target="_blank" rel="sponsored noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HFFWNQFX" target="_blank" rel="sponsored noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HFFWNQFX" target="_blank" rel="sponsored noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HFFWNQFX?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note">En Suisse ou en Autriche ? Choisissez l'Allemagne <img class="amz-inline" src="img/flags/de.svg" alt=""></p>
+          <p class="amz-aff">Ce sont des liens affiliés : si vous achetez par leur biais, nous recevons une petite commission, sans frais supplémentaires pour vous.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-cover">
+      <img id="coverImg" src="covers/en_front.jpg" alt="Cozy Mornings in Edelhollow — front cover">
+      <a href="#films" class="btn btn-primary" data-i18n="hero.watch" style="display:block;text-align:center;margin-top:14px;">▶ Watch the film</a>
+    </div>
+
+  </div>
+
+  <!-- ============ BOOK TWO — CB-002, English edition live since 2026-08-24 ============ -->
+  <div class="hero book-2" id="book2">
+    <div class="hero-content">
+
+      <!-- ENGLISH -->
+      <div class="lang-block" data-lang="en">
+        <div class="kicker">Book Two &middot; A Mossgrove Press Original</div>
+        <h1>Market Day in Edelhollow</h1>
+        <p class="subtitle">A Cozy Alpine Coloring Book for Kids and Grown-Ups</p>
+        <p class="desc">Welcome back to Edelhollow. Today is Market Day, and the whole village is out in the square — Pip lighting his oven before dawn, Nutmeg racing along the rooftops with a forgotten basket, Rosa parading a prize pumpkin, and Emily watching the first streetlamp come on as the day winds down.</p>
+        <ul class="bullets">
+          <li>50 warm, whimsical scenes covering one full market day in the village.</li>
+          <li>A hidden game on every page: find the tiny edelweiss tucked into every scene.</li>
+          <li>The same fourteen friends from Book One, out among the market stalls.</li>
+          <li>Single-sided pages. Heavy markers may still bleed through, so test first.</li>
+        </ul>
+        <div class="amz">
+          <p class="amz-label">Available on Amazon. Choose your store:</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HGBSCZXH?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HGBSCZXH?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HGBSCZXH?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HGBSCZXH" target="_blank" rel="sponsored noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HGBSCZXH" target="_blank" rel="sponsored noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HGBSCZXH" target="_blank" rel="sponsored noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HGBSCZXH" target="_blank" rel="sponsored noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HGBSCZXH?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note">In Switzerland or Austria? Choose Germany <img class="amz-inline" src="img/flags/de.svg" alt=""></p>
+          <p class="amz-aff">These are affiliate links: if you buy through them, we earn a small commission at no extra cost to you.</p>
+        </div>
+      </div>
+
+      <!-- GERMAN -->
+      <div class="lang-block" data-lang="de" hidden>
+        <div class="kicker">Band Zwei &middot; Ein Mossgrove Press Original</div>
+        <h1>Markttag in Edelhollow</h1>
+        <p class="subtitle">Ein gemütliches Alpen-Malbuch für Kinder und Erwachsene</p>
+        <p class="desc">Willkommen zurück in Edelhollow. Heute ist Markttag, und das ganze Dorf ist auf dem Platz unterwegs: Der Igel Pip heizt vor Sonnenaufgang seinen Ofen an, das Eichhörnchen Nutmeg saust mit einem vergessenen Korb über die Dächer, Rosa führt ihren Preiskürbis stolz durchs Dorf, und Emily beobachtet vom Dach aus, wie die erste Laterne angeht.</p>
+        <ul class="bullets">
+          <li>50 warme, verspielte Szenen, die einen ganzen Markttag im Dorf zeigen.</li>
+          <li>Ein kleines Suchspiel auf jeder Seite: Findest du das winzige Edelweiss?</li>
+          <li>Vierzehn Freunde zum Liebgewinnen, jeder mit eigenem Charakter.</li>
+          <li>Einseitig bedruckte Seiten. Kräftige Stifte können trotzdem durchdrücken, am besten vorher testen.</li>
+        </ul>
+        <div class="amz">
+          <p class="amz-label">Erhältlich bei Amazon. Wähle deinen Shop:</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HHX73DSJ?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HHX73DSJ?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HHX73DSJ?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HHX73DSJ" target="_blank" rel="sponsored noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HHX73DSJ" target="_blank" rel="sponsored noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HHX73DSJ" target="_blank" rel="sponsored noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HHX73DSJ" target="_blank" rel="sponsored noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HHX73DSJ?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note">In der Schweiz oder in Österreich? Wähle Deutschland <img class="amz-inline" src="img/flags/de.svg" alt=""></p>
+          <p class="amz-aff">Das sind Affiliate-Links: Wenn du darüber kaufst, erhalten wir eine kleine Provision, für dich ohne Mehrkosten.</p>
+        </div>
+      </div>
+
+      <!-- SPANISH -->
+      <div class="lang-block" data-lang="es" hidden>
+        <div class="kicker">Libro Dos &middot; Un original de Mossgrove Press</div>
+        <h1>Día de mercado en Edelhollow</h1>
+        <p class="subtitle">Un libro para colorear acogedor de los Alpes para niños y adultos</p>
+        <p class="desc">Bienvenidos de nuevo a Edelhollow. Hoy es día de mercado, y todo el pueblo está en la plaza.</p>
+        <ul class="bullets">
+          <li>50 escenas cálidas que abarcan un día completo de mercado en el pueblo.</li>
+          <li>Un juego escondido en cada página: encuentra la diminuta flor de edelweiss.</li>
+          <li>Catorce amigos para querer, cada uno con su propia personalidad.</li>
+          <li>Páginas impresas a una sola cara. Los rotuladores fuertes pueden traspasar, así que pruébalos antes.</li>
+        </ul>
+        <div class="cta-row">
+          <!-- TODO: replace with the live Amazon.es URL once the Spanish edition is published (SHIP-7) -->
+          <span class="btn btn-disabled">Próximamente en Amazon.es</span>
+        </div>
+      </div>
+
+      <!-- ITALIAN -->
+      <div class="lang-block" data-lang="it" hidden>
+        <div class="kicker">Libro Due &middot; Un originale Mossgrove Press</div>
+        <h1>Giorno di mercato a Edelhollow</h1>
+        <p class="subtitle">Un libro da colorare cozy delle Alpi per bambini e adulti</p>
+        <p class="desc">Bentornati a Edelhollow. Oggi è giorno di mercato, e tutto il villaggio è in piazza.</p>
+        <ul class="bullets">
+          <li>50 scene calde che coprono un'intera giornata di mercato nel villaggio.</li>
+          <li>Un gioco nascosto in ogni pagina: trova il minuscolo fiore di stella alpina.</li>
+          <li>Quattordici amici da amare, ognuno con la propria personalità.</li>
+          <li>Pagine stampate su un solo lato, così pennarelli e pastelli non passano.</li>
+        </ul>
+        <div class="cta-row">
+          <!-- TODO: replace with the live Amazon.it URL once the Italian edition is published (SHIP-7) -->
+          <span class="btn btn-disabled">Presto su Amazon.it</span>
+        </div>
+      </div>
+
+      <!-- FRENCH -->
+      <div class="lang-block" data-lang="fr" hidden>
+        <div class="kicker">Tome 2 &middot; Un original de Mossgrove Press</div>
+        <h1>Jour de marché à Edelhollow</h1>
+        <p class="subtitle">Un livre de coloriage cosy des Alpes pour enfants et adultes</p>
+        <p class="desc">Bienvenue de nouveau à Edelhollow. C'est aujourd'hui le jour de marché, et tout le village est dehors sur la place.</p>
+        <ul class="bullets">
+          <li>50 scènes chaleureuses qui couvrent une journée entière de marché au village.</li>
+          <li>Un jeu caché sur chaque page : trouverez-vous la minuscule edelweiss ?</li>
+          <li>Quatorze amis attachants, chacun avec sa personnalité bien à lui.</li>
+          <li>Pages imprimées d'un seul côté. Les feutres forts peuvent quand même traverser, mieux vaut tester avant.</li>
+        </ul>
+        <div class="cta-row">
+          <!-- TODO: replace with the live Amazon.fr URL once the French edition is published (SHIP-7) -->
+          <span class="btn btn-disabled">Bientôt sur Amazon.fr</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-cover">
+      <img id="coverImg2" src="covers/cb002_front.jpg" alt="Market Day in Edelhollow — front cover">
+    </div>
+  </div>
+
+  <div id="more-books">
+    <h2 data-i18n="books.more" style="font-size:22px;margin:0 0 16px;">More books from Edelhollow</h2>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;">
+      <figure style="margin:0;flex:0 0 200px;">
+        <img src="covers/cb004_front.jpg" alt="The Edelhollow Express — cover" style="width:100%;border-radius:10px;box-shadow:0 10px 24px rgba(58,42,34,0.15);display:block;">
+        <figcaption style="text-align:center;margin-top:10px;font-size:15px;"><em>The Edelhollow Express</em><br><span class="soon" data-i18n="soon">Soon</span></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <section id="download">
+    <h2 data-i18n="dl.h2">Free Edelhollow Download</h2>
+    <p class="lede" data-i18n-html="dl.lede">Three free pages from the village: the coloured cast poster to download straight away, and two colouring pages that arrive by email when you sign up below.</p>
+    <div class="free-cards">
+      <div class="free-card">
+        <img src="img/cast_color_labeled.png" alt="Meet the Cast of Edelhollow, colour poster">
+        <span class="tag" data-i18n="free.direct">Download now</span>
+        <h3 data-i18n="free.poster">Cast poster, in colour</h3>
+        <p data-i18n="free.poster.p">All fourteen friends with their names.</p>
+        <a class="btn btn-primary" href="downloads/Edelhollow_Meet_the_Cast.pdf" download data-i18n="free.poster.btn">Download PDF</a>
+      </div>
+      <div class="free-card">
+        <img src="img/cast_bw_preview.jpg" alt="Meet the Cast of Edelhollow, colouring page">
+        <span class="tag" data-i18n="free.email">By email</span>
+        <h3 data-i18n="free.cast">Cast colouring page</h3>
+        <p data-i18n="free.cast.p">The same fourteen friends, ready to colour.</p>
+        <a class="btn btn-primary" href="#signup" data-i18n="free.signup.btn">Sign up below</a>
+      </div>
+      <div class="free-card">
+        <img src="covers/sneak_peek_preview.jpg" alt="Evening at the picnic table, colouring page">
+        <span class="tag" data-i18n="free.email">By email</span>
+        <h3 data-i18n="free.p49">Evening at the picnic table</h3>
+        <p data-i18n-html="free.p49.p">Page 49 of <em>Cozy Mornings</em>, full size.</p>
+        <a class="btn btn-primary" href="#signup" data-i18n="free.signup.btn">Sign up below</a>
+      </div>
+    </div>
+    <div class="download-grid" id="signup">
+      <figure>
+        <img src="covers/sneak_peek_preview.jpg" alt="Preview of a free Edelhollow coloring page — a nighttime picnic-table scene">
+        <figcaption data-i18n="dl.caption">Preview shown with a watermark — your free copy prints clean.</figcaption>
+      </figure>
+      <div class="download-copy">
+        <p data-i18n="dl.body">A quiet evening at the picnic table, Bernard keeping watch, Pip serving supper, a lantern lit against the dark. It's page 49 of the book, one full-size coloring page, ready to print at home. Pop in your name and email and we'll send it straight over.</p>
+
+        <!--Zoho Campaigns Web-Optin Form's Header Code Starts Here-->
+        <script type="text/javascript" src="https://zcv2-zcmp.maillist-manage.eu/js/optin.min.js" onload="setupSF('sf3z52c03c0b7178d4a0797fad161361cf5ef8af0be575d38926e29ec1846d54fc0e','ZCFORMVIEW',false,'light',false,'0')"></script>
+        <script type="text/javascript">
+          function runOnFormSubmit_sf3z52c03c0b7178d4a0797fad161361cf5ef8af0be575d38926e29ec1846d54fc0e(th){
+            /*Before submit, if you want to trigger your event, "include your code here"*/
+          };
+        </script>
+        <style>
+          #customForm.quick_form_16_css * { -webkit-box-sizing: border-box !important; -moz-box-sizing: border-box !important; box-sizing: border-box !important; overflow-wrap: break-word }
+          input[type="text"]::placeholder { color: var(--muted) }
+          #zcWebOptin:hover{ background-color:#2a1e18 !important; }
+          .consent-row{ display:flex; align-items:flex-start; gap:8px; max-width:300px; margin:18px auto 0; text-align:left; font-family:'EB Garamond', serif; font-size:14px; color:var(--muted); }
+          .consent-row input{ margin-top:4px; flex:0 0 auto; }
+          .consent-row a{ color:var(--gold); }
+          #consentError{ display:none; max-width:300px; margin:8px auto 0; color:#b3261e; font-size:13px; font-family:'EB Garamond', serif; }
+        </style>
+        <!--Zoho Campaigns Web-Optin Form's Header Code Ends Here-->
+        <!--Zoho Campaigns Web-Optin Form Starts Here-->
+        <iframe name="_zcSignup" style="display:none; width:0; height:0; border:0;" title="signup response"></iframe>
+        <div id="sf3z52c03c0b7178d4a0797fad161361cf5ef8af0be575d38926e29ec1846d54fc0e" data-type="signupform" style="opacity: 1;">
+          <div id="customForm">
+            <div class="quick_form_16_css" style="background-color: var(--paper); width: 100%; max-width: 320px; margin: 0; z-index: 2; font-family: 'EB Garamond', serif; border: 1px solid var(--border); border-radius: 14px; overflow: hidden" name="SIGNUP_BODY">
+              <div style="text-align: center">
+                <div style="font-size: 15px; font-family: 'Baloo 2', sans-serif; font-weight: 700; color: var(--cream); text-align: center; padding: 15px 0px; width: 100%; display: block; background-color: var(--ink)" id="SIGNUP_HEADING">A Little Gift from Edelhollow</div>
+                <div style="position:relative;">
+                  <div id="Zc_SignupSuccess" style="display:none;position:absolute;margin-left:4%;width:90%;background-color: var(--paper); padding: 3px; border: 3px solid var(--accent);  margin-top: 10px;margin-bottom:10px;word-break:break-all">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tbody>
+                        <tr>
+                          <td width="10%">
+                            <img class="successicon" src="https://zcv2-zcmp.maillist-manage.eu/images/challangeiconenable.jpg" align="absmiddle">
+                          </td>
+                          <td>
+                            <span id="signupSuccessMsg" style="color: var(--accent); font-family: 'EB Garamond', serif; font-size: 14px;word-break:break-word">&nbsp;&nbsp;Thank you for signing up</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <form method="POST" id="zcampaignOptinForm" style="margin: 0px; width: 100%" action="https://zcv2-zcmp.maillist-manage.eu/weboptin.zc" target="_zcSignup">
+                  <div style="background-color: rgb(255, 235, 232); padding: 10px; color: rgb(210, 0, 0); font-size: 11px; margin: 20px 10px 0px; border: 1px solid rgb(255, 217, 211); opacity: 1; display: none" id="errorMsgDiv">Please correct the marked field(s) below.</div>
+                  <div style="position: relative; width: 240px; height: 40px; margin-top: 24px; display: inline-block">
+                    <input type="text" style="font-size: 15px; border-width: 0 0 2px; border-color: var(--gold); border-style: solid; width: 100%; height: 100%; z-index: 4; outline: none; padding: 5px 10px; box-sizing: border-box; color: var(--ink); text-align: left; font-family: 'EB Garamond', serif; background-color: transparent; border-radius: 0px" placeholder="Email" changeitem="SIGNUP_FORM_FIELD" name="CONTACT_EMAIL" id="EMBED_FORM_EMAIL_LABEL">
+                  </div>
+                  <div style="position: relative; width: 240px; height: 40px; margin-top: 20px; display: inline-block">
+                    <input type="text" style="font-size: 15px; border-width: 0 0 2px; border-color: var(--gold); border-style: solid; width: 100%; height: 100%; z-index: 4; outline: none; padding: 5px 10px; box-sizing: border-box; color: var(--ink); text-align: left; font-family: 'EB Garamond', serif; background-color: transparent; border-radius: 0px" placeholder="First Name" changeitem="SIGNUP_FORM_FIELD" name="FIRSTNAME" id="FIRSTNAME">
+                  </div>
+
+                  <div class="consent-row">
+                    <input type="checkbox" id="marketingConsent">
+                    <label for="marketingConsent" data-i18n-html="form.consent">Yes, I'd like to receive occasional Edelhollow news, free printables and new book announcements. See our <a href="privacy.html" target="_blank">Privacy Policy</a>.</label>
+                  </div>
+                  <div id="consentError" data-i18n="form.consentError">Please check the box above to continue.</div>
+                  <div id="customSuccessMsg" data-i18n="form.success" style="display:none; max-width:300px; margin:14px auto 0; padding:12px; background:var(--paper); border:1px solid var(--accent); border-radius:10px; font-family:'EB Garamond', serif; font-size:14px; color:var(--ink);">Thank you! Check your inbox (and spam folder) for an email asking you to confirm your subscription.</div>
+
+                  <div style="position: relative; width: 240px; height: 40px; margin: 16px 0 25px; display: inline-block">
+                    <input type="button" style="text-align: center; width: 100%; height: 100%; z-index: 5; border: 0; color: var(--cream); cursor: pointer; outline: none; font-size: 15px; font-family: 'Baloo 2', sans-serif; font-weight:700; background-color: var(--ink); border-radius: 10px" name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin" value="Get My Free Colouring Page">
+                  </div>
+                  <input type="hidden" id="fieldBorder" value="">
+                  <input type="hidden" id="submitType" name="submitType" value="optinCustomView">
+                  <input type="hidden" id="emailReportId" name="emailReportId" value="">
+                  <input type="hidden" id="formType" name="formType" value="QuickForm">
+                  <input type="hidden" name="zx" id="cmpZuid" value="14aefaacbd">
+                  <input type="hidden" name="zcvers" value="2.0">
+                  <input type="hidden" name="oldListIds" id="allCheckedListIds" value="">
+                  <input type="hidden" id="mode" name="mode" value="OptinCreateView">
+                  <input type="hidden" id="zcld" name="zcld" value="1405595b5ea4f9fd">
+                  <input type="hidden" id="zctd" name="zctd" value="1405595b5ea4f921">
+                  <input type="hidden" id="document_domain" value="">
+                  <input type="hidden" id="zc_Url" value="zcv2-zcmp.maillist-manage.eu">
+                  <input type="hidden" id="new_optin_response_in" value="0">
+                  <input type="hidden" id="duplicate_optin_response_in" value="0">
+                  <input type="hidden" name="zc_trackCode" id="zc_trackCode" value="ZCFORMVIEW">
+                  <input type="hidden" id="zc_formIx" name="zc_formIx" value="3z52c03c0b7178d4a0797fad161361cf5ef8af0be575d38926e29ec1846d54fc0e">
+                  <input type="hidden" id="viewFrom" value="URL_ACTION">
+                  <span style="display: none" id="dt_CONTACT_EMAIL">1,true,6,Contact Email,2</span>
+                  <span style="display: none" id="dt_FIRSTNAME">1,false,1,First Name,2</span>
+                  <span style="display: none" id="dt_LASTNAME">1,false,1,Last Name,2</span>
+                </form>
+              </div>
+            </div>
+          </div>
+          <img src="https://zcv2-zcmp.maillist-manage.eu/images/spacer.gif" id="refImage" onload="referenceSetter(this)" style="display:none;">
+        </div>
+        <input type="hidden" id="signupFormType" value="QuickForm_Vertical">
+        <div id="zcOptinOverLay" oncontextmenu="return false" style="display:none;text-align: center; background-color: rgb(0, 0, 0); opacity: 0.5; z-index: 100; position: fixed; width: 100%; top: 0px; left: 0px; height: 988px;"></div>
+        <div id="zcOptinSuccessPopup" style="display:none;z-index: 9999;width: 800px; height: 40%;top: 84px;position: fixed; left: 26%;background-color: #FFFFFF;border-color: #E6E6E6; border-style: solid; border-width: 1px;  box-shadow: 0 1px 10px #424242;padding: 35px;">
+          <span style="position: absolute;top: -16px;right:-14px;z-index:99999;cursor: pointer;" id="closeSuccess">
+            <img src="https://zcv2-zcmp.maillist-manage.eu/images/videoclose.png">
+          </span>
+          <div id="zcOptinSuccessPanel"></div>
+        </div>
+        <!--Zoho Campaigns Web-Optin Form Ends Here-->
+        <script>
+          (function(){
+            var btn = document.getElementById('zcWebOptin');
+            var consent = document.getElementById('marketingConsent');
+            var err = document.getElementById('consentError');
+            var success = document.getElementById('customSuccessMsg');
+            var emailField = document.getElementById('EMBED_FORM_EMAIL_LABEL');
+            if(btn && consent){
+              btn.addEventListener('click', function(e){
+                if(!consent.checked){
+                  e.preventDefault();
+                  e.stopImmediatePropagation();
+                  err.style.display = 'block';
+                  consent.focus();
+                } else if(!emailField.value || emailField.value.indexOf('@') === -1){
+                  // let Zoho's own validation handle a missing/invalid email, don't show success yet
+                  err.style.display = 'none';
+                } else {
+                  err.style.display = 'none';
+                  success.style.display = 'block';
+                  // Belt-and-suspenders: block any popup window Zoho's script might try to open,
+                  // the on-page confirmation message above already covers this.
+                  var realOpen = window.open;
+                  window.open = function(){ return null; };
+                  setTimeout(function(){ window.open = realOpen; }, 4000);
+                  // FIX 2026-08-15: Zoho's own click handler never attaches to this button,
+                  // so submit the form explicitly (POST to weboptin.zc via the hidden iframe).
+                  // Without this line, clicks showed the success message but sent nothing.
+                  btn.disabled = true; // prevent double submissions
+                  document.getElementById('zcampaignOptinForm').submit();
+                  // After a successful submit, hide the input fields and dead button —
+                  // only the confirmation message should remain visible.
+                  emailField.parentElement.style.display = 'none';
+                  var nameField = document.getElementById('FIRSTNAME');
+                  if (nameField) nameField.parentElement.style.display = 'none';
+                  var crow = document.querySelector('.consent-row');
+                  if (crow) crow.style.display = 'none';
+                  btn.parentElement.style.display = 'none';
+                }
+              }, true);
+            }
+          })();
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <section id="films">
+    <h2 data-i18n="films.h2">Edelhollow Films</h2>
+    <p class="lede" data-i18n="films.lede">Short wordless cartoons from the village. In each one somebody colours an Edelhollow page their own way, in felt-tips, wax crayons or markers. The colouring books are on Amazon.</p>
+    <div style="position:relative;width:100%;max-width:640px;aspect-ratio:16/9;border-radius:12px;border:1px solid var(--border);overflow:hidden;margin-bottom:12px;">
+      <iframe src="https://www.youtube-nocookie.com/embed/EC6zhNulYtY" title="The Hiccups — an Edelhollow short" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <p style="margin-bottom:6px;"><strong data-i18n="films.hiccups">The Hiccups</strong> — <span data-i18n="films.hiccups.lede">Bo has the hiccups. Rosa decides they are a guest, and a guest must be seen off properly.</span></p>
+    <p><a class="btn btn-primary" href="https://youtu.be/EC6zhNulYtY" target="_blank" rel="noopener" data-i18n="films.watch">▶ Watch on YouTube</a></p>
+    <video id="onedayVideo" controls preload="metadata" poster="img/video_poster.jpg" style="width:100%;max-width:640px;border-radius:12px;border:1px solid var(--border);display:block;margin:28px 0 12px;">
+      <source src="One_Day_in_Edelhollow_FINAL.mp4" type="video/mp4">
+    </video>
+    <p><strong data-i18n="films.oneday">One Day in Edelhollow</strong> — <span data-i18n-html="films.oneday.lede">Dawn to dusk in the village, page by page. The book trailer for <em>Cozy Mornings in Edelhollow</em>.</span></p>
+  </section>
+
+  <section id="etsy">
+    <h2 data-i18n="etsy.h2">Print-at-Home Pages</h2>
+    <p class="lede" data-i18n="etsy.lede">Single pages and small bundles from the Edelhollow world, for whenever you just want one more page to color.</p>
+    <div class="bundle-grid">
+      <figure><img src="img/bundles/the-village-market.jpg" alt="The Village Market — 9 digital coloring pages" loading="lazy"><figcaption><em>The Village Market</em><br><span data-i18n="etsy.pages9">9 pages</span></figcaption></figure>
+      <figure><img src="img/bundles/dawn-at-the-bakehouse.jpg" alt="Dawn at the Bakehouse — 8 digital coloring pages" loading="lazy"><figcaption><em>Dawn at the Bakehouse</em><br><span data-i18n="etsy.pages8">8 pages</span></figcaption></figure>
+      <figure><img src="img/bundles/an-afternoon-in-the-meadow.jpg" alt="An Afternoon in the Meadow — 9 digital coloring pages" loading="lazy"><figcaption><em>An Afternoon in the Meadow</em><br><span data-i18n="etsy.pages9">9 pages</span></figcaption></figure>
+      <figure><img src="img/bundles/evening-at-the-picnic-table.jpg" alt="Evening at the Picnic Table — 8 digital coloring pages" loading="lazy"><figcaption><em>Evening at the Picnic Table</em><br><span data-i18n="etsy.pages8">8 pages</span></figcaption></figure>
+    </div>
+    <p data-i18n-html="etsy.bundles" style="max-width:640px;">Four bundles from <em>Cozy Mornings in Edelhollow</em>, 34 pages in all, as PDFs in A4 and US Letter. An edelweiss is hiding on every page.</p>
+    <div class="platform-row">
+      <a class="platform" href="https://ko-fi.com/edelhollow/shop" target="_blank" rel="noopener" style="text-decoration:none;"><span class="dot" style="background:var(--gold);"></span> <span data-i18n="etsy.kofi">Ko-fi Shop</span></a>
+      <div class="platform"><span class="dot"></span> Etsy Shop <span class="soon" data-i18n="soon">Soon</span></div>
+    </div>
+  </section>
+
+  <section id="characters">
+    <h2 data-i18n="cast.h2">Meet the Cast</h2>
+    <p class="lede" data-i18n="cast.lede">Fourteen friends live in Edelhollow, each with their own corner of the village and their own way of caring for the rest. Full character profiles are on their way.</p>
+    <img src="img/cast_color_labeled.png" alt="The fourteen Edelhollow characters in color, lined up with their names" style="width:100%;border:1px solid var(--border);border-radius:12px;display:block;">
+    <p style="margin-top:14px;">
+      <a class="btn btn-primary" href="#download" data-i18n="cast.free">Get the free cast pages</a>
+    </p>
+  </section>
+
+  <section id="follow">
+    <h2 data-i18n="follow.h2">Follow Edelhollow</h2>
+    <p class="lede" data-i18n="follow.lede">New pages, behind-the-scenes art, and news of the next book — check back soon for where to follow along.</p>
+    <div class="platform-row">
+      <a class="platform" href="https://www.tiktok.com/@edelhollow" target="_blank" rel="noopener" style="text-decoration:none;"><span class="dot" style="background:var(--gold);"></span> TikTok</a>
+      <a class="platform" href="https://www.instagram.com/edelhollow" target="_blank" rel="noopener" style="text-decoration:none;"><span class="dot" style="background:var(--gold);"></span> Instagram</a>
+      <a class="platform" href="https://www.facebook.com/profile.php?id=61593785645464" target="_blank" rel="noopener" style="text-decoration:none;"><span class="dot" style="background:var(--gold);"></span> Facebook</a>
+      <a class="platform" href="https://www.youtube.com/@Edelhollow" target="_blank" rel="noopener" style="text-decoration:none;"><span class="dot" style="background:var(--gold);"></span> YouTube</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+    <a href="index.html"><img src="img/mossgrove_crest_web.png" alt="Mossgrove Press crest" style="width:110px;height:auto;"></a>
+    <span>Edelhollow is a <a href="index.html">Mossgrove Press</a> world &middot; &copy; 2026 Mossgrove Press &middot; <a href="mailto:hello@mossgrovepress.com">hello@mossgrovepress.com</a><br><span class="amz-disc" data-i18n="aff.disc">As an Amazon Associate I earn from qualifying purchases.</span></span>
+  </div>
+</footer>
+
+<script>
+  const buttons = document.querySelectorAll('.lang-btn');
+  const blocks = document.querySelectorAll('.lang-block');
+  const coverImg = document.getElementById('coverImg');
+  const coverImg2 = document.getElementById('coverImg2');
+  const covers = {en:'covers/en_front.jpg', de:'covers/de_front.jpg', es:'covers/es_front.jpg', it:'covers/it_front.jpg', fr:'covers/fr_front.jpg'};
+  const covers2 = {en:'covers/cb002_front.jpg', de:'covers/cb002_de_front.jpg', es:'covers/cb002_es_front.jpg', it:'covers/cb002_it_front.jpg', fr:'covers/cb002_fr_front.jpg'};
+
+  const I18N = {
+    en: {
+      'nav.book':'Books',
+      'books.more':'More books from Edelhollow',
+      'top.welcome':'Welcome to Edelhollow', 'top.sub':'Fourteen friends, one cozy alpine village.', 'top.cta':'Get your free coloring page', 'nav.download':'Free Download', 'nav.etsy':'Print-at-Home', 'nav.cast':'Meet the Cast', 'nav.follow':'Follow', 'nav.reviews':'Reviews',
+      'hero.watch':'▶ Watch the film',
+      'dl.h2':'Free Edelhollow Pages',
+      'dl.lede':"Three free pages from the village: the coloured cast poster to download straight away, and two colouring pages that arrive by email when you sign up below.",
+      'aff.disc':'As an Amazon Associate I earn from qualifying purchases.',
+      'free.direct':'Download now','free.email':'By email','free.poster':'Cast poster, in colour','free.poster.p':'All fourteen friends with their names.','free.poster.btn':'Download PDF',
+      'free.cast':'Cast colouring page','free.cast.p':'The same fourteen friends, ready to colour.','free.p49':'Evening at the picnic table','free.p49.p':'Page 49 of <em>Cozy Mornings</em>, full size.','free.signup.btn':'Sign up below','cast.free':'Get the free cast pages',
+      'dl.caption':'Preview shown with a watermark — your free copy prints clean.',
+      'dl.body':"A quiet evening at the picnic table, Bernard keeping watch, Pip serving supper, a lantern lit against the dark. It's page 49 of the book, full size and ready to print at home. Sign up once and both colouring pages, this one and the cast page, arrive in the same email.",
+      'form.heading':'A Little Gift from Edelhollow',
+      'form.email':'Email', 'form.name':'First Name',
+      'form.consent':'Yes, I\'d like to receive occasional Edelhollow news, free printables and new book announcements. See our <a href="privacy.html" target="_blank">Privacy Policy</a>.',
+      'form.consentError':'Please check the box above to continue.',
+      'form.success':'Thank you! Check your inbox (and spam folder) for an email asking you to confirm your subscription.',
+      'form.button':'Get My Free Colouring Pages',
+      'form.fieldError':'Please correct the marked field(s) below.',
+      'etsy.h2':'Print-at-Home Pages',
+      'etsy.lede':'Single pages and small bundles from the Edelhollow world, for whenever you just want one more page to color.',
+      'etsy.kofi':'Ko-fi Shop',
+      'nav.films':'Films',
+      'films.h2':'Edelhollow Films','films.lede':'Short wordless cartoons from the village. In each one somebody colours an Edelhollow page their own way, in felt-tips, wax crayons or markers. The colouring books are on Amazon.','films.hiccups':'The Hiccups','films.hiccups.lede':'Bo has the hiccups. Rosa decides they are a guest, and a guest must be seen off properly.','films.watch':'▶ Watch on YouTube','films.oneday':'One Day in Edelhollow','films.oneday.lede':'Dawn to dusk in the village, page by page. The book trailer for <em>Cozy Mornings in Edelhollow</em>.','etsy.pages8':'8 pages','etsy.pages9':'9 pages','etsy.bundles':'Four bundles from <em>Cozy Mornings in Edelhollow</em>, 34 pages in all, as PDFs in A4 and US Letter. An edelweiss is hiding on every page.',
+      'cast.h2':'Meet the Cast',
+      'cast.lede':'Fourteen friends live in Edelhollow, each with their own corner of the village and their own way of caring for the rest. Full character profiles are on their way.',
+      'cast.download':'Download the cast poster (free PDF)',
+      'cast.coloring':'Get the cast coloring page (free PDF)',
+      'follow.h2':'Follow Edelhollow',
+      'follow.lede':'New pages, behind-the-scenes art, and news of the next book — check back soon for where to follow along.',
+      'soon':'Soon'
+    },
+    de: {
+      'nav.book':'Bücher',
+      'books.more':'Weitere Bücher aus Edelhollow',
+      'top.welcome':'Willkommen in Edelhollow', 'top.sub':'Vierzehn Freunde, ein gemütliches Alpendorf.', 'top.cta':'Hol dir deine gratis Ausmalseite', 'nav.download':'Gratis-Download', 'nav.etsy':'Zum Selbstdrucken', 'nav.cast':'Die Charaktere', 'nav.follow':'Folgen', 'nav.reviews':'Rezensionen',
+      'hero.watch':'▶ Den Film ansehen',
+      'dl.h2':'Gratis-Seiten aus Edelhollow',
+      'dl.lede':"Drei Gratis-Seiten aus dem Dorf: das farbige Charakter-Poster zum sofortigen Herunterladen, und zwei Ausmalseiten, die per E-Mail kommen, wenn du dich unten anmeldest.",
+      'aff.disc':'Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.',
+      'free.direct':'Jetzt herunterladen','free.email':'Per E-Mail','free.poster':'Charakter-Poster, in Farbe','free.poster.p':'Alle vierzehn Freunde mit ihren Namen.','free.poster.btn':'PDF herunterladen',
+      'free.cast':'Charaktere als Ausmalseite','free.cast.p':'Dieselben vierzehn Freunde, zum Ausmalen.','free.p49':'Abend am Picknicktisch','free.p49.p':'Seite 49 aus <em>Gemütliche Morgen</em>, in voller Grösse.','free.signup.btn':'Unten anmelden','cast.free':'Zu den Gratis-Seiten',
+      'dl.caption':'Vorschau mit Wasserzeichen, deine Gratis-Seite kommt natürlich ohne.',
+      'dl.body':'Ein stiller Abend am Picknicktisch: Bernard hält Wache, Pip serviert das Abendessen, eine Laterne leuchtet in die Dunkelheit. Es ist Seite 49 des Buches, in voller Grösse, bereit zum Ausdrucken zu Hause. Einmal anmelden, und beide Ausmalseiten, diese und die Charakter-Seite, kommen in derselben E-Mail.',
+      'form.heading':'Ein kleines Geschenk aus Edelhollow',
+      'form.email':'E-Mail', 'form.name':'Vorname',
+      'form.consent':'Ja, ich möchte gelegentlich Edelhollow-Neuigkeiten, kostenlose Ausmalseiten und Ankündigungen neuer Bücher erhalten. Siehe unsere <a href="privacy.html" target="_blank">Datenschutzerklärung</a>.',
+      'form.consentError':'Bitte setze zuerst das Häkchen oben.',
+      'form.success':'Danke! Schau in dein Postfach (und in den Spam-Ordner): Dort wartet eine E-Mail, mit der du deine Anmeldung bestätigst.',
+      'form.button':'Meine Gratis-Ausmalseiten holen',
+      'form.fieldError':'Bitte korrigiere die markierten Felder.',
+      'etsy.h2':'Seiten zum Selbstdrucken',
+      'etsy.lede':'Einzelne Seiten und kleine Pakete aus der Welt von Edelhollow, für alle, die einfach noch eine Seite ausmalen möchten.',
+      'etsy.kofi':'Ko-fi Shop',
+      'nav.films':'Filme',
+      'films.h2':'Edelhollow-Filme','films.lede':'Kurze Zeichentrickfilme ohne Worte aus dem Dorf. In jedem malt jemand eine Edelhollow-Seite auf seine Art aus, mit Filzstiften, Wachsmalstiften oder Markern. Die Malbücher gibt es auf Amazon.','films.hiccups':'Der Schluckauf','films.hiccups.lede':'Bo hat Schluckauf. Rosa beschliesst, dass er ein Gast ist – und ein Gast wird anständig verabschiedet.','films.watch':'▶ Auf YouTube ansehen','films.oneday':'Ein Tag in Edelhollow','films.oneday.lede':'Vom Morgen bis zum Abend im Dorf, Seite für Seite. Der Buchtrailer zu <em>Cozy Mornings in Edelhollow</em>.','etsy.pages8':'8 Seiten','etsy.pages9':'9 Seiten','etsy.bundles':'Vier Pakete aus <em>Cozy Mornings in Edelhollow</em>, insgesamt 34 Seiten, als PDF in A4 und US Letter. Auf jeder Seite versteckt sich ein Edelweiss.',
+      'cast.h2':'Die Charaktere',
+      'cast.lede':'In Edelhollow leben vierzehn Freunde, jeder mit seiner eigenen Ecke im Dorf und seiner eigenen Art, für die anderen da zu sein. Ausführliche Charakterprofile folgen bald.',
+      'cast.download':'Charakter-Poster herunterladen (gratis PDF)',
+      'cast.coloring':'Die Charaktere als Ausmalseite (gratis PDF)',
+      'follow.h2':'Edelhollow folgen',
+      'follow.lede':'Neue Seiten, Einblicke hinter die Kulissen und Neuigkeiten zum nächsten Buch. Schau bald wieder vorbei.',
+      'soon':'Bald'
+    },
+    es: {
+      'nav.book':'Libros',
+      'books.more':'Más libros de Edelhollow',
+      'top.welcome':'Bienvenido a Edelhollow', 'top.sub':'Catorce amigos, un acogedor pueblo alpino.', 'top.cta':'Consigue tu página para colorear gratis', 'nav.download':'Descarga gratis', 'nav.etsy':'Imprimir en casa', 'nav.cast':'Conoce a los personajes', 'nav.follow':'Síguenos', 'nav.reviews':'Reseñas',
+      'hero.watch':'▶ Ver la película',
+      'dl.h2':'Páginas gratis de Edelhollow',
+      'dl.lede':"Tres páginas gratis del pueblo: el póster del elenco a color para descargar ahora mismo, y dos páginas para colorear que llegan por correo al apuntarte abajo.",
+      'aff.disc':'Como Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables.',
+      'free.direct':'Descargar ahora','free.email':'Por correo','free.poster':'Póster del elenco, a color','free.poster.p':'Los catorce amigos con sus nombres.','free.poster.btn':'Descargar PDF',
+      'free.cast':'Página del elenco para colorear','free.cast.p':'Los mismos catorce amigos, listos para colorear.','free.p49':'Tarde en la mesa de pícnic','free.p49.p':'Página 49 de <em>Las agradables mañanas</em>, a tamaño completo.','free.signup.btn':'Apúntate abajo','cast.free':'Ir a las páginas gratis',
+      'dl.caption':'La vista previa lleva marca de agua; tu copia gratuita se imprime limpia.',
+      'dl.body':'Una tarde tranquila en la mesa de pícnic: Bernard vigila, Pip sirve la cena y un farolillo brilla en la oscuridad. Es la página 49 del libro, a tamaño completo y lista para imprimir en casa. Apúntate una vez y las dos páginas para colorear, esta y la del elenco, llegan en el mismo correo.',
+      'form.heading':'Un pequeño regalo de Edelhollow',
+      'form.email':'Correo electrónico', 'form.name':'Nombre',
+      'form.consent':'Sí, quiero recibir de vez en cuando noticias de Edelhollow, imprimibles gratis y anuncios de nuevos libros. Consulta nuestra <a href="privacy.html" target="_blank">Política de privacidad</a>.',
+      'form.consentError':'Marca la casilla de arriba para continuar.',
+      'form.success':'¡Gracias! Revisa tu bandeja de entrada (y la carpeta de spam): te hemos enviado un correo para confirmar tu suscripción.',
+      'form.button':'Quiero mis páginas gratis',
+      'form.fieldError':'Corrige los campos marcados.',
+      'etsy.h2':'Páginas para imprimir en casa',
+      'etsy.lede':'Páginas sueltas y pequeños paquetes del mundo de Edelhollow, para cuando te apetezca colorear una página más.',
+      'etsy.kofi':'Tienda en Ko-fi',
+      'nav.films':'Películas',
+      'films.h2':'Películas de Edelhollow','films.lede':'Cortos de animación sin palabras desde el pueblo. En cada uno alguien colorea una página de Edelhollow a su manera, con rotuladores, ceras o marcadores. Los libros para colorear están en Amazon.','films.hiccups':'El hipo','films.hiccups.lede':'Bo tiene hipo. Rosa decide que es un invitado, y a un invitado hay que despedirlo como es debido.','films.watch':'▶ Ver en YouTube','films.oneday':'Un día en Edelhollow','films.oneday.lede':'Del amanecer al anochecer en el pueblo, página a página. El tráiler del libro <em>Cozy Mornings in Edelhollow</em>.','etsy.pages8':'8 páginas','etsy.pages9':'9 páginas','etsy.bundles':'Cuatro paquetes de <em>Cozy Mornings in Edelhollow</em>, 34 páginas en total, en PDF A4 y carta US. En cada página se esconde una edelweiss.',
+      'cast.h2':'Conoce a los personajes',
+      'cast.lede':'En Edelhollow viven catorce amigos, cada uno con su rincón del pueblo y su manera de cuidar de los demás. Muy pronto tendrás los perfiles completos de cada personaje.',
+      'cast.download':'Descarga el póster de los personajes (PDF gratis)',
+      'cast.coloring':'Consigue la página para colorear de los personajes (PDF gratis)',
+      'follow.h2':'Sigue a Edelhollow',
+      'follow.lede':'Nuevas páginas, arte entre bastidores y noticias del próximo libro. Vuelve pronto para saber dónde seguirnos.',
+      'soon':'Pronto'
+    },
+    it: {
+      'nav.book':'Libri',
+      'books.more':'Altri libri da Edelhollow',
+      'top.welcome':'Benvenuti a Edelhollow', 'top.sub':'Quattordici amici, un accogliente villaggio alpino.', 'top.cta':'Prendi la tua pagina da colorare gratis', 'nav.download':'Download gratuito', 'nav.etsy':'Stampa a casa', 'nav.cast':'I personaggi', 'nav.follow':'Seguici', 'nav.reviews':'Recensioni',
+      'hero.watch':'▶ Guarda il film',
+      'dl.h2':'Pagine gratuite di Edelhollow',
+      'dl.lede':"Tre pagine gratuite dal villaggio: il poster del cast a colori da scaricare subito, e due pagine da colorare che arrivano via email quando ti iscrivi qui sotto.",
+      'aff.disc':'In qualità di Affiliato Amazon, ricevo un guadagno dagli acquisti idonei.',
+      'free.direct':'Scarica ora','free.email':'Via email','free.poster':'Poster del cast, a colori','free.poster.p':'Tutti i quattordici amici con i loro nomi.','free.poster.btn':'Scarica il PDF',
+      'free.cast':'Pagina del cast da colorare','free.cast.p':'Gli stessi quattordici amici, pronti da colorare.','free.p49':'Sera al tavolo da picnic','free.p49.p':'Pagina 49 di <em>Le piacevoli mattine</em>, a grandezza naturale.','free.signup.btn':'Iscriviti qui sotto','cast.free':'Vai alle pagine gratuite',
+      'dl.caption':"L'anteprima ha una filigrana; la tua copia gratuita si stampa pulita.",
+      'dl.body':'Una sera tranquilla al tavolo da picnic: Bernard fa la guardia, Pip serve la cena, una lanterna brilla nel buio. È la pagina 49 del libro, a grandezza naturale, pronta da stampare a casa. Iscriviti una volta sola e le due pagine da colorare, questa e quella del cast, arrivano nella stessa email.',
+      'form.heading':'Un piccolo regalo da Edelhollow',
+      'form.email':'Email', 'form.name':'Nome',
+      'form.consent':'Sì, voglio ricevere ogni tanto novità da Edelhollow, pagine gratuite da stampare e annunci di nuovi libri. Leggi la nostra <a href="privacy.html" target="_blank">Informativa sulla privacy</a>.',
+      'form.consentError':'Spunta la casella qui sopra per continuare.',
+      'form.success':"Grazie! Controlla la tua casella di posta (anche lo spam): ti abbiamo inviato un'email per confermare l'iscrizione.",
+      'form.button':'Voglio le mie pagine gratuite',
+      'form.fieldError':'Correggi i campi segnalati.',
+      'etsy.h2':'Pagine da stampare a casa',
+      'etsy.lede':'Pagine singole e piccoli pacchetti dal mondo di Edelhollow, per quando hai voglia di colorare ancora una pagina.',
+      'etsy.kofi':'Negozio su Ko-fi',
+      'nav.films':'Film',
+      'films.h2':'I film di Edelhollow','films.lede':'Brevi cartoni animati senza parole dal villaggio. In ognuno qualcuno colora una pagina di Edelhollow a modo suo, con pennarelli, pastelli a cera o marker. I libri da colorare sono su Amazon.','films.hiccups':'Il singhiozzo','films.hiccups.lede':'Bo ha il singhiozzo. Rosa decide che è un ospite, e un ospite va salutato come si deve.','films.watch':'▶ Guarda su YouTube','films.oneday':'Un giorno a Edelhollow','films.oneday.lede':"Dall'alba al tramonto nel villaggio, pagina dopo pagina. Il trailer del libro <em>Cozy Mornings in Edelhollow</em>.",'etsy.pages8':'8 pagine','etsy.pages9':'9 pagine','etsy.bundles':'Quattro pacchetti da <em>Cozy Mornings in Edelhollow</em>, 34 pagine in tutto, in PDF A4 e US Letter. Su ogni pagina si nasconde una stella alpina.',
+      'cast.h2':'I personaggi',
+      'cast.lede':'A Edelhollow vivono quattordici amici, ognuno con il proprio angolo di villaggio e il proprio modo di prendersi cura degli altri. I profili completi dei personaggi sono in arrivo.',
+      'cast.download':'Scarica il poster dei personaggi (PDF gratuito)',
+      'cast.coloring':'La pagina da colorare dei personaggi (PDF gratuito)',
+      'follow.h2':'Segui Edelhollow',
+      'follow.lede':'Nuove pagine, dietro le quinte e notizie sul prossimo libro. Torna presto per sapere dove seguirci.',
+      'soon':'Presto'
+    },
+    fr: {
+      'nav.book':'Livres',
+      'books.more':'D\'autres livres d\'Edelhollow',
+      'top.welcome':'Bienvenue à Edelhollow', 'top.sub':'Quatorze amis, un village alpin douillet.', 'top.cta':'Recevez votre coloriage gratuit', 'nav.download':'Téléchargement gratuit', 'nav.etsy':'À imprimer chez soi', 'nav.cast':'Les personnages', 'nav.follow':'Suivez-nous', 'nav.reviews':'Avis',
+      'hero.watch':'▶ Voir le film',
+      'dl.h2':"Pages gratuites d'Edelhollow",
+      'dl.lede':"Trois pages gratuites du village : le poster des personnages en couleur à télécharger tout de suite, et deux pages à colorier qui arrivent par e-mail quand vous vous inscrivez ci-dessous.",
+      'aff.disc':'En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.',
+      'free.direct':'Télécharger','free.email':'Par e-mail','free.poster':'Poster des personnages, en couleur','free.poster.p':'Les quatorze amis avec leurs noms.','free.poster.btn':'Télécharger le PDF',
+      'free.cast':'Page des personnages à colorier','free.cast.p':'Les mêmes quatorze amis, prêts à colorier.','free.p49':'Soir à la table de pique-nique','free.p49.p':'Page 49 de <em>Matins Cosy</em>, en pleine taille.','free.signup.btn':'Inscrivez-vous ci-dessous','cast.free':'Voir les pages gratuites',
+      'dl.caption':"Aperçu avec filigrane ; votre exemplaire gratuit s'imprime sans.",
+      'dl.body':"Un soir paisible à la table de pique-nique : Bernard veille, Pip sert le souper, une lanterne brille dans la nuit. C'est la page 49 du livre, en pleine taille, prête à imprimer chez vous. Inscrivez-vous une seule fois et les deux pages à colorier, celle-ci et celle des personnages, arrivent dans le même e-mail.",
+      'form.heading':"Un petit cadeau d'Edelhollow",
+      'form.email':'E-mail', 'form.name':'Prénom',
+      'form.consent':'Oui, je souhaite recevoir de temps en temps des nouvelles d\'Edelhollow, des coloriages gratuits et les annonces de nouveaux livres. Voir notre <a href="privacy.html" target="_blank">Politique de confidentialité</a>.',
+      'form.consentError':'Cochez la case ci-dessus pour continuer.',
+      'form.success':'Merci ! Vérifiez votre boîte de réception (et vos spams) : un e-mail vous demande de confirmer votre inscription.',
+      'form.button':'Recevoir mes pages gratuites',
+      'form.fieldError':'Corrigez les champs signalés.',
+      'etsy.h2':'Pages à imprimer chez soi',
+      'etsy.lede':"Des pages à l'unité et de petits lots de l'univers d'Edelhollow, pour quand vous avez envie d'une page de plus à colorier.",
+      'etsy.kofi':'Boutique Ko-fi',
+      'nav.films':'Films',
+      'films.h2':"Les films d'Edelhollow",'films.lede':'De courts dessins animés sans paroles, venus du village. Dans chacun, une page à colorier est mise en couleur à la main, aux feutres, aux crayons de cire ou aux marqueurs. Les livres de coloriage sont sur Amazon.','films.hiccups':'Le hoquet','films.hiccups.lede':"Bo a le hoquet. Rosa décide que c'est un invité, et qu'un invité doit être raccompagné comme il se doit.",'films.watch':'▶ Voir sur YouTube','films.oneday':'Un jour à Edelhollow','films.oneday.lede':"De l'aube au crépuscule dans le village, page après page. La bande-annonce du livre <em>Cozy Mornings in Edelhollow</em>.",'etsy.pages8':'8 pages','etsy.pages9':'9 pages','etsy.bundles':"Quatre lots tirés de <em>Cozy Mornings in Edelhollow</em>, 34 pages en tout, en PDF A4 et US Letter. Un edelweiss se cache sur chaque page.",
+      'cast.h2':'Les personnages',
+      'cast.lede':'Quatorze amis vivent à Edelhollow, chacun avec son coin du village et sa façon de prendre soin des autres. Les portraits complets des personnages arrivent bientôt.',
+      'cast.download':'Télécharger le poster des personnages (PDF gratuit)',
+      'cast.coloring':'La page de coloriage des personnages (PDF gratuit)',
+      'follow.h2':'Suivez Edelhollow',
+      'follow.lede':'De nouvelles pages, les coulisses et les nouvelles du prochain livre. Revenez bientôt pour savoir où nous suivre.',
+      'soon':'Bientôt'
+    }
+  };
+
+  function applyLang(lang){
+    const t = I18N[lang] || I18N.en;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (t[key] !== undefined) el.textContent = t[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.dataset.i18nHtml;
+      if (t[key] !== undefined) el.innerHTML = t[key];
+    });
+    // Zoho form pieces (no data-attributes on Zoho-generated markup; set by id)
+    const heading = document.getElementById('SIGNUP_HEADING');
+    if (heading) heading.textContent = t['form.heading'];
+    const emailField = document.getElementById('EMBED_FORM_EMAIL_LABEL');
+    if (emailField) emailField.placeholder = t['form.email'];
+    const nameField = document.getElementById('FIRSTNAME');
+    if (nameField) nameField.placeholder = t['form.name'];
+    const submitBtn = document.getElementById('zcWebOptin');
+    if (submitBtn) submitBtn.value = t['form.button'];
+    const fieldErr = document.getElementById('errorMsgDiv');
+    if (fieldErr) fieldErr.textContent = t['form.fieldError'];
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      buttons.forEach(b => b.classList.toggle('active', b === btn));
+      blocks.forEach(b => b.hidden = (b.dataset.lang !== lang));
+      if (coverImg){
+        coverImg.src = covers[lang];
+        coverImg.alt = 'Cozy Mornings in Edelhollow — cover (' + lang.toUpperCase() + ')';
+      }
+      if (coverImg2){
+        coverImg2.src = covers2[lang];
+        coverImg2.alt = 'Market Day in Edelhollow — cover (' + lang.toUpperCase() + ')';
+      }
+      document.documentElement.lang = lang;
+      applyLang(lang);
+    });
+  });
+</script>
+
+</body>
+</html>

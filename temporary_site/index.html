@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mossgrove Press — an independent publishing studio</title>
+<meta name="description" content="Mossgrove Press is a small independent publishing studio making gentle, richly illustrated books for children and the grown-ups who read with them.">
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2a201a;
+    --paper:#fbf8f1;
+    --moss:#6b8e5a;
+    --muted:#7a6a5c;
+    --border:#e3d9c8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'EB Garamond', Georgia, serif;
+    background:var(--paper);
+    color:var(--ink);
+    font-size:19px;
+    line-height:1.65;
+  }
+  a{color:inherit;}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px;}
+
+  header{
+    padding:26px 0 16px;
+    border-bottom:1px solid var(--border);
+  }
+  .header-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  .wordmark{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    font-size:20px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-weight:500;
+  }
+  .wordmark img{width:34px;height:34px;}
+  .site-nav{
+    display:flex;
+    gap:26px;
+    flex-wrap:wrap;
+    font-size:15px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+  }
+  .site-nav a{
+    color:var(--muted);
+    text-decoration:none;
+    padding:4px 0;
+    border-bottom:1px solid transparent;
+  }
+  .site-nav a:hover{color:var(--ink);border-color:var(--moss);}
+
+  .hero{
+    text-align:center;
+    padding:72px 24px 60px;
+  }
+  .hero img.crest{
+    width:300px;
+    max-width:70vw;
+    height:auto;
+    margin:0 auto 8px;
+    display:block;
+  }
+  .hero p.tagline{
+    max-width:520px;
+    margin:10px auto 0;
+    font-size:21px;
+    font-style:italic;
+    color:var(--muted);
+  }
+
+  section{
+    border-top:1px solid var(--border);
+    padding:56px 0;
+  }
+  h2{
+    font-weight:500;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-size:17px;
+    text-align:center;
+    margin:0 0 8px;
+  }
+  .rule{
+    width:60px;height:2px;background:var(--moss);
+    margin:0 auto 36px;
+  }
+
+  .world-card{
+    display:flex;
+    gap:36px;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .world-card img{
+    width:280px;
+    max-width:80vw;
+    border-radius:10px;
+    box-shadow:0 14px 34px rgba(42,32,26,0.16);
+    display:block;
+  }
+  .world-copy{flex:1 1 320px;min-width:260px;max-width:440px;}
+  .world-copy h3{
+    font-weight:500;
+    font-size:26px;
+    margin:0 0 10px;
+  }
+  .world-copy p{margin:0 0 18px;}
+  .btn{
+    display:inline-block;
+    padding:12px 26px;
+    border:1px solid var(--ink);
+    border-radius:4px;
+    text-decoration:none;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:14px;
+    transition:all .15s ease;
+  }
+  .btn:hover{background:var(--ink);color:var(--paper);}
+  .coming{
+    text-align:center;
+    color:var(--muted);
+    font-style:italic;
+    margin-top:40px;
+  }
+
+  .about-copy{
+    max-width:620px;
+    margin:0 auto;
+    text-align:center;
+  }
+  .about-copy p{margin:0 0 16px;}
+
+  .contact-copy{
+    text-align:center;
+    color:var(--muted);
+  }
+  .contact-copy a{color:var(--ink);}
+
+  footer{
+    border-top:1px solid var(--border);
+    padding:30px 0 44px;
+    color:var(--muted);
+    font-size:14px;
+    text-align:center;
+  }
+  footer img{width:40px;height:40px;display:block;margin:0 auto 10px;opacity:0.9;}
+  footer a{color:var(--muted);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <a class="wordmark" href="index.html">
+      <img src="img/mp_roundel.png" alt="Mossgrove Press pressmark">
+      Mossgrove Press
+    </a>
+    <nav class="site-nav">
+      <a href="#worlds">Our Worlds</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <img class="crest" src="img/mossgrove_crest_web.png" alt="Mossgrove Press crest — an oak tree before an alpine valley">
+  <p class="tagline">Gentle, richly illustrated books for children and the grown-ups who read with them.</p>
+</div>
+
+<section id="worlds">
+  <div class="wrap">
+    <h2>Our Worlds</h2>
+    <div class="rule"></div>
+    <div class="world-card">
+      <a href="edelhollow.html"><img src="covers/en_front.jpg" alt="Cozy Mornings in Edelhollow — book cover"></a>
+      <div class="world-copy">
+        <h3 style="display:flex;align-items:center;gap:10px;"><img src="img/edelweiss_icon.png" alt="" style="width:30px;height:30px;">Edelhollow</h3>
+        <p>A little village high in the Swiss Alps where the neighbors are animals and nothing much happens, in the best possible way. Home of the coloring book series that began with <em>Cozy Mornings in Edelhollow</em> and continues with <em>Market Day in Edelhollow</em>, with a tiny edelweiss hiding on every page.</p>
+        <a class="btn" href="edelhollow.html">Visit Edelhollow</a>
+      </div>
+    </div>
+    <div class="world-card" style="margin-top:48px;">
+      <a href="cozy-patterns/"><img src="covers/CP-001_cozy_cottagecore_front_600.jpg" alt="Cozy Cottagecore — Cozy Patterns book cover"></a>
+      <div class="world-copy">
+        <h3>Cozy Patterns</h3>
+        <p>Full-page patterns to color — mushrooms, honey, quilts, and cats on the rooftops — for grown-ups and kids coloring the same book differently every time. Starts with <em>Cozy Cottagecore</em>, out now on Amazon.</p>
+        <a class="btn" href="cozy-patterns/">Visit Cozy Patterns</a>
+      </div>
+    </div>
+    <p class="coming">More worlds are on the way.</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <div class="rule"></div>
+    <div class="about-copy">
+      <p>Mossgrove Press is a small independent publishing studio. We make gentle, richly illustrated books for children and the grown-ups who read with them.</p>
+      <p>Our books favor warm details, unhurried stories, and pages that reward a second look.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="rule"></div>
+    <p class="contact-copy">Say hello at <a href="mailto:hello@mossgrovepress.com">hello@mossgrovepress.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <img src="img/mp_roundel.png" alt="">
+  &copy; 2026 Mossgrove Press &middot; <a href="privacy.html">Privacy Policy</a>
+</footer>
+
+</body>
+</html>
