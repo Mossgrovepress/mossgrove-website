@@ -1060,6 +1060,8 @@
       }
       document.documentElement.lang = lang;
       applyLang(lang);
+      var rv = document.querySelector('[data-i18n="nav.reviews"]');
+      if (rv) rv.href = 'edelhollow/thanks/' + lang + '/';
     });
   });
 </script>

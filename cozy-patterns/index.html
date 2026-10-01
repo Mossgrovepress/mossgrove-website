@@ -107,7 +107,7 @@
     </a>
     <nav class="site-nav">
       <a href="../index.html#worlds" data-i18n="nav.worlds">Our Worlds</a>
-      <a href="thanks/en/" data-i18n="nav.follow">Follow &amp; Reviews</a>
+      <a href="thanks/en/" data-thanks data-i18n="nav.follow">Follow &amp; Reviews</a>
       <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="lang-switch" id="langSwitch" aria-label="Language">
@@ -161,7 +161,7 @@
           </div>
           <p class="amz-note"><span data-i18n="amz.note">In Switzerland or Austria? Choose Germany</span> <img class="amz-inline" src="../img/flags/de.svg" alt=""></p>
         </div>
-        <p style="margin-top:18px;"><a class="btn btn-ghost" href="thanks/en/" data-i18n="review">Leave a review &amp; follow along</a></p>
+        <p style="margin-top:18px;"><a class="btn btn-ghost" href="thanks/en/" data-thanks data-i18n="review">Leave a review &amp; follow along</a></p>
       </div>
     </div>
   </div>
@@ -299,6 +299,7 @@
     document.querySelectorAll('[data-i18n]').forEach(function(e){var v=t[e.getAttribute('data-i18n')];if(v!==undefined)e.innerHTML=v;});
     btns.forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
     document.documentElement.lang=l;
+    document.querySelectorAll('[data-thanks]').forEach(function(a){a.href='thanks/'+l+'/';});
     try{localStorage.setItem('mp_lang',l);}catch(e){}
   }
   var l=null;
