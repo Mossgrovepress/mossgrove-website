@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank you for colouring with us | Blumenfalter</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="64x64" href="../../img/favicon-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#2f2a33;--paper:#faf7f2;--slate:#6b5a7a;--terracotta:#b56a7a;--sage:#8a9b6e;--muted:#6f6a5f;--border:#e3ded2;}
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Poppins',system-ui,sans-serif;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;}
+  h1,h2,h3,.btn{font-weight:900;}
+  a{color:inherit;}
+  .wrap{max-width:680px;margin:0 auto;padding:0 22px;}
+  header{padding:26px 0 14px;text-align:center;}
+  header img{width:80px;height:auto;}
+  h1{font-size:34px;line-height:1.15;margin:8px 0 10px;}
+  .lede{font-size:18px;color:var(--muted);margin:0 0 8px;}
+  .note{font-size:14px;color:var(--muted);font-style:italic;margin:0 0 28px;}
+  section{padding:26px 0;border-top:1px solid var(--border);}
+  h2{font-size:23px;margin:0 0 6px;}
+  p{margin:0 0 14px;}
+  .btn{display:inline-block;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:700;font-size:16px;border:2px solid var(--ink);}
+  .btn-primary{background:var(--ink);color:var(--paper);}
+  .btn-primary:hover{background:var(--slate);border-color:var(--slate);}
+  .btn-ghost{background:transparent;color:var(--ink);}
+  .btn-ghost:hover{background:#fff;}
+  .social{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;}
+  .social a{text-decoration:none;border:1px solid var(--border);border-radius:999px;padding:8px 16px;background:#fff;font-weight:700;}
+  .social a:hover{background:var(--paper);border-color:var(--terracotta);}
+  .book{display:flex;gap:16px;align-items:center;margin:16px 0;}
+  .book img{width:96px;height:auto;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.12);flex:none;}
+  .book h3{font-size:18px;margin:0 0 6px;}
+  footer{padding:26px 0 40px;font-size:15px;color:var(--muted);text-align:center;}
+  @media (max-width:520px){h1{font-size:28px;} .book{align-items:flex-start;} .book img{width:76px;}}
+
+  /* language switch (added 2026-10-01) */
+  .lang-switch{display:flex;gap:6px;flex-wrap:wrap;}
+  .lang-btn{border:1px solid var(--border);background:var(--paper);color:var(--muted);padding:6px 12px;border-radius:999px;font:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:all .15s ease;}
+  .lang-btn:hover{color:var(--ink);border-color:var(--ink);}
+  .lang-btn.active{background:var(--ink);border-color:var(--ink);color:var(--paper);}
+  .lang-note{font-size:14px;font-style:italic;color:var(--muted);}
+  .lang-note:empty{display:none;}
+  header .lang-switch{justify-content:center;margin:0 0 14px;}
+</style>
+</head>
+<body>
+<header class="wrap">
+    <div class="lang-switch" id="langSwitch" aria-label="Language">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="it">IT</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+    </div>
+  <a href="../../index.html#worlds"><img src="../../img/mp_roundel.png" alt="Mossgrove Press"></a>
+  <h1 data-i18n="h1">Thank you for colouring with us.</h1>
+  <p class="lede" data-i18n="lede">Mossgrove Press is a very small publisher. Every review on Amazon helps another colourist find these books.</p>
+</header>
+
+<section class="wrap">
+  <h2 data-i18n="rev.h2">Leave a review</h2>
+  <p data-i18n="rev.p">If you have a minute, we would love to hear what you thought. One tap takes you straight to the review form.</p>
+  <!-- Review buttons are Amazon searches until the ASINs exist; replace with https://www.amazon.com/review/create-review/?asin=<ASIN> per store (see edelhollow/thanks/en/) -->
+  <div class="book">
+    <img src="../../covers/BF-001_garden_alphabet_front_600.jpg" alt="Garden Alphabet">
+    <div>
+      <h3>Garden Alphabet</h3>
+      <a class="btn btn-primary" href="https://www.amazon.com/s?k=Garden+Alphabet+Blumenfalter+Mossgrove+Press" target="_blank" rel="noopener" data-i18n="rev.btn">Review on Amazon</a>
+    </div>
+  </div>
+  <div class="book">
+    <img src="../../covers/BF-002_gothic_alphabet_front_600.jpg" alt="Gothic Alphabet">
+    <div>
+      <h3>Gothic Alphabet</h3>
+      <a class="btn btn-primary" href="https://www.amazon.com/s?k=Gothic+Alphabet+Blumenfalter+Mossgrove+Press" target="_blank" rel="noopener" data-i18n="rev.btn">Review on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2 data-i18n="soc.h2">Show us your pages</h2>
+  <p data-i18n="soc.p">Post a photo of your coloured page and tag <strong>@mossgrovepress</strong>. We love seeing the letters in new colours.</p>
+  <div class="social">
+    <a href="https://www.instagram.com/mossgrovepress" target="_blank" rel="noopener"><img src="../../img/social/instagram.svg" alt="" style="width:16px;height:16px;vertical-align:-3px;margin-right:5px;opacity:.85;">Instagram</a>
+    <a href="https://www.tiktok.com/@mossgrovepress" target="_blank" rel="noopener"><img src="../../img/social/tiktok.svg" alt="" style="width:16px;height:16px;vertical-align:-3px;margin-right:5px;opacity:.85;">TikTok</a>
+    <a href="https://www.facebook.com/mossgrovepress" target="_blank" rel="noopener"><img src="../../img/social/facebook.svg" alt="" style="width:16px;height:16px;vertical-align:-3px;margin-right:5px;opacity:.85;">Facebook</a>
+    <a href="https://www.youtube.com/channel/UCTZoNWZnh4wHqgK92UX3bGQ" target="_blank" rel="noopener"><img src="../../img/social/youtube.svg" alt="" style="width:16px;height:16px;vertical-align:-3px;margin-right:5px;opacity:.85;">YouTube</a>
+    <a href="https://www.pinterest.com/mossgrovepress/" target="_blank" rel="noopener"><img src="../../img/social/pinterest.svg" alt="" style="width:16px;height:16px;vertical-align:-3px;margin-right:5px;opacity:.85;">Pinterest</a>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2 data-i18n="more.h2">More Mossgrove Press books</h2>
+  <p data-i18n="more.p">Garden Alphabet and Gothic Alphabet are the first Blumenfalter books. Meet our other worlds too.</p>
+  <div class="book">
+    <img src="../../covers/CP-001_cozy_cottagecore_front_600.jpg" alt="Cozy Cottagecore">
+    <div>
+      <h3>Cozy Patterns</h3>
+      <p style="margin:0 0 8px;" data-i18n="cp.p">Full-page pattern colouring books for grown-ups and kids, starting with Cozy Cottagecore.</p>
+      <a class="btn btn-ghost" href="../../cozy-patterns/" data-i18n="cp.btn">Visit Cozy Patterns</a>
+    </div>
+  </div>
+  <a class="btn btn-primary" href="../../index.html#worlds" style="margin-top:6px;" data-i18n="all.btn">See all our worlds</a>
+</section>
+
+<footer class="wrap">
+  <a href="../../index.html#worlds" data-i18n="back">Back to Mossgrove Press</a><br>&copy; 2026 Mossgrove Press
+</footer>
+<script>
+(function(){
+  var I18N={
+ "en": {
+  "h1": "Thank you for colouring with us.",
+  "lede": "Mossgrove Press is a very small publisher. Every review on Amazon helps another colourist find these books.",
+  "rev.h2": "Leave a review",
+  "rev.p": "If you have a minute, we would love to hear what you thought. One tap takes you straight to the review form.",
+  "rev.btn": "Review on Amazon",
+  "more.h2": "More Mossgrove Press books",
+  "more.p": "Garden Alphabet and Gothic Alphabet are the first Blumenfalter books. Meet our other worlds too.",
+  "all.btn": "See all our worlds",
+  "back": "Back to Mossgrove Press",
+  "cp.p": "Full-page pattern colouring books for grown-ups and kids, starting with Cozy Cottagecore.",
+  "cp.btn": "Visit Cozy Patterns",
+  "soc.h2": "Show us your pages",
+  "soc.p": "Post a photo of your coloured page and tag <strong>@mossgrovepress</strong>. We love seeing the letters in new colours."
+ },
+ "de": {
+  "h1": "Danke, dass du mit uns ausmalst.",
+  "lede": "Mossgrove Press ist ein sehr kleiner Verlag. Jede Rezension auf Amazon hilft jemandem, diese Bücher zu entdecken.",
+  "rev.h2": "Eine Rezension schreiben",
+  "rev.p": "Wenn du eine Minute Zeit hast, würden wir uns freuen zu hören, wie es dir gefallen hat. Ein Tipp bringt dich direkt zum Rezensionsformular.",
+  "rev.btn": "Auf Amazon bewerten",
+  "more.h2": "Mehr Bücher von Mossgrove Press",
+  "more.p": "Garden Alphabet und Gothic Alphabet sind die ersten Blumenfalter-Bücher. Lern auch unsere anderen Welten kennen.",
+  "all.btn": "Alle unsere Welten ansehen",
+  "back": "Zurück zu Mossgrove Press",
+  "cp.p": "Ganzseitige Muster-Malbücher für Erwachsene und Kinder, beginnend mit Cozy Cottagecore.",
+  "cp.btn": "Cozy Patterns besuchen",
+  "soc.h2": "Zeig uns deine Seiten",
+  "soc.p": "Poste ein Foto deiner ausgemalten Seite und markiere <strong>@mossgrovepress</strong>. Wir lieben es, die Buchstaben in neuen Farben zu sehen."
+ },
+ "es": {
+  "h1": "Gracias por colorear con nosotros.",
+  "lede": "Mossgrove Press es una editorial muy pequeña. Cada reseña en Amazon ayuda a otra persona a descubrir estos libros.",
+  "rev.h2": "Dejar una reseña",
+  "rev.p": "Si tienes un minuto, nos encantaría saber qué te ha parecido. Un toque y estás en el formulario de reseña.",
+  "rev.btn": "Reseñar en Amazon",
+  "more.h2": "Más libros de Mossgrove Press",
+  "more.p": "Garden Alphabet y Gothic Alphabet son los primeros libros de Blumenfalter. Conoce también nuestros otros mundos.",
+  "all.btn": "Ver todos nuestros mundos",
+  "back": "Volver a Mossgrove Press",
+  "cp.p": "Libros de patrones a página completa para colorear, para adultos y niños, empezando por Cozy Cottagecore.",
+  "cp.btn": "Visitar Cozy Patterns",
+  "soc.h2": "Enséñanos tus páginas",
+  "soc.p": "Publica una foto de tu página coloreada y etiqueta a <strong>@mossgrovepress</strong>. Nos encanta ver las letras con nuevos colores."
+ },
+ "it": {
+  "h1": "Grazie per aver colorato con noi.",
+  "lede": "Mossgrove Press è una casa editrice piccolissima. Ogni recensione su Amazon aiuta un'altra persona a scoprire questi libri.",
+  "rev.h2": "Lascia una recensione",
+  "rev.p": "Se hai un minuto, ci farebbe piacere sapere cosa ne pensi. Un tocco e sei direttamente nel modulo della recensione.",
+  "rev.btn": "Recensisci su Amazon",
+  "more.h2": "Altri libri di Mossgrove Press",
+  "more.p": "Garden Alphabet e Gothic Alphabet sono i primi libri Blumenfalter. Scopri anche gli altri nostri mondi.",
+  "all.btn": "Vedi tutti i nostri mondi",
+  "back": "Torna a Mossgrove Press",
+  "cp.p": "Libri da colorare di motivi a pagina intera, per adulti e bambini, a partire da Cozy Cottagecore.",
+  "cp.btn": "Visita Cozy Patterns",
+  "soc.h2": "Mostraci le tue pagine",
+  "soc.p": "Pubblica una foto della tua pagina colorata e tagga <strong>@mossgrovepress</strong>. Adoriamo vedere le lettere con colori nuovi."
+ },
+ "fr": {
+  "h1": "Merci de colorier avec nous.",
+  "lede": "Mossgrove Press est une toute petite maison d'édition. Chaque avis sur Amazon aide une autre personne à découvrir ces livres.",
+  "rev.h2": "Laisser un avis",
+  "rev.p": "Si vous avez une minute, nous serions ravis de savoir ce que vous en avez pensé. Un seul geste vous amène directement au formulaire d'avis.",
+  "rev.btn": "Donner un avis sur Amazon",
+  "more.h2": "D'autres livres de Mossgrove Press",
+  "more.p": "Garden Alphabet et Gothic Alphabet sont les premiers livres Blumenfalter. Découvrez aussi nos autres univers.",
+  "all.btn": "Voir tous nos univers",
+  "back": "Retour à Mossgrove Press",
+  "cp.p": "Des livres de coloriage de motifs pleine page, pour adultes et enfants, à commencer par Cozy Cottagecore.",
+  "cp.btn": "Visiter Cozy Patterns",
+  "soc.h2": "Montrez-nous vos pages",
+  "soc.p": "Publiez une photo de votre page coloriée et identifiez <strong>@mossgrovepress</strong>. Nous adorons voir les lettres sous de nouvelles couleurs."
+ }
+};
+  var btns=document.querySelectorAll('.lang-btn');
+  function apply(l){
+    if(!I18N[l]) l='en';
+    var t=I18N[l];
+    document.querySelectorAll('[data-i18n]').forEach(function(e){var v=t[e.getAttribute('data-i18n')];if(v!==undefined)e.innerHTML=v;});
+    btns.forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
+    document.documentElement.lang=l;
+    try{localStorage.setItem('mp_lang',l);}catch(e){}
+  }
+  var l=null;
+  try{l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('mp_lang');}catch(e){}
+  if(l&&l!=='en') apply(l);
+  btns.forEach(function(b){b.addEventListener('click',function(){apply(b.dataset.lang);});});
+})();
+</script>
+</body>
+</html>
