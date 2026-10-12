@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blumenfalter | a Mossgrove Press world</title>
+<meta name="description" content="Blumenfalter: intricate botanical colouring books for adults from Mossgrove Press, starting with Garden Alphabet and Gothic Alphabet.">
+<link rel="icon" type="image/png" sizes="64x64" href="../img/favicon-64.png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2f2a33;
+    --paper:#faf7f2;
+    --slate:#6b5a7a;
+    --terracotta:#b56a7a;
+    --sage:#8a9b6e;
+    --muted:#6f6a5f;
+    --border:#e6dfe3;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Poppins', system-ui, sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    font-size:17px;
+    line-height:1.65;
+  }
+  h1,h2,h3,.wordmark,.btn{font-weight:900;}
+  a{color:inherit;}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+
+  header{padding:28px 0 18px;border-bottom:1px solid var(--border);}
+  .header-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+  .wordmark{display:flex;align-items:center;gap:10px;font-size:20px;color:var(--ink);text-decoration:none;}
+  .wordmark img{width:28px;height:28px;}
+  .site-nav{display:flex;gap:22px;flex-wrap:wrap;font-weight:700;font-size:14px;}
+  .site-nav a{color:var(--muted);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;}
+  .site-nav a:hover{color:var(--ink);border-color:var(--terracotta);}
+
+  main.wrap{padding:48px 24px 44px;}
+  .hero{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start;}
+  .hero-cover{flex:0 1 320px;min-width:240px;}
+  .hero-cover img{width:100%;border-radius:10px;box-shadow:0 14px 34px rgba(51,57,63,0.18);display:block;}
+  .draft-tag{display:inline-block;margin-top:10px;font-size:13px;color:var(--muted);font-style:italic;}
+  .hero-content{flex:1 1 420px;min-width:300px;}
+  .hero-content h1{font-size:40px;margin:0 0 6px;}
+  .kicker{text-transform:uppercase;letter-spacing:2px;font-size:13px;color:var(--sage);font-weight:700;margin:0 0 8px;}
+  .lede{font-size:20px;color:var(--muted);margin:0 0 20px;}
+  .badge{display:inline-block;padding:7px 16px;border-radius:999px;background:var(--terracotta);color:#fff;font-size:13px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;}
+
+  section{border-top:1px solid var(--border);padding:44px 0;}
+  section h2{font-size:24px;margin:0 0 14px;}
+  section p{margin:0 0 14px;max-width:680px;}
+
+  .book-card{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start;}
+  .book-card img{width:180px;border-radius:8px;box-shadow:0 8px 22px rgba(51,57,63,0.16);flex:none;}
+  .book-copy{flex:1 1 320px;min-width:260px;}
+  .book-copy h3{font-size:22px;margin:0 0 6px;}
+  .book-copy .subtitle{font-style:italic;color:var(--muted);font-size:15px;margin:0 0 8px;}
+  .book-copy .series{font-size:14px;color:var(--muted);margin:0 0 12px;}
+
+  .btn{display:inline-block;padding:12px 24px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px;border:2px solid var(--ink);}
+  .btn-primary{background:var(--ink);color:var(--paper);}
+  .btn-primary:hover{background:var(--slate);border-color:var(--slate);}
+  .btn-ghost{background:transparent;color:var(--ink);}
+  .btn-ghost:hover{background:#fff;}
+
+  .motif-list{color:var(--muted);font-style:italic;}
+
+  footer{border-top:1px solid var(--border);padding:30px 0 44px;color:var(--muted);font-size:14px;text-align:center;}
+  footer a{color:var(--muted);}
+  @media (max-width:520px){.hero-content h1{font-size:32px;}}
+
+  /* Amazon store flags (added 2026-09-27) */
+  .amz-label{margin:0 0 8px;font-weight:700;}
+  .amz-flags{display:flex;flex-wrap:wrap;gap:10px;}
+  .amz-flags a{position:relative;display:inline-flex;border-radius:4px;box-shadow:0 0 0 1px var(--border),0 2px 6px rgba(0,0,0,.14);transition:transform .15s;}
+  .amz-flags a::after{content:attr(data-label);position:absolute;left:50%;bottom:calc(100% + 7px);transform:translateX(-50%);background:#2b2b2b;color:#fff;font-size:12px;font-weight:600;line-height:1;padding:5px 8px;border-radius:5px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .12s;z-index:5;}
+  .amz-flags a:hover::after,.amz-flags a:focus-visible::after{opacity:1;}
+  .amz-aff{margin:6px 0 0;font-size:13px;font-style:italic;color:var(--muted);}
+  .amz-flags a:hover,.amz-flags a:focus-visible{transform:translateY(-2px);}
+  .amz .amz-flags img{display:block;width:44px;height:33px;margin:0;border-radius:4px;box-shadow:none;}
+  .amz-note{margin:10px 0 0;font-size:14px;color:var(--muted);}
+  .amz img.amz-inline{display:inline;width:20px;height:15px;margin:0;vertical-align:-2px;border-radius:2px;box-shadow:0 0 0 1px var(--border);}
+  .amz-disc{font-size:13px;color:var(--muted);}
+
+  /* language switch (added 2026-10-01) */
+  .lang-switch{display:flex;gap:6px;flex-wrap:wrap;}
+  .lang-btn{border:1px solid var(--border);background:var(--paper);color:var(--muted);padding:6px 12px;border-radius:999px;font:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:all .15s ease;}
+  .lang-btn:hover{color:var(--ink);border-color:var(--ink);}
+  .lang-btn.active{background:var(--ink);border-color:var(--ink);color:var(--paper);}
+  .lang-note{font-size:14px;font-style:italic;color:var(--muted);}
+  .lang-note:empty{display:none;}
+  .follow-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin:0 0 14px;}
+  .follow-row strong{margin-right:6px;}
+  .follow-row a{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:inherit;}
+  .follow-row a img{width:18px;height:18px;opacity:.85;}
+  .follow-row a:hover img{opacity:1;}
+  .follow-row a:hover{text-decoration:underline;}
+  .bundle-grid{display:flex;gap:18px;flex-wrap:wrap;margin:14px 0 18px;}
+  .bundle-grid figure{margin:0;flex:0 0 160px;}
+  .bundle-grid img{width:100%;border-radius:10px;border:1px solid var(--border);display:block;}
+  .bundle-grid figcaption{font-size:13px;opacity:.8;margin-top:6px;text-align:center;line-height:1.35;}
+  .soon-tag{display:inline-block;padding:7px 16px;border-radius:999px;border:2px solid var(--border);color:var(--muted);font-size:13px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-row">
+    <a class="wordmark" href="../index.html">
+      <img src="../img/mp_roundel.png" alt="Mossgrove Press pressmark">
+      Mossgrove Press
+    </a>
+    <nav class="site-nav">
+      <a href="../index.html#worlds" data-i18n="nav.worlds">Our Worlds</a>
+      <a href="thanks/" data-i18n="nav.follow">Follow &amp; Reviews</a>
+      <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="lang-switch" id="langSwitch" aria-label="Language">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="it">IT</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="hero-cover">
+      <img src="../covers/BF-001_garden_alphabet_front_600.jpg" alt="Garden Alphabet, Blumenfalter Book 1 cover">
+    </div>
+    <div class="hero-content">
+      <p class="kicker" data-i18n="kicker">A Mossgrove Press world</p>
+      <h1>Blumenfalter</h1>
+      <p class="lede" data-i18n="lede">Intricate botanical colouring books for grown-ups, in fine engraving detail.</p>
+      <p data-i18n="hero.p">Every Blumenfalter subject comes as a pair: a Garden book, soft and flowery, and its Gothic twin, dark and thorny, alive with moths and beetles. Both are drawn in the style of old natural-history engravings, for long, slow evenings with pencils or fine markers.</p>
+      <a class="badge" style="text-decoration:none;" href="#books" data-i18n="badge">Get it on Amazon</a>
+    </div>
+  </div>
+</main>
+
+<section id="books">
+  <div class="wrap">
+    <h2 data-i18n="book.h2">The Books</h2>
+    <div class="book-card">
+      <img src="../covers/BF-001_garden_alphabet_front_600.jpg" alt="Garden Alphabet cover">
+      <div class="book-copy">
+        <h3>Garden Alphabet</h3>
+        <p class="subtitle" data-i18n="g.sub">A Botanical Colouring Book for Adults</p>
+        <p class="series" data-i18n="g.series">Blumenfalter, Book 1</p>
+        <p data-i18n="g.p">Twenty-six letters grown from a garden. Every letter is woven from roses, cornflowers, daisies and tulips, with bees, ladybirds, snails and butterflies tucked between the petals. Each letter sits on its own page with a blank back. A big square book, 8.5 by 8.5 inches.</p>
+        <div class="amz">
+          <p class="amz-label" data-i18n="amz.label">Available on Amazon. Choose your store:</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HMR9BP5Q?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="../img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HMR9BP5Q?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="../img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HMR9BP5Q?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="../img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HMR9BP5Q" target="_blank" rel="sponsored noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="../img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HMR9BP5Q" target="_blank" rel="sponsored noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="../img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HMR9BP5Q" target="_blank" rel="sponsored noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="../img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HMR9BP5Q" target="_blank" rel="sponsored noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="../img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HMR9BP5Q?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="../img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note"><span data-i18n="amz.note">In Switzerland or Austria? Choose Germany</span> <img class="amz-inline" src="../img/flags/de.svg" alt=""></p>
+        </div>
+        <p style="margin-top:18px;"><a class="btn btn-ghost" href="thanks/" data-i18n="review">Leave a review &amp; follow along</a></p>
+      </div>
+    </div>
+    <div class="book-card" style="margin-top:36px;">
+      <img src="../covers/BF-002_gothic_alphabet_front_600.jpg" alt="Gothic Alphabet cover">
+      <div class="book-copy">
+        <h3>Gothic Alphabet</h3>
+        <p class="subtitle" data-i18n="go.sub">A Dark Botanical Colouring Book for Adults</p>
+        <p class="series" data-i18n="go.series">Blumenfalter, Book 2</p>
+        <p data-i18n="go.p">Twenty-six letters grown in the dark. Every letter is woven from thorny roses, nightshade, foxgloves and thistles, alive with moths, beetles, dragonflies and the odd little spider. Each letter sits on its own page with a blank back. A big square book, 8.5 by 8.5 inches.</p>
+        <!-- COMING SOON: replace this line with the flag row (copy from Garden Alphabet above) once the BF-002 ASIN exists -->
+        <p><span class="soon-tag" data-i18n="soon">Coming soon to Amazon</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="etsy">
+  <div class="wrap">
+    <h2 data-i18n="etsy.h2">Alphabet Prints</h2>
+    <p data-i18n="etsy.lede">The same letters in full colour, as printable wall-art posters from our Etsy shop.</p>
+    <div class="bundle-grid">
+      <figure><a href="https://www.etsy.com/listing/4591660643" target="_blank" rel="noopener"><img src="../img/bundles/floral-alphabet-print.jpg" alt="Floral Alphabet Print, printable poster on Etsy" loading="lazy"></a><figcaption><em>Floral Alphabet Print</em><br><span data-i18n="etsy.poster">Printable poster</span></figcaption></figure>
+      <figure><a href="https://www.etsy.com/listing/4591659805" target="_blank" rel="noopener"><img src="../img/bundles/gothic-alphabet-print.jpg" alt="Gothic Alphabet Print, printable poster on Etsy" loading="lazy"></a><figcaption><em>Gothic Alphabet Print</em><br><span data-i18n="etsy.poster">Printable poster</span></figcaption></figure>
+    </div>
+    <a class="btn btn-primary" href="https://www.etsy.com/shop/MossgrovePress" target="_blank" rel="noopener" data-i18n="etsy.shop">Etsy Shop</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2 data-i18n="about.h2">About the line</h2>
+    <p data-i18n="about.p">Blumenfalter is a made-up word, flower and moth in one, and it is ours alone. The line began with the Wilderkind prints, creatures woven into letters, and grew into books. Flowers and insects first, animals later, always in pairs. Made in Switzerland, like every Mossgrove Press book.</p>
+  </div>
+</section>
+
+<section id="follow">
+  <div class="wrap">
+    <h2 data-i18n="follow.h2">Follow Mossgrove Press</h2>
+    <p class="follow-row"><a href="https://www.tiktok.com/@mossgrovepress" target="_blank" rel="noopener"><img src="../img/social/tiktok.svg" alt="">TikTok</a>
+      <a href="https://www.instagram.com/mossgrovepress" target="_blank" rel="noopener"><img src="../img/social/instagram.svg" alt="">Instagram</a>
+      <a href="https://www.facebook.com/mossgrovepress" target="_blank" rel="noopener"><img src="../img/social/facebook.svg" alt="">Facebook</a>
+      <a href="https://www.youtube.com/channel/UCTZoNWZnh4wHqgK92UX3bGQ" target="_blank" rel="noopener"><img src="../img/social/youtube.svg" alt="">YouTube</a>
+      <a href="https://www.pinterest.com/mossgrovepress/" target="_blank" rel="noopener"><img src="../img/social/pinterest.svg" alt="">Pinterest</a></p>
+  </div>
+</section>
+
+<footer>
+  <a href="../index.html" data-i18n="back">Back to Mossgrove Press</a> &middot; &copy; 2026 Mossgrove Press<br><span class="amz-disc" data-i18n="aff.disc">As an Amazon Associate I earn from qualifying purchases.</span>
+</footer>
+
+<script>
+(function(){
+  var I18N={
+ "en": {
+  "nav.worlds": "Our Worlds",
+  "nav.follow": "Follow &amp; Reviews",
+  "nav.contact": "Contact",
+  "kicker": "A Mossgrove Press world",
+  "lede": "Intricate botanical colouring books for grown-ups, in fine engraving detail.",
+  "hero.p": "Every Blumenfalter subject comes as a pair: a Garden book, soft and flowery, and its Gothic twin, dark and thorny, alive with moths and beetles. Both are drawn in the style of old natural-history engravings, for long, slow evenings with pencils or fine markers.",
+  "badge": "Get it on Amazon",
+  "book.h2": "The Books",
+  "g.sub": "A Botanical Colouring Book for Adults",
+  "g.series": "Blumenfalter, Book 1",
+  "g.p": "Twenty-six letters grown from a garden. Every letter is woven from roses, cornflowers, daisies and tulips, with bees, ladybirds, snails and butterflies tucked between the petals. Each letter sits on its own page with a blank back. A big square book, 8.5 by 8.5 inches.",
+  "go.sub": "A Dark Botanical Colouring Book for Adults",
+  "go.series": "Blumenfalter, Book 2",
+  "go.p": "Twenty-six letters grown in the dark. Every letter is woven from thorny roses, nightshade, foxgloves and thistles, alive with moths, beetles, dragonflies and the odd little spider. Each letter sits on its own page with a blank back. A big square book, 8.5 by 8.5 inches.",
+  "soon": "Coming soon to Amazon",
+  "amz.label": "Available on Amazon. Choose your store:",
+  "amz.note": "In Switzerland or Austria? Choose Germany",
+  "review": "Leave a review &amp; follow along",
+  "etsy.h2": "Alphabet Prints",
+  "etsy.lede": "The same letters in full colour, as printable wall-art posters from our Etsy shop.",
+  "etsy.poster": "Printable poster",
+  "etsy.shop": "Etsy Shop",
+  "about.h2": "About the line",
+  "about.p": "Blumenfalter is a made-up word, flower and moth in one, and it is ours alone. The line began with the Wilderkind prints, creatures woven into letters, and grew into books. Flowers and insects first, animals later, always in pairs. Made in Switzerland, like every Mossgrove Press book.",
+  "follow.h2": "Follow Mossgrove Press",
+  "back": "Back to Mossgrove Press",
+  "aff.disc": "As an Amazon Associate I earn from qualifying purchases."
+ },
+ "de": {
+  "nav.worlds": "Unsere Welten",
+  "nav.follow": "Folgen &amp; Rezensionen",
+  "nav.contact": "Kontakt",
+  "kicker": "Eine Welt von Mossgrove Press",
+  "lede": "Detailreiche botanische Malbücher für Erwachsene, fein wie alte Stiche.",
+  "hero.p": "Jedes Blumenfalter-Thema kommt als Paar: ein Garden-Buch, weich und blumig, und sein Gothic-Zwilling, dunkel und dornig, voller Motten und Käfer. Beide sind im Stil alter naturkundlicher Stiche gezeichnet, für lange, ruhige Abende mit Buntstiften oder feinen Markern.",
+  "badge": "Jetzt bei Amazon",
+  "book.h2": "Die Bücher",
+  "g.sub": "Ein botanisches Malbuch für Erwachsene",
+  "g.series": "Blumenfalter, Band 1",
+  "g.p": "Sechsundzwanzig Buchstaben, gewachsen in einem Garten. Jeder Buchstabe ist aus Rosen, Kornblumen, Gänseblümchen und Tulpen geflochten, mit Bienen, Marienkäfern, Schnecken und Schmetterlingen zwischen den Blüten. Jeder Buchstabe hat seine eigene Seite mit leerer Rückseite. Ein grosses quadratisches Buch, 21,6 x 21,6 cm.",
+  "go.sub": "Ein dunkles botanisches Malbuch für Erwachsene",
+  "go.series": "Blumenfalter, Band 2",
+  "go.p": "Sechsundzwanzig Buchstaben, gewachsen im Dunkeln. Jeder Buchstabe ist aus dornigen Rosen, Nachtschatten, Fingerhut und Disteln geflochten, belebt von Motten, Käfern, Libellen und der einen oder anderen kleinen Spinne. Jeder Buchstabe hat seine eigene Seite mit leerer Rückseite. Ein grosses quadratisches Buch, 21,6 x 21,6 cm.",
+  "soon": "Bald bei Amazon",
+  "amz.label": "Erhältlich bei Amazon. Wähle deinen Shop:",
+  "amz.note": "In der Schweiz oder in Österreich? Wähle Deutschland",
+  "review": "Rezension schreiben &amp; folgen",
+  "etsy.h2": "Alphabet-Poster",
+  "etsy.lede": "Dieselben Buchstaben in Farbe, als Poster zum Ausdrucken aus unserem Etsy-Shop.",
+  "etsy.poster": "Poster zum Ausdrucken",
+  "etsy.shop": "Etsy Shop",
+  "about.h2": "Über die Reihe",
+  "about.p": "Blumenfalter ist ein erfundenes Wort, Blume und Falter in einem, und es gehört nur uns. Die Reihe begann mit den Wilderkind-Postern, Tiere in Buchstaben geflochten, und wuchs zu Büchern. Erst Blumen und Insekten, später Tiere, immer als Paar. Gemacht in der Schweiz, wie jedes Buch von Mossgrove Press.",
+  "follow.h2": "Folge Mossgrove Press",
+  "back": "Zurück zu Mossgrove Press",
+  "aff.disc": "Als Amazon-Partner verdiene ich an qualifizierten Verkäufen."
+ },
+ "es": {
+  "nav.worlds": "Nuestros mundos",
+  "nav.follow": "Seguir y reseñas",
+  "nav.contact": "Contacto",
+  "kicker": "Un mundo de Mossgrove Press",
+  "lede": "Libros botánicos para colorear, para adultos, con el detalle fino de un grabado.",
+  "hero.p": "Cada tema de Blumenfalter viene en pareja: un libro Garden, suave y florido, y su gemelo Gothic, oscuro y espinoso, lleno de polillas y escarabajos. Los dos están dibujados al estilo de los grabados antiguos de historia natural, para tardes largas y tranquilas con lápices o rotuladores finos.",
+  "badge": "Consíguelo en Amazon",
+  "book.h2": "Los libros",
+  "g.sub": "Un libro botánico para colorear para adultos",
+  "g.series": "Blumenfalter, libro 1",
+  "g.p": "Veintiséis letras crecidas en un jardín. Cada letra está tejida con rosas, acianos, margaritas y tulipanes, con abejas, mariquitas, caracoles y mariposas entre los pétalos. Cada letra tiene su propia página con el reverso en blanco. Un libro grande y cuadrado, de 21,6 x 21,6 cm.",
+  "go.sub": "Un libro botánico oscuro para colorear para adultos",
+  "go.series": "Blumenfalter, libro 2",
+  "go.p": "Veintiséis letras crecidas en la oscuridad. Cada letra está tejida con rosas espinosas, belladona, dedaleras y cardos, llena de polillas, escarabajos, libélulas y alguna arañita. Cada letra tiene su propia página con el reverso en blanco. Un libro grande y cuadrado, de 21,6 x 21,6 cm.",
+  "soon": "Pronto en Amazon",
+  "amz.label": "Disponible en Amazon. Elige tu tienda:",
+  "amz.note": "¿En Suiza o Austria? Elige Alemania",
+  "review": "Deja una reseña y síguenos",
+  "etsy.h2": "Pósteres del alfabeto",
+  "etsy.lede": "Las mismas letras a todo color, como pósteres imprimibles de nuestra tienda de Etsy.",
+  "etsy.poster": "Póster imprimible",
+  "etsy.shop": "Tienda en Etsy",
+  "about.h2": "Sobre la colección",
+  "about.p": "Blumenfalter es una palabra inventada, flor y polilla en una, y es solo nuestra. La colección empezó con los pósteres Wilderkind, criaturas tejidas en letras, y creció hasta convertirse en libros. Primero flores e insectos, después animales, siempre en parejas. Hecho en Suiza, como todos los libros de Mossgrove Press.",
+  "follow.h2": "Sigue a Mossgrove Press",
+  "back": "Volver a Mossgrove Press",
+  "aff.disc": "Como afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables."
+ },
+ "it": {
+  "nav.worlds": "I nostri mondi",
+  "nav.follow": "Segui e recensisci",
+  "nav.contact": "Contatti",
+  "kicker": "Un mondo di Mossgrove Press",
+  "lede": "Libri botanici da colorare per adulti, con il dettaglio fine di un'incisione.",
+  "hero.p": "Ogni soggetto Blumenfalter arriva in coppia: un libro Garden, morbido e fiorito, e il suo gemello Gothic, scuro e spinoso, pieno di falene e scarabei. Entrambi sono disegnati nello stile delle antiche incisioni di storia naturale, per serate lunghe e lente con matite o pennarelli fini.",
+  "badge": "Acquistalo su Amazon",
+  "book.h2": "I libri",
+  "g.sub": "Un libro botanico da colorare per adulti",
+  "g.series": "Blumenfalter, libro 1",
+  "g.p": "Ventisei lettere cresciute in un giardino. Ogni lettera è intrecciata di rose, fiordalisi, margherite e tulipani, con api, coccinelle, chiocciole e farfalle tra i petali. Ogni lettera ha la sua pagina con il retro bianco. Un grande libro quadrato, 21,6 x 21,6 cm.",
+  "go.sub": "Un libro botanico dark da colorare per adulti",
+  "go.series": "Blumenfalter, libro 2",
+  "go.p": "Ventisei lettere cresciute nel buio. Ogni lettera è intrecciata di rose spinose, belladonna, digitali e cardi, animata da falene, scarabei, libellule e qualche piccolo ragno. Ogni lettera ha la sua pagina con il retro bianco. Un grande libro quadrato, 21,6 x 21,6 cm.",
+  "soon": "Presto su Amazon",
+  "amz.label": "Disponibile su Amazon. Scegli il tuo store:",
+  "amz.note": "In Svizzera o in Austria? Scegli la Germania",
+  "review": "Lascia una recensione e seguici",
+  "etsy.h2": "Poster dell'alfabeto",
+  "etsy.lede": "Le stesse lettere a colori, come poster stampabili dal nostro negozio Etsy.",
+  "etsy.poster": "Poster stampabile",
+  "etsy.shop": "Negozio su Etsy",
+  "about.h2": "La collana",
+  "about.p": "Blumenfalter è una parola inventata, fiore e falena insieme, ed è solo nostra. La collana è nata con i poster Wilderkind, creature intrecciate nelle lettere, ed è cresciuta fino ai libri. Prima fiori e insetti, poi animali, sempre in coppia. Realizzato in Svizzera, come ogni libro di Mossgrove Press.",
+  "follow.h2": "Segui Mossgrove Press",
+  "back": "Torna a Mossgrove Press",
+  "aff.disc": "In qualità di Affiliato Amazon, ricevo un guadagno dagli acquisti idonei."
+ },
+ "fr": {
+  "nav.worlds": "Nos univers",
+  "nav.follow": "Suivre et avis",
+  "nav.contact": "Contact",
+  "kicker": "Un univers Mossgrove Press",
+  "lede": "Des livres de coloriage botaniques pour adultes, fins comme une gravure.",
+  "hero.p": "Chaque sujet Blumenfalter vient par deux : un livre Garden, doux et fleuri, et son jumeau Gothic, sombre et épineux, peuplé de papillons de nuit et de scarabées. Tous deux sont dessinés dans le style des anciennes gravures d'histoire naturelle, pour de longues soirées tranquilles aux crayons ou aux feutres fins.",
+  "badge": "Disponible sur Amazon",
+  "book.h2": "Les livres",
+  "g.sub": "Un livre de coloriage botanique pour adultes",
+  "g.series": "Blumenfalter, livre 1",
+  "g.p": "Vingt-six lettres poussées dans un jardin. Chaque lettre est tissée de roses, de bleuets, de marguerites et de tulipes, avec des abeilles, des coccinelles, des escargots et des papillons nichés entre les pétales. Chaque lettre a sa propre page, au verso vierge. Un grand livre carré, 21,6 x 21,6 cm.",
+  "go.sub": "Un livre de coloriage botanique sombre pour adultes",
+  "go.series": "Blumenfalter, livre 2",
+  "go.p": "Vingt-six lettres poussées dans l'ombre. Chaque lettre est tissée de roses épineuses, de belladone, de digitales et de chardons, animée de papillons de nuit, de scarabées, de libellules et de quelques petites araignées. Chaque lettre a sa propre page, au verso vierge. Un grand livre carré, 21,6 x 21,6 cm.",
+  "soon": "Bientôt sur Amazon",
+  "amz.label": "Disponible sur Amazon. Choisissez votre boutique :",
+  "amz.note": "En Suisse ou en Autriche ? Choisissez l'Allemagne",
+  "review": "Laisser un avis et nous suivre",
+  "etsy.h2": "Affiches de l'alphabet",
+  "etsy.lede": "Les mêmes lettres en couleur, en affiches à imprimer depuis notre boutique Etsy.",
+  "etsy.poster": "Affiche à imprimer",
+  "etsy.shop": "Boutique Etsy",
+  "about.h2": "À propos de la collection",
+  "about.p": "Blumenfalter est un mot inventé, fleur et papillon de nuit en un, et il n'appartient qu'à nous. La collection est née avec les affiches Wilderkind, des créatures tissées dans des lettres, puis a grandi en livres. D'abord les fleurs et les insectes, plus tard les animaux, toujours par deux. Fabriqué en Suisse, comme tous les livres de Mossgrove Press.",
+  "follow.h2": "Suivez Mossgrove Press",
+  "back": "Retour à Mossgrove Press",
+  "aff.disc": "En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises."
+ }
+};
+  var btns=document.querySelectorAll('.lang-btn');
+  function apply(l){
+    if(!I18N[l]) l='en';
+    var t=I18N[l];
+    document.querySelectorAll('[data-i18n]').forEach(function(e){var v=t[e.getAttribute('data-i18n')];if(v!==undefined)e.innerHTML=v;});
+    btns.forEach(function(b){b.classList.toggle('active',b.dataset.lang===l);});
+    document.documentElement.lang=l;
+    try{localStorage.setItem('mp_lang',l);}catch(e){}
+  }
+  var l=null;
+  try{l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('mp_lang');}catch(e){}
+  if(l&&l!=='en') apply(l);
+  btns.forEach(function(b){b.addEventListener('click',function(){apply(b.dataset.lang);});});
+})();
+</script>
+
+</body>
+</html>
