@@ -47,6 +47,21 @@
   .lang-note{font-size:14px;font-style:italic;color:var(--muted);}
   .lang-note:empty{display:none;}
   header .lang-switch{justify-content:center;margin:0 0 14px;}
+  /* Amazon store flags (added 2026-09-27) */
+  .amz-label{margin:0 0 8px;font-weight:700;}
+  .amz-flags{display:flex;flex-wrap:wrap;gap:10px;}
+  .amz-flags a{position:relative;display:inline-flex;border-radius:4px;box-shadow:0 0 0 1px var(--border),0 2px 6px rgba(0,0,0,.14);transition:transform .15s;}
+  .amz-flags a::after{content:attr(data-label);position:absolute;left:50%;bottom:calc(100% + 7px);transform:translateX(-50%);background:#2b2b2b;color:#fff;font-size:12px;font-weight:600;line-height:1;padding:5px 8px;border-radius:5px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .12s;z-index:5;}
+  .amz-flags a:hover::after,.amz-flags a:focus-visible::after{opacity:1;}
+  .amz-aff{margin:6px 0 0;font-size:13px;font-style:italic;color:var(--muted);}
+  .amz-flags a:hover,.amz-flags a:focus-visible{transform:translateY(-2px);}
+  .amz .amz-flags img{display:block;width:44px;height:33px;margin:0;border-radius:4px;box-shadow:none;}
+  .amz-note{margin:10px 0 0;font-size:14px;color:var(--muted);}
+  .amz img.amz-inline{display:inline;width:20px;height:15px;margin:0;vertical-align:-2px;border-radius:2px;box-shadow:0 0 0 1px var(--border);}
+  .amz-disc{font-size:13px;color:var(--muted);}
+
+  .rev-flags .other{margin:12px 0 8px;}
+  .rev-flags .amz-flags{gap:8px;}
 </style>
 </head>
 <body>
@@ -66,20 +81,48 @@
 <section class="wrap">
   <h2 data-i18n="rev.h2">Leave a review</h2>
   <p data-i18n="rev.p">If you have a minute, we would love to hear what you thought. One tap takes you straight to the review form.</p>
-  <!-- Review buttons are Amazon searches until the ASINs exist; replace with https://www.amazon.com/review/create-review/?asin=<ASIN> per store (see edelhollow/thanks/en/) -->
   <div class="book">
     <img src="../../covers/BF-001_garden_alphabet_front_600.jpg" alt="Garden Alphabet">
     <div>
       <h3>Garden Alphabet</h3>
       <a class="btn btn-primary" href="https://www.amazon.com/review/create-review/?asin=B0HMR9BP5Q" target="_blank" rel="noopener" data-i18n="rev.btn">Review on Amazon</a>
-      <p class="other"><span data-i18n="rev.other">Bought it on another Amazon store?</span> <a href="https://www.amazon.co.uk/review/create-review/?asin=B0HMR9BP5Q" target="_blank" rel="noopener">Amazon.co.uk</a> &middot; <a href="https://www.amazon.ca/review/create-review/?asin=B0HMR9BP5Q" target="_blank" rel="noopener">Amazon.ca</a> &middot; <a href="https://www.amazon.com.au/review/create-review/?asin=B0HMR9BP5Q" target="_blank" rel="noopener">Amazon.com.au</a> &middot; <a href="https://www.amazon.ie/review/create-review/?asin=B0HMR9BP5Q" target="_blank" rel="noopener">Amazon.ie</a> &middot; <a href="https://www.amazon.de/review/create-review/?asin=B0HMR9BP5Q" target="_blank" rel="noopener">Amazon.de</a></p>
+          <div class="amz rev-flags">
+            <p class="other"><span data-i18n="rev.other">Bought it on another Amazon store?</span></p>
+            <div class="amz-flags">
+            <a href="https://www.amazon.de/review/create-review/?asin=B0HMR9BP5Q" target="_blank" rel="noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="../../img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/review/create-review/?asin=B0HMR9BP5Q" target="_blank" rel="noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="../../img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/review/create-review/?asin=B0HMR9BP5Q" target="_blank" rel="noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="../../img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/review/create-review/?asin=B0HMR9BP5Q" target="_blank" rel="noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="../../img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/review/create-review/?asin=B0HMR9BP5Q" target="_blank" rel="noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="../../img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/review/create-review/?asin=B0HMR9BP5Q" target="_blank" rel="noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="../../img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/review/create-review/?asin=B0HMR9BP5Q" target="_blank" rel="noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="../../img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/review/create-review/?asin=B0HMR9BP5Q" target="_blank" rel="noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="../../img/flags/es.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com.au/review/create-review/?asin=B0HMR9BP5Q" target="_blank" rel="noopener" data-label="Amazon.com.au" aria-label="Amazon.com.au"><img src="../../img/flags/au.svg" alt="" width="44" height="33"></a>
+            </div>
+            <p class="amz-note"><span data-i18n="amz.note">In Switzerland or Austria? Choose Germany</span> <img class="amz-inline" src="../../img/flags/de.svg" alt=""></p>
+          </div>
     </div>
   </div>
   <div class="book">
     <img src="../../covers/BF-002_gothic_alphabet_front_600.jpg" alt="Gothic Alphabet">
     <div>
       <h3>Gothic Alphabet</h3>
-      <a class="btn btn-primary" href="https://www.amazon.com/s?k=Gothic+Alphabet+Blumenfalter+Mossgrove+Press" target="_blank" rel="noopener" data-i18n="rev.btn">Review on Amazon</a>
+      <a class="btn btn-primary" href="https://www.amazon.com/review/create-review/?asin=B0HN32Y371" target="_blank" rel="noopener" data-i18n="rev.btn">Review on Amazon</a>
+          <div class="amz rev-flags">
+            <p class="other"><span data-i18n="rev.other">Bought it on another Amazon store?</span></p>
+            <div class="amz-flags">
+            <a href="https://www.amazon.de/review/create-review/?asin=B0HN32Y371" target="_blank" rel="noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="../../img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/review/create-review/?asin=B0HN32Y371" target="_blank" rel="noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="../../img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/review/create-review/?asin=B0HN32Y371" target="_blank" rel="noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="../../img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/review/create-review/?asin=B0HN32Y371" target="_blank" rel="noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="../../img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/review/create-review/?asin=B0HN32Y371" target="_blank" rel="noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="../../img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/review/create-review/?asin=B0HN32Y371" target="_blank" rel="noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="../../img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/review/create-review/?asin=B0HN32Y371" target="_blank" rel="noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="../../img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/review/create-review/?asin=B0HN32Y371" target="_blank" rel="noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="../../img/flags/es.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com.au/review/create-review/?asin=B0HN32Y371" target="_blank" rel="noopener" data-label="Amazon.com.au" aria-label="Amazon.com.au"><img src="../../img/flags/au.svg" alt="" width="44" height="33"></a>
+            </div>
+            <p class="amz-note"><span data-i18n="amz.note">In Switzerland or Austria? Choose Germany</span> <img class="amz-inline" src="../../img/flags/de.svg" alt=""></p>
+          </div>
     </div>
   </div>
 </section>
@@ -130,7 +173,8 @@
   "cp.btn": "Visit Cozy Patterns",
   "soc.h2": "Show us your pages",
   "soc.p": "Post a photo of your coloured page and tag <strong>@mossgrovepress</strong>. We love seeing the letters in new colours.",
-  "rev.other": "Bought it on another Amazon store?"
+  "rev.other": "Bought it on another Amazon store?",
+  "amz.note": "In Switzerland or Austria? Choose Germany"
  },
  "de": {
   "h1": "Danke, dass du mit uns ausmalst.",
@@ -146,7 +190,8 @@
   "cp.btn": "Cozy Patterns besuchen",
   "soc.h2": "Zeig uns deine Seiten",
   "soc.p": "Poste ein Foto deiner ausgemalten Seite und markiere <strong>@mossgrovepress</strong>. Wir lieben es, die Buchstaben in neuen Farben zu sehen.",
-  "rev.other": "Auf einem anderen Amazon-Shop gekauft?"
+  "rev.other": "Auf einem anderen Amazon-Shop gekauft?",
+  "amz.note": "In der Schweiz oder in Österreich? Wähle Deutschland"
  },
  "es": {
   "h1": "Gracias por colorear con nosotros.",
@@ -162,7 +207,8 @@
   "cp.btn": "Visitar Cozy Patterns",
   "soc.h2": "Enséñanos tus páginas",
   "soc.p": "Publica una foto de tu página coloreada y etiqueta a <strong>@mossgrovepress</strong>. Nos encanta ver las letras con nuevos colores.",
-  "rev.other": "¿Lo compraste en otra tienda de Amazon?"
+  "rev.other": "¿Lo compraste en otra tienda de Amazon?",
+  "amz.note": "¿En Suiza o en Austria? Elige Alemania"
  },
  "it": {
   "h1": "Grazie per aver colorato con noi.",
@@ -178,7 +224,8 @@
   "cp.btn": "Visita Cozy Patterns",
   "soc.h2": "Mostraci le tue pagine",
   "soc.p": "Pubblica una foto della tua pagina colorata e tagga <strong>@mossgrovepress</strong>. Adoriamo vedere le lettere con colori nuovi.",
-  "rev.other": "Lo hai comprato su un altro store Amazon?"
+  "rev.other": "Lo hai comprato su un altro store Amazon?",
+  "amz.note": "In Svizzera o in Austria? Scegli la Germania"
  },
  "fr": {
   "h1": "Merci de colorier avec nous.",
@@ -194,7 +241,8 @@
   "cp.btn": "Visiter Cozy Patterns",
   "soc.h2": "Montrez-nous vos pages",
   "soc.p": "Publiez une photo de votre page coloriée et identifiez <strong>@mossgrovepress</strong>. Nous adorons voir les lettres sous de nouvelles couleurs.",
-  "rev.other": "Acheté sur une autre boutique Amazon ?"
+  "rev.other": "Acheté sur une autre boutique Amazon ?",
+  "amz.note": "En Suisse ou en Autriche ? Choisissez l'Allemagne"
  }
 };
   var btns=document.querySelectorAll('.lang-btn');

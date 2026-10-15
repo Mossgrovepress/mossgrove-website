@@ -37,6 +37,22 @@
   .book h3{font-size:18px;margin:0 0 6px;}
   footer{padding:26px 0 40px;font-size:15px;color:var(--muted);text-align:center;}
   @media (max-width:520px){h1{font-size:28px;} .book{align-items:flex-start;} .book img{width:76px;}}
+  /* Amazon store flags (added 2026-09-27) */
+  .amz-label{margin:0 0 8px;font-weight:700;}
+  .amz-flags{display:flex;flex-wrap:wrap;gap:10px;}
+  .amz-flags a{position:relative;display:inline-flex;border-radius:4px;box-shadow:0 0 0 1px var(--border),0 2px 6px rgba(0,0,0,.14);transition:transform .15s;}
+  .amz-flags a::after{content:attr(data-label);position:absolute;left:50%;bottom:calc(100% + 7px);transform:translateX(-50%);background:#2b2b2b;color:#fff;font-size:12px;font-weight:600;line-height:1;padding:5px 8px;border-radius:5px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .12s;z-index:5;}
+  .amz-flags a:hover::after,.amz-flags a:focus-visible::after{opacity:1;}
+  .amz-aff{margin:6px 0 0;font-size:13px;font-style:italic;color:var(--muted);}
+  .amz-flags a:hover,.amz-flags a:focus-visible{transform:translateY(-2px);}
+  .amz .amz-flags img{display:block;width:44px;height:33px;margin:0;border-radius:4px;box-shadow:none;}
+  .amz-note{margin:10px 0 0;font-size:14px;color:var(--muted);}
+  .amz img.amz-inline{display:inline;width:20px;height:15px;margin:0;vertical-align:-2px;border-radius:2px;box-shadow:0 0 0 1px var(--border);}
+  .amz-disc{font-size:13px;color:var(--muted);}
+
+  .rev-flags .other{margin:12px 0 8px;}
+  .rev-flags .amz-flags{gap:8px;}
+  .other{font-size:14px;color:var(--muted);}
 </style>
 </head>
 <body>
@@ -54,6 +70,21 @@
     <div>
       <h3>Cozy Cottagecore</h3>
       <a class="btn btn-primary" href="https://www.amazon.fr/review/create-review/?asin=B0HJHQ85NM" target="_blank" rel="noopener">Donner un avis sur Amazon</a>
+          <div class="amz rev-flags">
+            <p class="other"><span data-i18n="rev.other">Acheté sur une autre boutique Amazon ?</span></p>
+            <div class="amz-flags">
+            <a href="https://www.amazon.de/review/create-review/?asin=B0HJHQ85NM" target="_blank" rel="noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="../../../img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/review/create-review/?asin=B0HJHQ85NM" target="_blank" rel="noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="../../../img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/review/create-review/?asin=B0HJHQ85NM" target="_blank" rel="noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="../../../img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/review/create-review/?asin=B0HJHQ85NM" target="_blank" rel="noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="../../../img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/review/create-review/?asin=B0HJHQ85NM" target="_blank" rel="noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="../../../img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/review/create-review/?asin=B0HJHQ85NM" target="_blank" rel="noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="../../../img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/review/create-review/?asin=B0HJHQ85NM" target="_blank" rel="noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="../../../img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/review/create-review/?asin=B0HJHQ85NM" target="_blank" rel="noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="../../../img/flags/es.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com.au/review/create-review/?asin=B0HJHQ85NM" target="_blank" rel="noopener" data-label="Amazon.com.au" aria-label="Amazon.com.au"><img src="../../../img/flags/au.svg" alt="" width="44" height="33"></a>
+            </div>
+            <p class="amz-note"><span data-i18n="amz.note">En Suisse ou en Autriche ? Choisissez l'Allemagne</span> <img class="amz-inline" src="../../../img/flags/de.svg" alt=""></p>
+          </div>
     </div>
   </div>
 </section>
