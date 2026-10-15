@@ -101,6 +101,21 @@
   .bundle-grid figure{margin:0;flex:0 0 160px;}
   .bundle-grid img{width:100%;border-radius:10px;border:1px solid var(--border);display:block;}
   .bundle-grid figcaption{font-size:13px;opacity:.8;margin-top:6px;text-align:center;line-height:1.35;}
+  /* Amazon store flags (added 2026-09-27) */
+  .amz-label{margin:0 0 8px;font-weight:700;}
+  .amz-flags{display:flex;flex-wrap:wrap;gap:10px;}
+  .amz-flags a{position:relative;display:inline-flex;border-radius:4px;box-shadow:0 0 0 1px var(--border),0 2px 6px rgba(0,0,0,.14);transition:transform .15s;}
+  .amz-flags a::after{content:attr(data-label);position:absolute;left:50%;bottom:calc(100% + 7px);transform:translateX(-50%);background:#2b2b2b;color:#fff;font-size:12px;font-weight:600;line-height:1;padding:5px 8px;border-radius:5px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .12s;z-index:5;}
+  .amz-flags a:hover::after,.amz-flags a:focus-visible::after{opacity:1;}
+  .amz-aff{margin:6px 0 0;font-size:13px;font-style:italic;color:var(--muted);}
+  .amz-flags a:hover,.amz-flags a:focus-visible{transform:translateY(-2px);}
+  .amz .amz-flags img{display:block;width:44px;height:33px;margin:0;border-radius:4px;box-shadow:none;}
+  .amz-note{margin:10px 0 0;font-size:14px;color:var(--muted);}
+  .amz img.amz-inline{display:inline;width:20px;height:15px;margin:0;vertical-align:-2px;border-radius:2px;box-shadow:0 0 0 1px var(--border);}
+  .amz-disc{font-size:13px;color:var(--muted);}
+
+  .btn-ghost{display:inline-block;padding:12px 24px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px;border:2px solid var(--ink);background:transparent;color:var(--ink);}
+  .btn-ghost:hover{background:#fff;}
 </style>
 </head>
 <body>
@@ -137,7 +152,7 @@
       <h1>Bold and Easy</h1>
       <p class="lede" data-i18n="lede">Big pictures. Thick lines. No fuss.</p>
       <p data-i18n="hero.p">Bold and Easy is our line of big, simple coloring books. Every page is one friendly picture with bold black outlines and large shapes to fill. Easy for small hands, relaxing for grown ups.</p>
-      <span class="badge" data-i18n="badge">Coming soon to Amazon</span>
+      <span class="badge" data-i18n="badge">Get it on Amazon</span>
     </div>
   </div>
 </main>
@@ -159,10 +174,22 @@
           <li data-i18n="li3">A big square book, 8.5 x 8.5 inches.</li>
           <li data-i18n="li4">Two visitors from Edelhollow are hiding in the pages. See if you can spot them.</li>
         </ul>
-        <!-- COMING SOON: replace this block with the Amazon store flags (copy from cozy-patterns/index.html) once the BE-001 ASIN exists -->
-        <span class="soon" data-i18n="soon">Coming soon</span>
-        <p class="soon-note" data-i18n="soon.note">On its way to Amazon in time for Halloween.</p>
         <p class="lang-note" data-i18n="note"></p>
+        <div class="amz">
+          <p class="amz-label" data-i18n="amz.label">Available on Amazon. Choose your store:</p>
+          <div class="amz-flags">
+            <a href="https://www.amazon.de/dp/B0HN1VXLDV?tag=mossgrovepres-21" target="_blank" rel="sponsored noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="../img/flags/de.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.com/dp/B0HN1VXLDV?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="../img/flags/us.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ca/dp/B0HN1VXLDV?tag=mossgrovepr06-20" target="_blank" rel="sponsored noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="../img/flags/ca.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.co.uk/dp/B0HN1VXLDV" target="_blank" rel="sponsored noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="../img/flags/gb.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.ie/dp/B0HN1VXLDV" target="_blank" rel="sponsored noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="../img/flags/ie.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.fr/dp/B0HN1VXLDV" target="_blank" rel="sponsored noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="../img/flags/fr.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.it/dp/B0HN1VXLDV" target="_blank" rel="sponsored noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="../img/flags/it.svg" alt="" width="44" height="33"></a>
+            <a href="https://www.amazon.es/dp/B0HN1VXLDV?tag=mossgrovepr07-21" target="_blank" rel="sponsored noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="../img/flags/es.svg" alt="" width="44" height="33"></a>
+          </div>
+          <p class="amz-note"><span data-i18n="amz.note">In Switzerland or Austria? Choose Germany</span> <img class="amz-inline" src="../img/flags/de.svg" alt=""></p>
+        </div>
+        <p style="margin-top:18px;"><a class="btn btn-ghost" href="thanks/" data-i18n="review">Leave a review &amp; follow along</a></p>
       </div>
     </div>
   </div>
@@ -205,7 +232,7 @@
 </section>
 
 <footer>
-  <a href="../index.html" data-i18n="back">Back to Mossgrove Press</a><br>&copy; 2026 Mossgrove Press
+  <a href="../index.html" data-i18n="back">Back to Mossgrove Press</a><br>&copy; 2026 Mossgrove Press<br><span class="amz-disc" data-i18n="aff.disc">As an Amazon Associate I earn from qualifying purchases.</span>
 </footer>
 
 <script>
@@ -218,7 +245,7 @@
   "kicker": "A Mossgrove Press world",
   "lede": "Big pictures. Thick lines. No fuss.",
   "hero.p": "Bold and Easy is our line of big, simple coloring books. Every page is one friendly picture with bold black outlines and large shapes to fill. Easy for small hands, relaxing for grown ups.",
-  "badge": "Coming soon to Amazon",
+  "badge": "Get it on Amazon",
   "book.h2": "Book One",
   "book.sub": "50 Big, Simple Pictures to Color",
   "book.series": "Bold and Easy, Book 1",
@@ -227,8 +254,6 @@
   "li2": "Friendly, not scary. The witches, ghosts and skeletons are all animals in costume.",
   "li3": "A big square book, 8.5 x 8.5 inches.",
   "li4": "Two visitors from Edelhollow are hiding in the pages. See if you can spot them.",
-  "soon": "Coming soon",
-  "soon.note": "On its way to Amazon in time for Halloween.",
   "note": "",
   "about.h2": "What makes it Bold and Easy",
   "etsy.h2": "Print-at-Home Pages",
@@ -244,7 +269,11 @@
   "t3.h": "Friendly animals",
   "t3.p": "Every character is an animal, and every picture is a whole little scene.",
   "about.p": "Halloween comes first, with more seasons to follow. Made in Switzerland, like every Mossgrove Press book.",
-  "back": "Back to Mossgrove Press"
+  "back": "Back to Mossgrove Press",
+  "amz.label": "Available on Amazon. Choose your store:",
+  "amz.note": "In Switzerland or Austria? Choose Germany",
+  "review": "Leave a review &amp; follow along",
+  "aff.disc": "As an Amazon Associate I earn from qualifying purchases."
  },
  "de": {
   "nav.worlds": "Unsere Welten",
@@ -253,7 +282,7 @@
   "kicker": "Eine Welt von Mossgrove Press",
   "lede": "Grosse Bilder. Dicke Linien. Ganz unkompliziert.",
   "hero.p": "Bold and Easy ist unsere Reihe mit grossen, einfachen Malbüchern. Jede Seite zeigt ein freundliches Bild mit kräftigen schwarzen Konturen und grossen Flächen zum Ausmalen. Leicht für kleine Hände, entspannend für Erwachsene.",
-  "badge": "Bald bei Amazon",
+  "badge": "Jetzt bei Amazon",
   "book.h2": "Buch eins",
   "book.sub": "50 grosse, einfache Bilder zum Ausmalen",
   "book.series": "Bold and Easy, Band 1",
@@ -262,8 +291,6 @@
   "li2": "Freundlich statt gruselig. Hexen, Geister und Skelette sind alles Tiere im Kostüm.",
   "li3": "Ein grosses quadratisches Buch, 21,6 x 21,6 cm.",
   "li4": "Zwei Gäste aus Edelhollow haben sich auf den Seiten versteckt. Wer findet sie?",
-  "soon": "Bald erhältlich",
-  "soon.note": "Rechtzeitig zu Halloween auf dem Weg zu Amazon.",
   "note": "Das Buch selbst ist auf Englisch. Es enthält nur wenige Wörter, zum Ausmalen braucht es keine Übersetzung.",
   "about.h2": "Was Bold and Easy ausmacht",
   "etsy.h2": "Seiten zum Selbstdrucken",
@@ -279,7 +306,11 @@
   "t3.h": "Freundliche Tiere",
   "t3.p": "Jede Figur ist ein Tier, und jedes Bild ist eine ganze kleine Szene.",
   "about.p": "Halloween macht den Anfang, weitere Jahreszeiten folgen. Gemacht in der Schweiz, wie jedes Buch von Mossgrove Press.",
-  "back": "Zurück zu Mossgrove Press"
+  "back": "Zurück zu Mossgrove Press",
+  "amz.label": "Erhältlich bei Amazon. Wähle deinen Shop:",
+  "amz.note": "In der Schweiz oder in Österreich? Wähle Deutschland",
+  "review": "Rezension schreiben &amp; folgen",
+  "aff.disc": "Als Amazon-Partner verdiene ich an qualifizierten Verkäufen."
  },
  "es": {
   "nav.worlds": "Nuestros mundos",
@@ -288,7 +319,7 @@
   "kicker": "Un mundo de Mossgrove Press",
   "lede": "Dibujos grandes. Líneas gruesas. Sin complicaciones.",
   "hero.p": "Bold and Easy es nuestra colección de libros para colorear grandes y sencillos. Cada página es un dibujo simpático con contornos negros bien marcados y formas amplias para rellenar. Fácil para manos pequeñas, relajante para los mayores.",
-  "badge": "Muy pronto en Amazon",
+  "badge": "Consíguelo en Amazon",
   "book.h2": "Libro uno",
   "book.sub": "50 dibujos grandes y sencillos para colorear",
   "book.series": "Bold and Easy, libro 1",
@@ -297,8 +328,6 @@
   "li2": "Simpático, no da miedo. Las brujas, los fantasmas y los esqueletos son animales disfrazados.",
   "li3": "Un libro cuadrado y grande, de 21,6 x 21,6 cm.",
   "li4": "Dos visitantes de Edelhollow se esconden entre las páginas. A ver quién los encuentra.",
-  "soon": "Muy pronto",
-  "soon.note": "Llegará a Amazon a tiempo para Halloween.",
   "note": "El libro está en inglés. Tiene muy pocas palabras, y para colorear no hace falta traducción.",
   "about.h2": "Qué hace que sea Bold and Easy",
   "etsy.h2": "Páginas para imprimir en casa",
@@ -314,7 +343,11 @@
   "t3.h": "Animales simpáticos",
   "t3.p": "Cada personaje es un animal, y cada dibujo es una pequeña escena completa.",
   "about.p": "Halloween es el primero, y le seguirán otras estaciones. Hecho en Suiza, como todos los libros de Mossgrove Press.",
-  "back": "Volver a Mossgrove Press"
+  "back": "Volver a Mossgrove Press",
+  "amz.label": "Disponible en Amazon. Elige tu tienda:",
+  "amz.note": "¿En Suiza o en Austria? Elige Alemania",
+  "review": "Deja una reseña y síguenos",
+  "aff.disc": "Como Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables."
  },
  "it": {
   "nav.worlds": "I nostri mondi",
@@ -323,7 +356,7 @@
   "kicker": "Un mondo di Mossgrove Press",
   "lede": "Disegni grandi. Linee spesse. Niente complicazioni.",
   "hero.p": "Bold and Easy è la nostra collana di libri da colorare grandi e semplici. Ogni pagina è un disegno simpatico con contorni neri ben marcati e forme ampie da riempire. Facile per le mani piccole, rilassante per i grandi.",
-  "badge": "Presto su Amazon",
+  "badge": "Acquistalo su Amazon",
   "book.h2": "Libro uno",
   "book.sub": "50 disegni grandi e semplici da colorare",
   "book.series": "Bold and Easy, libro 1",
@@ -332,8 +365,6 @@
   "li2": "Simpatico, non pauroso. Streghe, fantasmi e scheletri sono tutti animali in costume.",
   "li3": "Un grande libro quadrato, 21,6 x 21,6 cm.",
   "li4": "Due ospiti di Edelhollow si nascondono tra le pagine. Chi riesce a trovarli?",
-  "soon": "Presto disponibile",
-  "soon.note": "In arrivo su Amazon in tempo per Halloween.",
   "note": "Il libro è in inglese. Contiene pochissime parole, e per colorare non serve traduzione.",
   "about.h2": "Che cosa lo rende Bold and Easy",
   "etsy.h2": "Pagine da stampare a casa",
@@ -349,7 +380,11 @@
   "t3.h": "Animali simpatici",
   "t3.p": "Ogni personaggio è un animale, e ogni disegno è una piccola scena completa.",
   "about.p": "Halloween apre la collana, poi arriveranno altre stagioni. Realizzato in Svizzera, come ogni libro di Mossgrove Press.",
-  "back": "Torna a Mossgrove Press"
+  "back": "Torna a Mossgrove Press",
+  "amz.label": "Disponibile su Amazon. Scegli il tuo negozio:",
+  "amz.note": "In Svizzera o in Austria? Scegli la Germania",
+  "review": "Lascia una recensione e seguici",
+  "aff.disc": "In qualità di Affiliato Amazon, ricevo un guadagno dagli acquisti idonei."
  },
  "fr": {
   "nav.worlds": "Nos univers",
@@ -358,7 +393,7 @@
   "kicker": "Un univers de Mossgrove Press",
   "lede": "Grands dessins. Traits épais. Sans complication.",
   "hero.p": "Bold and Easy est notre collection de grands livres de coloriage tout simples. Chaque page est un dessin sympathique aux contours noirs bien marqués, avec de grandes formes à remplir. Facile pour les petites mains, reposant pour les grands.",
-  "badge": "Bientôt sur Amazon",
+  "badge": "Disponible sur Amazon",
   "book.h2": "Premier livre",
   "book.sub": "50 grands dessins simples à colorier",
   "book.series": "Bold and Easy, tome 1",
@@ -367,8 +402,6 @@
   "li2": "Sympathique, pas effrayant. Les sorcières, les fantômes et les squelettes sont tous des animaux déguisés.",
   "li3": "Un grand livre carré de 21,6 x 21,6 cm.",
   "li4": "Deux visiteurs d'Edelhollow se cachent dans les pages. Qui saura les trouver ?",
-  "soon": "Bientôt disponible",
-  "soon.note": "Il arrive sur Amazon à temps pour Halloween.",
   "note": "Le livre est en anglais. Il contient très peu de mots, et le coloriage se passe de traduction.",
   "about.h2": "Ce qui fait un Bold and Easy",
   "etsy.h2": "Pages à imprimer chez soi",
@@ -384,7 +417,11 @@
   "t3.h": "Animaux sympathiques",
   "t3.p": "Chaque personnage est un animal, et chaque dessin est une petite scène complète.",
   "about.p": "Halloween ouvre la collection, d'autres saisons suivront. Fabriqué en Suisse, comme tous les livres de Mossgrove Press.",
-  "back": "Retour à Mossgrove Press"
+  "back": "Retour à Mossgrove Press",
+  "amz.label": "Disponible sur Amazon. Choisissez votre boutique :",
+  "amz.note": "En Suisse ou en Autriche ? Choisissez l'Allemagne",
+  "review": "Laisser un avis et nous suivre",
+  "aff.disc": "En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises."
  }
 };
   var btns=document.querySelectorAll('.lang-btn');
