@@ -7,6 +7,15 @@
 <meta name="p:domain_verify" content="30e0ababff11a1ef480a49e48cf23bbc"/>
 <title>Mossgrove Press | an independent publishing studio</title>
 <meta name="description" content="Mossgrove Press is a small independent publishing studio making gentle, richly illustrated books for children and the grown-ups who read with them.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mossgrove Press">
+<meta property="og:title" content="Mossgrove Press | colouring books and printables">
+<meta property="og:description" content="Gentle, richly illustrated colouring books for children and the grown-ups who colour with them: Edelhollow, Cozy Patterns, Bold and Easy and Blumenfalter.">
+<meta property="og:url" content="https://www.mossgrovepress.com/">
+<meta property="og:image" content="https://www.mossgrovepress.com/img/share/mossgrove_home_share_v1.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -159,6 +168,42 @@
   }
   .contact-copy a{color:var(--ink);}
 
+  .hero.compact{padding:44px 24px 36px;}
+  .hero.compact img.crest{width:190px;}
+  .facts{margin:14px auto 0;font-size:16px;letter-spacing:1px;color:var(--muted);}
+  .facts span{white-space:nowrap;}
+  #books{border-top:1px solid var(--border);padding:48px 0 52px;}
+  .book-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 28px;}
+  .book{text-align:center;text-decoration:none;color:inherit;display:block;}
+  .book img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;box-shadow:0 10px 26px rgba(42,32,26,0.14);display:block;transition:transform .15s ease;}
+  .book:hover img{transform:translateY(-3px);}
+  .book .t{display:block;font-size:19px;font-weight:500;line-height:1.3;margin:14px 0 2px;}
+  .book .tag{display:block;font-size:15px;font-style:italic;color:var(--muted);line-height:1.4;}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:46px;}
+  .btn.solid{background:var(--ink);color:var(--paper);}
+  .btn.solid:hover{background:var(--moss);border-color:var(--moss);}
+  #peek{background:#f4efe4;}
+  #peek .intro{text-align:center;font-style:italic;color:var(--muted);margin:-18px auto 30px;max-width:520px;}
+  .peek-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 24px;}
+  .peek{text-align:center;text-decoration:none;color:inherit;display:block;}
+  .peek img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;padding:10px;border:1px solid var(--border);border-radius:4px;box-shadow:0 8px 20px rgba(42,32,26,0.10);display:block;transition:transform .15s ease;}
+  .peek:hover img{transform:translateY(-3px);}
+  .peek span{display:block;font-size:15px;font-style:italic;color:var(--muted);margin-top:10px;line-height:1.35;}
+  @media (max-width:640px){
+    .peek-grid{grid-template-columns:repeat(2,1fr);gap:22px 14px;}
+    .peek img{padding:6px;}
+    .peek span{font-size:14px;}
+    .book-grid{grid-template-columns:repeat(2,1fr);gap:26px 16px;}
+    .book .t{font-size:17px;}
+    .book .tag{font-size:14px;}
+    .site-nav{gap:8px 18px;font-size:14px;}
+    .cta-row .btn{width:100%;text-align:center;}
+    .hero.compact{padding:26px 20px 22px;}
+    .hero.compact img.crest{width:130px;}
+    .hero p.tagline{font-size:19px;}
+    #books{padding-top:34px;}
+  }
+
   footer{
     border-top:1px solid var(--border);
     padding:30px 0 44px;
@@ -185,18 +230,56 @@
       Mossgrove Press
     </a>
     <nav class="site-nav">
+      <a href="#books">Books</a>
+      <a href="edelhollow.html#download">Free Page</a>
+      <a href="https://www.etsy.com/shop/MossgrovePress" target="_blank" rel="noopener">Etsy Shop</a>
       <a href="#worlds">Our Worlds</a>
       <a href="#about">About</a>
-      <a href="#follow">Follow</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<div class="hero">
+<div class="hero compact">
   <img class="crest" src="img/mossgrove_crest_web.png" alt="Mossgrove Press crest: an oak tree before an alpine valley">
   <p class="tagline">Gentle, richly illustrated books for children and the grown-ups who read with them.</p>
+  <p class="facts"><span>6 books</span> &middot; <span>5 languages</span> &middot; <span>1 edelweiss hidden on every Edelhollow page</span></p>
 </div>
+
+<section id="books">
+  <div class="wrap">
+    <h2>Our Books</h2>
+    <div class="rule"></div>
+    <div class="book-grid">
+      <a class="book" href="get/cozy-mornings/"><img src="covers/en_front.jpg" alt="Cozy Mornings in Edelhollow, book cover"><span class="t">Cozy Mornings in Edelhollow</span><span class="tag">Storybook village, for kids and grown-ups</span></a>
+      <a class="book" href="get/market-day/"><img src="covers/cb002_front.jpg" alt="Market Day in Edelhollow, book cover" loading="lazy"><span class="t">Market Day in Edelhollow</span><span class="tag">Storybook village, for kids and grown-ups</span></a>
+      <a class="book" href="get/cozy-cottagecore/"><img src="covers/CP-001_cozy_cottagecore_front_600.jpg" alt="Cozy Cottagecore, book cover" loading="lazy"><span class="t">Cozy Cottagecore</span><span class="tag">Full-page patterns, all ages</span></a>
+      <a class="book" href="get/bold-and-easy-halloween/"><img src="covers/BE-001_bold_and_easy_halloween_front_600.jpg" alt="Bold and Easy Halloween, book cover" loading="lazy"><span class="t">Bold and Easy Halloween</span><span class="tag">Thick lines, big shapes, easy</span></a>
+      <a class="book" href="get/garden-alphabet/"><img src="covers/BF-001_garden_alphabet_front_600.jpg" alt="Garden Alphabet, book cover" loading="lazy"><span class="t">Garden Alphabet</span><span class="tag">Fine botanical detail, for adults</span></a>
+      <a class="book" href="get/gothic-alphabet/"><img src="covers/BF-002_gothic_alphabet_front_600.jpg" alt="Gothic Alphabet, book cover" loading="lazy"><span class="t">Gothic Alphabet</span><span class="tag">Dark botanical detail, for adults</span></a>
+    </div>
+    <div class="cta-row">
+      <a class="btn solid" href="edelhollow.html#download">Free colouring page</a>
+      <a class="btn" href="https://www.etsy.com/shop/MossgrovePress" target="_blank" rel="noopener">Printables on Etsy</a>
+    </div>
+  </div>
+</section>
+
+<section id="peek">
+  <div class="wrap">
+    <h2>A Peek Inside</h2>
+    <div class="rule"></div>
+    <p class="intro">One page from each book, just as you will colour it.</p>
+    <div class="peek-grid">
+      <a class="peek" href="get/cozy-mornings/"><img src="img/peek/CB-001_peek_p26_v1.jpg" alt="Inside Cozy Mornings in Edelhollow: the village friends at a tea party, line art" loading="lazy"><span>Cozy Mornings in Edelhollow</span></a>
+      <a class="peek" href="get/market-day/"><img src="img/peek/CB-002_peek_p17_v1.jpg" alt="Inside Market Day in Edelhollow: the busy market square, line art" loading="lazy"><span>Market Day in Edelhollow</span></a>
+      <a class="peek" href="get/cozy-cottagecore/"><img src="img/peek/CP-001_peek_04_v1.jpg" alt="Inside Cozy Cottagecore: cottage rooftops with cats, line art pattern" loading="lazy"><span>Cozy Cottagecore</span></a>
+      <a class="peek" href="get/bold-and-easy-halloween/"><img src="img/peek/BE-001_peek_24_v1.jpg" alt="Inside Bold and Easy Halloween: a big jack-o'-lantern bucket with candy spilling out, bold line art" loading="lazy"><span>Bold and Easy Halloween</span></a>
+      <a class="peek" href="get/garden-alphabet/"><img src="img/peek/BF-001_peek_A_v1.jpg" alt="Inside Garden Alphabet: the letter A made of flowers, fine line art" loading="lazy"><span>Garden Alphabet</span></a>
+      <a class="peek" href="get/gothic-alphabet/"><img src="img/peek/BF-002_peek_A_v1.jpg" alt="Inside Gothic Alphabet: the letter A made of flowers and insects, fine line art" loading="lazy"><span>Gothic Alphabet</span></a>
+    </div>
+  </div>
+</section>
 
 <section id="worlds">
   <div class="wrap">
