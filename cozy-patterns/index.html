@@ -105,6 +105,11 @@
   .bundle-grid figure{margin:0;flex:0 0 160px;}
   .bundle-grid img{width:100%;border-radius:10px;border:1px solid var(--border);display:block;}
   .bundle-grid figcaption{font-size:13px;opacity:.8;margin-top:6px;text-align:center;line-height:1.35;}
+  /* peek inside strips (added 2026-10-17) */
+  .peek-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:16px 0 8px;}
+  .peek-grid img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;padding:8px;border:1px solid var(--border);border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,0.07);display:block;}
+  .peek-book{font-size:19px;margin:26px 0 4px;}
+  @media (max-width:640px){.peek-grid{grid-template-columns:repeat(2,1fr);gap:12px;}.peek-grid img{padding:5px;}}
 </style>
 </head>
 <body>
@@ -177,6 +182,21 @@
   </div>
 </section>
 
+<section id="peek">
+  <div class="wrap">
+    <h2 data-i18n="peek.h2">A Peek Inside</h2>
+    <p data-i18n="peek.lede">A few pages from the book, just as they are printed, ready to colour.</p>
+    <div class="peek-grid">
+      <img src="../img/peek/CP-001_peek_04_v1.jpg" alt="Cozy Cottagecore, inside page, line art" loading="lazy">
+      <img src="../img/peek/CP-001_peek_17_v1.jpg" alt="Cozy Cottagecore, inside page, line art" loading="lazy">
+      <img src="../img/peek/CP-001_peek_15_v1.jpg" alt="Cozy Cottagecore, inside page, line art" loading="lazy">
+      <img src="../img/peek/CP-001_peek_06_v1.jpg" alt="Cozy Cottagecore, inside page, line art" loading="lazy">
+      <img src="../img/peek/CP-001_peek_49_v1.jpg" alt="Cozy Cottagecore, inside page, line art" loading="lazy">
+      <img src="../img/peek/CP-001_peek_03_v1.jpg" alt="Cozy Cottagecore, inside page, line art" loading="lazy">
+    </div>
+  </div>
+</section>
+
 <section id="etsy">
   <div class="wrap">
     <h2 data-i18n="etsy.h2">Print-at-Home Pages</h2>
@@ -234,6 +254,8 @@
   "note": "",
   "about.h2": "About the line",
   "etsy.h2": "Print-at-Home Pages",
+  "peek.h2": "A Peek Inside",
+  "peek.lede": "A few pages from the book, just as they are printed, ready to colour.",
   "etsy.lede": "Printable bundles from Cozy Cottagecore, as PDFs in A4 and US Letter.",
   "etsy.pages13": "13 pages",
   "etsy.pages26": "26 pages",
@@ -262,6 +284,8 @@
   "note": "Das Buch selbst ist auf Englisch. Es enthält kaum Text, zum Ausmalen braucht es keine Übersetzung.",
   "about.h2": "Über die Reihe",
   "etsy.h2": "Seiten zum Selbstdrucken",
+  "peek.h2": "Ein Blick ins Buch",
+  "peek.lede": "Ein paar Seiten aus dem Buch, genau so, wie sie gedruckt sind, bereit zum Ausmalen.",
   "etsy.lede": "Pakete zum Ausdrucken aus Cozy Cottagecore, als PDF in A4 und US Letter.",
   "etsy.pages13": "13 Seiten",
   "etsy.pages26": "26 Seiten",
@@ -290,6 +314,8 @@
   "note": "El libro está en inglés. Casi no tiene texto, y para colorear no hace falta traducción.",
   "about.h2": "Sobre la colección",
   "etsy.h2": "Páginas para imprimir en casa",
+  "peek.h2": "Un vistazo al interior",
+  "peek.lede": "Algunas páginas del libro, tal como vienen impresas, listas para colorear.",
   "etsy.lede": "Paquetes imprimibles de Cozy Cottagecore, en PDF A4 y carta US.",
   "etsy.pages13": "13 páginas",
   "etsy.pages26": "26 páginas",
@@ -318,6 +344,8 @@
   "note": "Il libro è in inglese. Non contiene quasi testo, e per colorare non serve traduzione.",
   "about.h2": "La collana",
   "etsy.h2": "Pagine da stampare a casa",
+  "peek.h2": "Uno sguardo all'interno",
+  "peek.lede": "Alcune pagine del libro, così come sono stampate, pronte da colorare.",
   "etsy.lede": "Pacchetti stampabili da Cozy Cottagecore, in PDF A4 e US Letter.",
   "etsy.pages13": "13 pagine",
   "etsy.pages26": "26 pagine",
@@ -346,6 +374,8 @@
   "note": "Le livre est en anglais. Il contient très peu de texte, et le coloriage se passe de traduction.",
   "about.h2": "À propos de la collection",
   "etsy.h2": "Pages à imprimer chez soi",
+  "peek.h2": "Un coup d'œil à l'intérieur",
+  "peek.lede": "Quelques pages du livre, telles qu'elles sont imprimées, prêtes à colorier.",
   "etsy.lede": "Des lots à imprimer tirés de Cozy Cottagecore, en PDF A4 et US Letter.",
   "etsy.pages13": "13 pages",
   "etsy.pages26": "26 pages",

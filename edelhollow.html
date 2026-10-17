@@ -298,6 +298,11 @@
   .amz-note{margin:10px 0 0;font-size:14px;color:var(--muted);}
   .amz img.amz-inline{display:inline;width:20px;height:15px;margin:0;vertical-align:-2px;border-radius:2px;box-shadow:0 0 0 1px var(--border);}
   .amz-disc{font-size:13px;color:var(--muted);}
+  /* peek inside strips (added 2026-10-17) */
+  .peek-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:16px 0 8px;}
+  .peek-grid img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;padding:8px;border:1px solid var(--border);border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,0.07);display:block;}
+  .peek-book{font-size:19px;margin:26px 0 4px;}
+  @media (max-width:640px){.peek-grid{grid-template-columns:repeat(2,1fr);gap:12px;}.peek-grid img{padding:5px;}}
 </style>
 </head>
 <body>
@@ -607,6 +612,29 @@
     </div>
   </div>
 
+  <section id="peek">
+    <h2 data-i18n="peek.h2">A Peek Inside</h2>
+    <p class="lede" data-i18n="peek.lede">A few pages from each book, just as they are printed, ready to colour.</p>
+    <h3 class="peek-book" data-i18n="peek.cb1">Cozy Mornings in Edelhollow</h3>
+    <div class="peek-grid">
+      <img src="img/peek/CB-001_peek_p26_v1.jpg" alt="Cozy Mornings in Edelhollow, inside page, line art" loading="lazy">
+      <img src="img/peek/CB-001_peek_p08_v1.jpg" alt="Cozy Mornings in Edelhollow, inside page, line art" loading="lazy">
+      <img src="img/peek/CB-001_peek_p11_v1.jpg" alt="Cozy Mornings in Edelhollow, inside page, line art" loading="lazy">
+      <img src="img/peek/CB-001_peek_p39_v1.jpg" alt="Cozy Mornings in Edelhollow, inside page, line art" loading="lazy">
+      <img src="img/peek/CB-001_peek_p36_v1.jpg" alt="Cozy Mornings in Edelhollow, inside page, line art" loading="lazy">
+      <img src="img/peek/CB-001_peek_p01_v1.jpg" alt="Cozy Mornings in Edelhollow, inside page, line art" loading="lazy">
+    </div>
+    <h3 class="peek-book" data-i18n="peek.cb2">Market Day in Edelhollow</h3>
+    <div class="peek-grid">
+      <img src="img/peek/CB-002_peek_p17_v1.jpg" alt="Market Day in Edelhollow, inside page, line art" loading="lazy">
+      <img src="img/peek/CB-002_peek_p27_v1.jpg" alt="Market Day in Edelhollow, inside page, line art" loading="lazy">
+      <img src="img/peek/CB-002_peek_p22_v1.jpg" alt="Market Day in Edelhollow, inside page, line art" loading="lazy">
+      <img src="img/peek/CB-002_peek_p49_v1.jpg" alt="Market Day in Edelhollow, inside page, line art" loading="lazy">
+      <img src="img/peek/CB-002_peek_p13_v1.jpg" alt="Market Day in Edelhollow, inside page, line art" loading="lazy">
+      <img src="img/peek/CB-002_peek_p48_v1.jpg" alt="Market Day in Edelhollow, inside page, line art" loading="lazy">
+    </div>
+  </section>
+
   <div id="more-books">
     <h2 data-i18n="books.more" style="font-size:22px;margin:0 0 16px;">More books from Edelhollow</h2>
     <div style="display:flex;gap:24px;flex-wrap:wrap;">
@@ -882,6 +910,10 @@
       'form.button':'Get My Free Colouring Pages',
       'form.fieldError':'Please correct the marked field(s) below.',
       'etsy.h2':'Print-at-Home Pages',
+      "peek.h2":"A Peek Inside",
+      "peek.lede":"A few pages from each book, just as they are printed, ready to colour.",
+      "peek.cb1":"Cozy Mornings in Edelhollow",
+      "peek.cb2":"Market Day in Edelhollow",
       'etsy.lede':'Single pages and small bundles from the Edelhollow world, for whenever you just want one more page to color.',
       'etsy.kofi':'Ko-fi Shop','etsy.etsy':'Etsy Shop','etsy.pages34':'34 pages',
       'nav.films':'Films',
@@ -914,6 +946,10 @@
       'form.button':'Meine Gratis-Ausmalseiten holen',
       'form.fieldError':'Bitte korrigiere die markierten Felder.',
       'etsy.h2':'Seiten zum Selbstdrucken',
+      "peek.h2":"Ein Blick ins Buch",
+      "peek.lede":"Ein paar Seiten aus jedem Buch, genau so, wie sie gedruckt sind, bereit zum Ausmalen.",
+      "peek.cb1":"Gemütliche Morgen in Edelhollow",
+      "peek.cb2":"Markttag in Edelhollow",
       'etsy.lede':'Einzelne Seiten und kleine Pakete aus der Welt von Edelhollow, für alle, die einfach noch eine Seite ausmalen möchten.',
       'etsy.kofi':'Ko-fi Shop','etsy.etsy':'Etsy Shop','etsy.pages34':'34 Seiten',
       'nav.films':'Filme',
@@ -946,6 +982,10 @@
       'form.button':'Quiero mis páginas gratis',
       'form.fieldError':'Corrige los campos marcados.',
       'etsy.h2':'Páginas para imprimir en casa',
+      "peek.h2":"Un vistazo al interior",
+      "peek.lede":"Algunas páginas de cada libro, tal como vienen impresas, listas para colorear.",
+      "peek.cb1":"Las agradables mañanas en Edelhollow",
+      "peek.cb2":"Día de mercado en Edelhollow",
       'etsy.lede':'Páginas sueltas y pequeños paquetes del mundo de Edelhollow, para cuando te apetezca colorear una página más.',
       'etsy.kofi':'Tienda en Ko-fi','etsy.etsy':'Tienda en Etsy','etsy.pages34':'34 páginas',
       'nav.films':'Películas',
@@ -978,6 +1018,10 @@
       'form.button':'Voglio le mie pagine gratuite',
       'form.fieldError':'Correggi i campi segnalati.',
       'etsy.h2':'Pagine da stampare a casa',
+      "peek.h2":"Uno sguardo all'interno",
+      "peek.lede":"Alcune pagine di ogni libro, così come sono stampate, pronte da colorare.",
+      "peek.cb1":"Le piacevoli mattine a Edelhollow",
+      "peek.cb2":"Giorno di mercato a Edelhollow",
       'etsy.lede':'Pagine singole e piccoli pacchetti dal mondo di Edelhollow, per quando hai voglia di colorare ancora una pagina.',
       'etsy.kofi':'Negozio su Ko-fi','etsy.etsy':'Negozio su Etsy','etsy.pages34':'34 pagine',
       'nav.films':'Film',
@@ -1010,6 +1054,10 @@
       'form.button':'Recevoir mes pages gratuites',
       'form.fieldError':'Corrigez les champs signalés.',
       'etsy.h2':'Pages à imprimer chez soi',
+      "peek.h2":"Un coup d'œil à l'intérieur",
+      "peek.lede":"Quelques pages de chaque livre, telles qu'elles sont imprimées, prêtes à colorier.",
+      "peek.cb1":"Matins Cosy à Edelhollow",
+      "peek.cb2":"Jour de marché à Edelhollow",
       'etsy.lede':"Des pages à l'unité et de petits lots de l'univers d'Edelhollow, pour quand vous avez envie d'une page de plus à colorier.",
       'etsy.kofi':'Boutique Ko-fi','etsy.etsy':'Boutique Etsy','etsy.pages34':'34 pages',
       'nav.films':'Films',
