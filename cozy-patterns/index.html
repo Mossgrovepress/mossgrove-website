@@ -85,6 +85,8 @@
   .amz-flags a:hover,.amz-flags a:focus-visible{transform:translateY(-2px);}
   .amz .amz-flags img{display:block;width:44px;height:33px;margin:0;border-radius:4px;box-shadow:none;}
   .amz-note{margin:10px 0 0;font-size:14px;color:var(--muted);}
+  .amz-buy{display:inline-block;padding:13px 30px;border-radius:999px;background:var(--ink);color:var(--paper);text-decoration:none;font-family:'Baloo 2',system-ui,sans-serif;font-weight:800;font-size:17px;line-height:1.2;box-shadow:0 2px 6px rgba(0,0,0,.14);transition:transform .15s;}
+  .amz-buy:hover,.amz-buy:focus-visible{transform:translateY(-2px);}
   .amz img.amz-inline{display:inline;width:20px;height:15px;margin:0;vertical-align:-2px;border-radius:2px;box-shadow:0 0 0 1px var(--border);}
   .amz-disc{font-size:13px;color:var(--muted);}
 
@@ -163,21 +165,8 @@
         <p class="motif-list" data-i18n="motifs">Mushrooms &middot; honey &middot; jam jars &middot; quilts &middot; teacups &middot; bunnies &middot; rooftop cats &middot; and more</p>
         <p class="lang-note" data-i18n="note"></p>
         <div class="amz">
-          <p class="amz-label" data-i18n="amz.label">Available on Amazon. Choose your store:</p>
-          <div class="amz-flags">
-            <a href="https://www.amazon.de/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.de" aria-label="Amazon.de"><img src="../img/flags/de.svg" alt="" width="44" height="33"></a>
-            <a href="https://www.amazon.com/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.com" aria-label="Amazon.com"><img src="../img/flags/us.svg" alt="" width="44" height="33"></a>
-            <a href="https://www.amazon.ca/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.ca" aria-label="Amazon.ca"><img src="../img/flags/ca.svg" alt="" width="44" height="33"></a>
-            <a href="https://www.amazon.co.uk/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.co.uk" aria-label="Amazon.co.uk"><img src="../img/flags/gb.svg" alt="" width="44" height="33"></a>
-            <a href="https://www.amazon.ie/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.ie" aria-label="Amazon.ie"><img src="../img/flags/ie.svg" alt="" width="44" height="33"></a>
-            <a href="https://www.amazon.fr/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.fr" aria-label="Amazon.fr"><img src="../img/flags/fr.svg" alt="" width="44" height="33"></a>
-            <a href="https://www.amazon.it/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.it" aria-label="Amazon.it"><img src="../img/flags/it.svg" alt="" width="44" height="33"></a>
-            <a href="https://www.amazon.es/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.es" aria-label="Amazon.es"><img src="../img/flags/es.svg" alt="" width="44" height="33"></a>
-            <a href="https://www.amazon.nl/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.nl" aria-label="Amazon.nl"><img src="../img/flags/nl.svg" alt="" width="44" height="33"></a>
-            <a href="https://www.amazon.pl/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.pl" aria-label="Amazon.pl"><img src="../img/flags/pl.svg" alt="" width="44" height="33"></a>
-            <a href="https://www.amazon.se/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-label="Amazon.se" aria-label="Amazon.se"><img src="../img/flags/se.svg" alt="" width="44" height="33"></a>
-          </div>
-          <p class="amz-note"><span data-i18n="amz.note">In Switzerland or Austria? Choose Germany</span> <img class="amz-inline" src="../img/flags/de.svg" alt=""></p>
+          <a class="amz-buy" href="https://www.amazon.com/dp/B0HJHQ85NM?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener" data-i18n="amz.label">Buy on Amazon</a>
+          <p class="amz-note" data-i18n="amz.note">Amazon will take you to the store for your country.</p>
         </div>
         <p style="margin-top:18px;"><a class="btn btn-ghost" href="thanks/en/" data-thanks data-i18n="review">Leave a review &amp; follow along</a></p>
       </div>
@@ -252,8 +241,8 @@
   "book.series": "Cozy Patterns, Book 1",
   "book.p": "Fifty patterns of a cottagecore world: mushrooms and toadstools, honeybees and skeps, jam jars, quilts, socks on the line, sleeping bunnies in teacups, and cats on the rooftops among them. Each pattern sits on its own page with a blank back, so your colors stay on their page.",
   "motifs": "Mushrooms &middot; honey &middot; jam jars &middot; quilts &middot; teacups &middot; bunnies &middot; rooftop cats &middot; and more",
-  "amz.label": "Available on Amazon. Choose your store:",
-  "amz.note": "In Switzerland or Austria? Choose Germany",
+  "amz.label": "Buy on Amazon",
+  "amz.note": "Amazon will take you to the store for your country.",
   "review": "Leave a review &amp; follow along",
   "note": "",
   "about.h2": "About the line",
@@ -282,8 +271,8 @@
   "book.series": "Cozy Patterns, Band 1",
   "book.p": "Fünfzig Muster aus der Welt des Cottagecore, darunter Pilze, Honigbienen und Bienenkörbe, Konfitürengläser, Quilts, Socken an der Leine, schlafende Häschen in Teetassen und Katzen auf den Dächern. Jedes Muster steht auf einer eigenen Seite mit leerer Rückseite, so bleiben deine Farben auf ihrer Seite.",
   "motifs": "Pilze &middot; Honig &middot; Konfitürengläser &middot; Quilts &middot; Teetassen &middot; Häschen &middot; Katzen auf den Dächern &middot; und mehr",
-  "amz.label": "Erhältlich bei Amazon. Wähle deinen Shop:",
-  "amz.note": "In der Schweiz oder in Österreich? Wähle Deutschland",
+  "amz.label": "Bei Amazon kaufen",
+  "amz.note": "Amazon leitet dich zum Shop deines Landes weiter.",
   "review": "Rezension schreiben &amp; folgen",
   "note": "Das Buch selbst ist auf Englisch. Es enthält kaum Text, zum Ausmalen braucht es keine Übersetzung.",
   "about.h2": "Über die Reihe",
@@ -312,8 +301,8 @@
   "book.series": "Cozy Patterns, libro 1",
   "book.p": "Cincuenta patrones de un mundo cottagecore, entre ellos setas, abejas y colmenas, tarros de mermelada, colchas, calcetines en el tendedero, conejitos dormidos en tazas de té y gatos en los tejados. Cada patrón ocupa su propia página con el reverso en blanco, así tus colores se quedan en su página.",
   "motifs": "Setas &middot; miel &middot; tarros de mermelada &middot; colchas &middot; tazas de té &middot; conejitos &middot; gatos en los tejados &middot; y más",
-  "amz.label": "Disponible en Amazon. Elige tu tienda:",
-  "amz.note": "¿En Suiza o en Austria? Elige Alemania",
+  "amz.label": "Comprar en Amazon",
+  "amz.note": "Amazon te lleva a la tienda de tu país.",
   "review": "Deja una reseña y síguenos",
   "note": "El libro está en inglés. Casi no tiene texto, y para colorear no hace falta traducción.",
   "about.h2": "Sobre la colección",
@@ -342,8 +331,8 @@
   "book.series": "Cozy Patterns, libro 1",
   "book.p": "Cinquanta motivi di un mondo cottagecore, tra cui funghi, api e alveari, vasetti di marmellata, trapunte, calzini stesi, coniglietti addormentati nelle tazze da tè e gatti sui tetti. Ogni motivo ha la sua pagina con il retro bianco, così i tuoi colori restano al loro posto.",
   "motifs": "Funghi &middot; miele &middot; vasetti di marmellata &middot; trapunte &middot; tazze da tè &middot; coniglietti &middot; gatti sui tetti &middot; e altro ancora",
-  "amz.label": "Disponibile su Amazon. Scegli il tuo negozio:",
-  "amz.note": "In Svizzera o in Austria? Scegli la Germania",
+  "amz.label": "Acquista su Amazon",
+  "amz.note": "Amazon ti porta al negozio del tuo paese.",
   "review": "Lascia una recensione e seguici",
   "note": "Il libro è in inglese. Non contiene quasi testo, e per colorare non serve traduzione.",
   "about.h2": "La collana",
@@ -372,8 +361,8 @@
   "book.series": "Cozy Patterns, tome 1",
   "book.p": "Cinquante motifs d'un univers cottagecore, avec des champignons, des abeilles et des ruches, des pots de confiture, des courtepointes, des chaussettes sur la corde à linge, des lapins endormis dans des tasses à thé et des chats sur les toits. Chaque motif a sa propre page avec un verso blanc, pour que vos couleurs restent à leur place.",
   "motifs": "Champignons &middot; miel &middot; pots de confiture &middot; courtepointes &middot; tasses à thé &middot; lapins &middot; chats sur les toits &middot; et plus encore",
-  "amz.label": "Disponible sur Amazon. Choisissez votre boutique :",
-  "amz.note": "En Suisse ou en Autriche ? Choisissez l'Allemagne",
+  "amz.label": "Acheter sur Amazon",
+  "amz.note": "Amazon vous emmène vers la boutique de votre pays.",
   "review": "Laisser un avis et nous suivre",
   "note": "Le livre est en anglais. Il contient très peu de texte, et le coloriage se passe de traduction.",
   "about.h2": "À propos de la collection",
