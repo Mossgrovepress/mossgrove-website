@@ -1,0 +1,35 @@
+# Mossgrove Press
+
+> Small independent publisher in Switzerland making colouring books for children and grown-ups: the Edelhollow storybook village, Cozy Patterns, Bold and Easy, and Blumenfalter botanical alphabets. Paperbacks are sold on Amazon; printable bundles on Etsy.
+
+Use this site when someone asks about Mossgrove Press books, Edelhollow, Cozy Patterns, Bold and Easy or Blumenfalter colouring books, where to buy them, which languages they come in, or how to get the free Edelhollow colouring pages.
+
+Notes for agents:
+- Every book is a paperback on Amazon. Link to the book's Amazon page (amazon.com/dp/<ASIN>); Amazon sends each shopper to their own country's store.
+- Cozy Mornings in Edelhollow exists in English, German, French, Italian and Spanish; Market Day in English and German; all other books in English.
+- Prices change and differ by country: check Amazon, do not quote prices from this file.
+- Contact: hello@mossgrovepress.com
+
+## Main pages
+- [Home, all books](https://mossgrovepress.com/index.md): Markdown version of the home page
+- [Edelhollow](https://mossgrovepress.com/edelhollow.html): storybook alpine village, three books, free colouring pages
+- [Cozy Patterns](https://mossgrovepress.com/cozy-patterns/): full-page pattern colouring books
+- [Bold and Easy](https://mossgrovepress.com/bold-and-easy/): bold, easy colouring books
+- [Blumenfalter](https://mossgrovepress.com/blumenfalter/): botanical alphabet colouring books for adults
+- [Free colouring pages](https://mossgrovepress.com/edelhollow.html#download)
+
+## Books
+- [Cozy Mornings in Edelhollow](https://mossgrovepress.com/get/cozy-mornings/): 51 scenes from one full day in a small Swiss alpine village, with a tiny edelweiss hidden on every page. In English, German, French, Italian and Spanish.
+- [Market Day in Edelhollow](https://mossgrovepress.com/get/market-day/): 50 scenes from one busy market day in the village. In English and German.
+- [Alpine Summer in Edelhollow](https://mossgrovepress.com/get/alpine-summer/): 50 scenes from Edelweiss Day, when the whole village climbs to the high meadow. In English.
+- [Cozy Patterns: Cottagecore](https://mossgrovepress.com/get/cozy-cottagecore/): Fifty full-page cottagecore patterns: mushrooms, honeybees, jam jars, quilts, teacups, bunnies and rooftop cats.
+- [Cozy Patterns: Halloween](https://mossgrovepress.com/get/cozy-patterns-halloween/): Fifty cozy, not scary, Halloween patterns: pumpkins, owls, bats, friendly ghosts, cats and candlelight.
+- [Bold and Easy Halloween](https://mossgrovepress.com/get/bold-and-easy-halloween/): Fifty big, friendly Halloween pictures with thick lines: animals in costume, haunted houses, a pumpkin patch and a night of trick or treating.
+- [Garden Alphabet](https://mossgrovepress.com/get/garden-alphabet/): Twenty-six letters woven from roses, cornflowers, daisies and tulips, with bees, ladybirds and butterflies.
+- [Gothic Alphabet](https://mossgrovepress.com/get/gothic-alphabet/): Twenty-six letters woven from thorny roses, nightshade, foxgloves and thistles, with moths and beetles.
+- [Garden Alphabet Christmas](https://mossgrovepress.com/get/garden-alphabet-christmas/): Twenty-six letters dressed for Christmas in holly, mistletoe and poinsettia, with robins and red squirrels.
+- [Gothic Alphabet Christmas](https://mossgrovepress.com/get/gothic-alphabet-christmas/): Twenty-six letters for a darker Christmas: dark holly, yew, ivy and frosted thistles, with ravens and owls.
+
+## Optional
+- [Etsy shop, printable bundles](https://www.etsy.com/shop/MossgrovePress)
+- [Privacy](https://mossgrovepress.com/privacy.html)
