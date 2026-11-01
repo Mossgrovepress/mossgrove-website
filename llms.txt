@@ -30,6 +30,15 @@ Notes for agents:
 - [Garden Alphabet Christmas](https://mossgrovepress.com/get/garden-alphabet-christmas/): Twenty-six letters dressed for Christmas in holly, mistletoe and poinsettia, with robins and red squirrels.
 - [Gothic Alphabet Christmas](https://mossgrovepress.com/get/gothic-alphabet-christmas/): Twenty-six letters for a darker Christmas: dark holly, yew, ivy and frosted thistles, with ravens and owls.
 
+<!-- languages:start -->
+## Other languages
+The home page and the four world pages also exist in German, French, Italian and Spanish:
+- Deutsch: [Home](https://www.mossgrovepress.com/de/), [Edelhollow](https://www.mossgrovepress.com/de/edelhollow/), [Cozy Patterns](https://www.mossgrovepress.com/de/cozy-patterns/), [Bold and Easy](https://www.mossgrovepress.com/de/bold-and-easy/), [Blumenfalter](https://www.mossgrovepress.com/de/blumenfalter/)
+- Français: [Home](https://www.mossgrovepress.com/fr/), [Edelhollow](https://www.mossgrovepress.com/fr/edelhollow/), [Cozy Patterns](https://www.mossgrovepress.com/fr/cozy-patterns/), [Bold and Easy](https://www.mossgrovepress.com/fr/bold-and-easy/), [Blumenfalter](https://www.mossgrovepress.com/fr/blumenfalter/)
+- Italiano: [Home](https://www.mossgrovepress.com/it/), [Edelhollow](https://www.mossgrovepress.com/it/edelhollow/), [Cozy Patterns](https://www.mossgrovepress.com/it/cozy-patterns/), [Bold and Easy](https://www.mossgrovepress.com/it/bold-and-easy/), [Blumenfalter](https://www.mossgrovepress.com/it/blumenfalter/)
+- Español: [Home](https://www.mossgrovepress.com/es/), [Edelhollow](https://www.mossgrovepress.com/es/edelhollow/), [Cozy Patterns](https://www.mossgrovepress.com/es/cozy-patterns/), [Bold and Easy](https://www.mossgrovepress.com/es/bold-and-easy/), [Blumenfalter](https://www.mossgrovepress.com/es/blumenfalter/)
+<!-- languages:end -->
+
 ## Optional
 - [Etsy shop, printable bundles](https://www.etsy.com/shop/MossgrovePress)
 - [Privacy](https://mossgrovepress.com/privacy.html)

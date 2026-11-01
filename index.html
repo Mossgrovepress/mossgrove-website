@@ -6,12 +6,21 @@
 <!-- Pinterest website claim (9 Oct 2026): keep this line, or the claim on Pinterest drops. -->
 <meta name="p:domain_verify" content="30e0ababff11a1ef480a49e48cf23bbc"/>
 <title>Mossgrove Press | an independent publishing studio</title>
+<!-- lang-pages:start -->
+<link rel="canonical" href="https://www.mossgrovepress.com/">
+<link rel="alternate" hreflang="en" href="https://www.mossgrovepress.com/">
+<link rel="alternate" hreflang="de" href="https://www.mossgrovepress.com/de/">
+<link rel="alternate" hreflang="fr" href="https://www.mossgrovepress.com/fr/">
+<link rel="alternate" hreflang="it" href="https://www.mossgrovepress.com/it/">
+<link rel="alternate" hreflang="es" href="https://www.mossgrovepress.com/es/">
+<link rel="alternate" hreflang="x-default" href="https://www.mossgrovepress.com/">
+<script>(function(){var M={"en": "/", "de": "/de/", "fr": "/fr/", "it": "/it/", "es": "/es/"},L='en';try{var q=new URLSearchParams(location.search).get('lang');if(q&&M[q]&&q!==L){location.replace(M[q]+location.hash);return;}localStorage.setItem('mp_lang',L);}catch(e){}})();</script>
+<!-- lang-pages:end -->
 <meta name="description" content="Mossgrove Press is a small independent publishing studio making gentle, richly illustrated books for children and the grown-ups who read with them.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mossgrove Press">
 <meta property="og:title" content="Mossgrove Press | colouring books and printables">
 <meta property="og:description" content="Gentle, richly illustrated colouring books for children and the grown-ups who colour with them: Edelhollow, Cozy Patterns, Bold and Easy and Blumenfalter.">
-<link rel="canonical" href="https://www.mossgrovepress.com/">
 <meta property="og:url" content="https://www.mossgrovepress.com/">
 <meta property="og:image" content="https://www.mossgrovepress.com/img/share/mossgrove_home_share_v1.jpg">
 <meta property="og:image:width" content="1200">
@@ -222,6 +231,10 @@
   .follow-row a img{width:18px;height:18px;opacity:.85;}
   .follow-row a:hover img{opacity:1;}
   .follow-row a:hover{text-decoration:underline;}
+  .lang-links{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap;margin:6px 0 0;font-size:13px;letter-spacing:.06em;}
+  .lang-links a{text-decoration:none;color:var(--muted);padding:2px 6px;border-radius:4px;}
+  .lang-links a.active{color:var(--ink);font-weight:700;}
+  @media (max-width:480px){.facts span{white-space:normal;}}
 </style>
 <link rel="alternate" type="text/markdown" href="/index.md" title="Mossgrove Press in Markdown">
 <script type="application/ld+json">
@@ -526,6 +539,7 @@
       <a href="#contact">Contact</a>
     </nav>
   </div>
+<nav class="lang-links wrap" aria-label="Language"><a href="/" hreflang="en" lang="en" class="active" aria-current="page">EN</a> <a href="/de/" hreflang="de" lang="de">DE</a> <a href="/fr/" hreflang="fr" lang="fr">FR</a> <a href="/it/" hreflang="it" lang="it">IT</a> <a href="/es/" hreflang="es" lang="es">ES</a></nav>
 </header>
 
 <div class="hero compact">
