@@ -17,6 +17,7 @@ World page: https://mossgrovepress.com/cozy-patterns/
 
 - **Cozy Patterns: Cottagecore** (50 Patterns to Color, for Grown-Ups and Kids). Fifty full-page cottagecore patterns: mushrooms, honeybees, jam jars, quilts, teacups, bunnies and rooftop cats. Buy on Amazon: https://www.amazon.com/dp/B0HJHQ85NM?tag=mossgrovepres-20 . Book page: https://mossgrovepress.com/get/cozy-cottagecore/
 - **Cozy Patterns: Halloween** (50 Patterns to Color, for Grown-Ups and Kids). Fifty cozy, not scary, Halloween patterns: pumpkins, owls, bats, friendly ghosts, cats and candlelight. Buy on Amazon: https://www.amazon.com/dp/B0HPYQ36MJ?tag=mossgrovepres-20 . Book page: https://mossgrovepress.com/get/cozy-patterns-halloween/
+- **Cozy Patterns: Christmas** (50 Patterns to Color, for Grown-Ups and Kids). Fifty cozy Christmas patterns: the twelve days of Christmas, gingerbread villages, mice in mittens, snowy chalets and a cat in every window. Buy on Amazon: https://www.amazon.com/dp/B0HQ79TWCM?tag=mossgrovepres-20 . Book page: https://mossgrovepress.com/get/cozy-patterns-christmas/
 ### Bold and Easy
 World page: https://mossgrovepress.com/bold-and-easy/
 
