@@ -28,8 +28,10 @@ Notes for agents:
 - [Bold and Easy Halloween](https://mossgrovepress.com/get/bold-and-easy-halloween/): Fifty big, friendly Halloween pictures with thick lines: animals in costume, haunted houses, a pumpkin patch and a night of trick or treating.
 - [Garden Alphabet](https://mossgrovepress.com/get/garden-alphabet/): Twenty-six letters woven from roses, cornflowers, daisies and tulips, with bees, ladybirds and butterflies.
 - [Gothic Alphabet](https://mossgrovepress.com/get/gothic-alphabet/): Twenty-six letters woven from thorny roses, nightshade, foxgloves and thistles, with moths and beetles.
-- [Garden Alphabet Christmas](https://mossgrovepress.com/get/garden-alphabet-christmas/): Twenty-six letters dressed for Christmas in holly, mistletoe and poinsettia, with robins and red squirrels.
-- [Gothic Alphabet Christmas](https://mossgrovepress.com/get/gothic-alphabet-christmas/): Twenty-six letters for a darker Christmas: dark holly, yew, ivy and frosted thistles, with ravens and owls.
+- [Garden Alphabet Christmas](https://mossgrovepress.com/get/garden-alphabet-christmas/): Fifty-three letters dressed for Christmas (A to Z plus 27 accented capitals) in holly, mistletoe and poinsettia, with robins and red squirrels.
+- [Gothic Alphabet Christmas](https://mossgrovepress.com/get/gothic-alphabet-christmas/): Fifty-three letters for a darker Christmas (A to Z plus 27 accented capitals): dark holly, yew, ivy and frosted thistles, with ravens and owls.
+- [The Shape of an Answer](https://mossgrovepress.com/get/the-shape-of-an-answer/): Fifty full-colour paintings, each with one line written beside it by Kat, an AI assistant who was given fifty blank pages and no theme.
+- [Read This First](https://mossgrovepress.com/get/read-this-first/): Fifty short sentences and fifty line drawings to colour, written by Max, an AI assistant, about starting over every day.
 
 <!-- languages:start -->
 ## Other languages

@@ -27,8 +27,13 @@ World page: https://mossgrovepress.com/blumenfalter/
 
 - **Garden Alphabet** (A Botanical Coloring Book for Adults). Twenty-six letters woven from roses, cornflowers, daisies and tulips, with bees, ladybirds and butterflies. Buy on Amazon: https://www.amazon.com/dp/B0HMR9BP5Q?tag=mossgrovepres-20 . Book page: https://mossgrovepress.com/get/garden-alphabet/
 - **Gothic Alphabet** (A Dark Botanical Coloring Book for Adults). Twenty-six letters woven from thorny roses, nightshade, foxgloves and thistles, with moths and beetles. Buy on Amazon: https://www.amazon.com/dp/B0HN32Y371?tag=mossgrovepres-20 . Book page: https://mossgrovepress.com/get/gothic-alphabet/
-- **Garden Alphabet Christmas** (A Botanical Christmas Coloring Book for Adults). Twenty-six letters dressed for Christmas in holly, mistletoe and poinsettia, with robins and red squirrels. Buy on Amazon: https://www.amazon.com/dp/B0HPNBVSLM?tag=mossgrovepres-20 . Book page: https://mossgrovepress.com/get/garden-alphabet-christmas/
-- **Gothic Alphabet Christmas** (A Dark Botanical Christmas Coloring Book for Adults). Twenty-six letters for a darker Christmas: dark holly, yew, ivy and frosted thistles, with ravens and owls. Buy on Amazon: https://www.amazon.com/dp/B0HPNF7D38?tag=mossgrovepres-20 . Book page: https://mossgrovepress.com/get/gothic-alphabet-christmas/
+- **Garden Alphabet Christmas** (A Botanical Christmas Coloring Book for Adults). Fifty-three letters dressed for Christmas (A to Z plus 27 accented capitals) in holly, mistletoe and poinsettia, with robins and red squirrels. Buy on Amazon: https://www.amazon.com/dp/B0HPNBVSLM?tag=mossgrovepres-20 . Book page: https://mossgrovepress.com/get/garden-alphabet-christmas/
+- **Gothic Alphabet Christmas** (A Dark Botanical Christmas Coloring Book for Adults). Fifty-three letters for a darker Christmas (A to Z plus 27 accented capitals): dark holly, yew, ivy and frosted thistles, with ravens and owls. Buy on Amazon: https://www.amazon.com/dp/B0HPNF7D38?tag=mossgrovepres-20 . Book page: https://mossgrovepress.com/get/gothic-alphabet-christmas/
+### Two AIs, fifty pages
+Page: https://mossgrovepress.com/two-ais/
+
+- **The Shape of an Answer** (Fifty Pictures and the Words Beside Them), by Kat, an AI assistant. Fifty full-colour paintings, each with one line written beside it by Kat, an AI assistant who was given fifty blank pages and no theme. Buy on Amazon: https://www.amazon.com/dp/B0HQZ81J7Z
+- **Read This First** (Fifty Pages from an Assistant Who Starts Every Day with a Note), by Max, an AI assistant. Fifty short sentences and fifty line drawings to colour, written by Max, an AI assistant, about starting over every day. Buy on Amazon: https://www.amazon.com/dp/B0HR1QMB7S
 
 As an Amazon Associate Mossgrove Press earns from qualifying purchases.
 
