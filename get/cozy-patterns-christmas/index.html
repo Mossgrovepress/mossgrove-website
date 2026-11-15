@@ -47,6 +47,28 @@
   .series-row .m a.t{text-decoration:none;color:var(--ink);}
   .series-row .m img{width:100%;height:auto;border-radius:8px;box-shadow:0 8px 20px rgba(51,57,63,0.15);display:block;margin-bottom:6px;}
   .series-row .m a.amz-buy{padding:8px 16px;font-size:13px;color:var(--paper);margin-top:auto;}
+/* samples:start (sample pages, Dylan 15 Nov 2026) */
+  .stage{display:grid;grid-template-columns:1fr minmax(300px,440px) 1fr;grid-template-areas:"l c r";gap:36px;align-items:start;max-width:1240px;margin:7vh auto 0;padding:0 24px;}
+  .stage .card{grid-area:c;margin:0 auto;padding:0;max-width:440px;}
+  .samples{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .samples.l{grid-area:l;} .samples.r{grid-area:r;}
+  .samples a{display:block;border-radius:6px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--border),0 6px 16px rgba(51,57,63,0.12);transition:transform .15s,box-shadow .15s;cursor:zoom-in;}
+  .samples a:hover,.samples a:focus-visible{transform:translateY(-3px);box-shadow:0 0 0 1px var(--border),0 12px 24px rgba(51,57,63,0.18);}
+  .samples img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;}
+  .look{font-size:14px;color:var(--muted);margin:14px 0 0;}
+  .lb{position:fixed;inset:0;background:rgba(30,32,36,.88);display:none;align-items:center;justify-content:center;z-index:50;padding:56px 64px;}
+  .lb.on{display:flex;}
+  .lb img{max-width:100%;max-height:100%;border-radius:6px;background:#fff;box-shadow:0 20px 50px rgba(0,0,0,.4);}
+  .lb button{position:absolute;background:rgba(255,255,255,.14);color:#fff;border:0;border-radius:999px;width:48px;height:48px;font-size:26px;line-height:1;cursor:pointer;font-family:inherit;}
+  .lb button:hover,.lb button:focus-visible{background:rgba(255,255,255,.3);}
+  .lb .x{top:14px;right:14px;} .lb .pv{left:12px;top:50%;transform:translateY(-50%);} .lb .nx{right:12px;top:50%;transform:translateY(-50%);}
+  .lb .cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#eee;font-size:14px;}
+  @media (max-width:1100px){
+    .stage{grid-template-columns:1fr;grid-template-areas:"c" "l" "r";gap:22px;max-width:760px;margin-top:6vh;}
+    .samples{grid-template-columns:repeat(4,1fr);}
+  }
+  @media (max-width:600px){ .samples{grid-template-columns:1fr 1fr;gap:10px;} .lb{padding:56px 8px;} .lb .pv,.lb .nx{top:auto;bottom:8px;transform:none;} }
+/* samples:end */
 </style>
 <!-- books-ld -->
 <script type="application/ld+json">
@@ -207,6 +229,17 @@
 <!-- /books-ld -->
 </head>
 <body>
+<div class="stage">
+<!-- samples:l -->
+<div class="samples l">
+  <a href="../../img/samples/CP-003/CP-003_sample_p007_v1.jpg"><img src="../../img/samples/CP-003/CP-003_sample_p007_thumb_v1.jpg" alt="Cozy Patterns: Christmas, sample page: page 7" width="360" height="360" loading="lazy"></a>
+  <a href="../../img/samples/CP-003/CP-003_sample_p011_v1.jpg"><img src="../../img/samples/CP-003/CP-003_sample_p011_thumb_v1.jpg" alt="Cozy Patterns: Christmas, sample page: page 11" width="360" height="360" loading="lazy"></a>
+  <a href="../../img/samples/CP-003/CP-003_sample_p017_v1.jpg"><img src="../../img/samples/CP-003/CP-003_sample_p017_thumb_v1.jpg" alt="Cozy Patterns: Christmas, sample page: page 17" width="360" height="360" loading="lazy"></a>
+  <a href="../../img/samples/CP-003/CP-003_sample_p033_v1.jpg"><img src="../../img/samples/CP-003/CP-003_sample_p033_thumb_v1.jpg" alt="Cozy Patterns: Christmas, sample page: page 33" width="360" height="360" loading="lazy"></a>
+  <a href="../../img/samples/CP-003/CP-003_sample_p035_v1.jpg"><img src="../../img/samples/CP-003/CP-003_sample_p035_thumb_v1.jpg" alt="Cozy Patterns: Christmas, sample page: page 35" width="360" height="360" loading="lazy"></a>
+  <a href="../../img/samples/CP-003/CP-003_sample_p047_v1.jpg"><img src="../../img/samples/CP-003/CP-003_sample_p047_thumb_v1.jpg" alt="Cozy Patterns: Christmas, sample page: page 47" width="360" height="360" loading="lazy"></a>
+</div>
+<!-- /samples:l -->
 <div class="card">
   <img src="../../covers/CP-003_cozy_christmas_front_600.jpg" alt="Cozy Patterns: Christmas">
   <h1>Cozy Patterns: Christmas</h1>
@@ -216,7 +249,19 @@
     <p class="amz-note">Amazon will take you to the store for your country.</p>
   </div>
   <p class="small amz-disc">As an Amazon Associate I earn from qualifying purchases.</p>
+  <p class="look">Click any sample page to see it large.</p>
 </div>
+<!-- samples:r -->
+<div class="samples r">
+  <a href="../../img/samples/CP-003/CP-003_sample_p053_v1.jpg"><img src="../../img/samples/CP-003/CP-003_sample_p053_thumb_v1.jpg" alt="Cozy Patterns: Christmas, sample page: page 53" width="360" height="360" loading="lazy"></a>
+  <a href="../../img/samples/CP-003/CP-003_sample_p065_v1.jpg"><img src="../../img/samples/CP-003/CP-003_sample_p065_thumb_v1.jpg" alt="Cozy Patterns: Christmas, sample page: page 65" width="360" height="360" loading="lazy"></a>
+  <a href="../../img/samples/CP-003/CP-003_sample_p071_v1.jpg"><img src="../../img/samples/CP-003/CP-003_sample_p071_thumb_v1.jpg" alt="Cozy Patterns: Christmas, sample page: page 71" width="360" height="360" loading="lazy"></a>
+  <a href="../../img/samples/CP-003/CP-003_sample_p077_v1.jpg"><img src="../../img/samples/CP-003/CP-003_sample_p077_thumb_v1.jpg" alt="Cozy Patterns: Christmas, sample page: page 77" width="360" height="360" loading="lazy"></a>
+  <a href="../../img/samples/CP-003/CP-003_sample_p093_v1.jpg"><img src="../../img/samples/CP-003/CP-003_sample_p093_thumb_v1.jpg" alt="Cozy Patterns: Christmas, sample page: page 93" width="360" height="360" loading="lazy"></a>
+  <a href="../../img/samples/CP-003/CP-003_sample_p103_v1.jpg"><img src="../../img/samples/CP-003/CP-003_sample_p103_thumb_v1.jpg" alt="Cozy Patterns: Christmas, sample page: page 103" width="360" height="360" loading="lazy"></a>
+</div>
+<!-- /samples:r -->
+</div><!-- /stage -->
 <div class="series">
   <h2>More in this series: Cozy Patterns</h2>
   <div class="series-row">
@@ -233,5 +278,26 @@
 </div>
 <!-- Anonymous visit counting, no cookies (GoatCounter, Dylan's yes 17 Oct 2026) -->
 <script data-goatcounter="https://mossgrovepress.goatcounter.com/count" async src="/js/goatcounter-count.js"></script>
+<!-- samples-js:start -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Sample page" hidden>
+  <img id="lbImg" alt="">
+  <button class="x" type="button" aria-label="Close">&times;</button>
+  <button class="pv" type="button" aria-label="Previous page">&#8249;</button>
+  <button class="nx" type="button" aria-label="Next page">&#8250;</button>
+  <p class="cap" id="lbCap"></p>
+</div>
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.samples a')),lb=document.getElementById('lb'),im=document.getElementById('lbImg'),cap=document.getElementById('lbCap'),i=0,last=null;
+  function show(n){i=(n+links.length)%links.length;var a=links[i],t=a.querySelector('img');im.src=a.href;im.alt=t.alt;cap.textContent=(i+1)+' / '+links.length;}
+  function open(n){last=document.activeElement;show(n);lb.hidden=false;lb.classList.add('on');lb.querySelector('.x').focus();}
+  function close(){lb.classList.remove('on');lb.hidden=true;im.removeAttribute('src');if(last)last.focus();}
+  links.forEach(function(a,n){a.addEventListener('click',function(e){e.preventDefault();open(n);});});
+  lb.querySelector('.x').onclick=close;lb.querySelector('.pv').onclick=function(){show(i-1);};lb.querySelector('.nx').onclick=function(){show(i+1);};
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1);});
+})();
+</script>
+<!-- samples-js:end -->
 </body>
 </html>
