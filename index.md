@@ -22,6 +22,7 @@ World page: https://mossgrovepress.com/cozy-patterns/
 World page: https://mossgrovepress.com/bold-and-easy/
 
 - **Bold and Easy Halloween** (50 Big, Simple Pictures to Color). Fifty big, friendly Halloween pictures with thick lines: animals in costume, haunted houses, a pumpkin patch and a night of trick or treating. Buy on Amazon: https://www.amazon.com/dp/B0HN1VXLDV?tag=mossgrovepres-20 . Book page: https://mossgrovepress.com/get/bold-and-easy-halloween/
+- **A Snowy Woodland Christmas** (Bold and Easy Coloring Book for Adults and Seniors). Fifty big, simple Christmas pictures with bold lines: woodland animals bake gingerbread, wrap presents, build a snowman and sing carols in a snowy village. Buy on Amazon: https://www.amazon.com/dp/B0HSL63X3C?tag=mossgrovepres-20 . Book page: https://mossgrovepress.com/get/bold-and-easy-christmas/
 ### Blumenfalter
 World page: https://mossgrovepress.com/blumenfalter/
 

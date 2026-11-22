@@ -61,6 +61,36 @@
   }
   @media (max-width:600px){ .samples{grid-template-columns:1fr 1fr;gap:10px;} .lb{padding:56px 8px;} .lb .pv,.lb .nx{top:auto;bottom:8px;transform:none;} }
 /* samples:end */
+  /* more in this series (added 2026-11-10) */
+  .series{max-width:760px;margin:46px auto 0;padding:0 24px 40px;text-align:center;}
+  .series h2{font-size:20px;font-weight:900;margin:0 0 16px;}
+  .series-row{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
+  .series-row .m{width:150px;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:14px;line-height:1.3;}
+  .series-row .m a.t{text-decoration:none;color:var(--ink);}
+  .series-row .m img{width:100%;height:auto;border-radius:8px;box-shadow:0 8px 20px rgba(51,57,63,0.15);display:block;margin-bottom:6px;}
+  .series-row .m a.amz-buy{padding:8px 16px;font-size:13px;color:var(--paper);margin-top:auto;}
+/* samples:start (sample pages, Dylan 15 Nov 2026) */
+  .stage{display:grid;grid-template-columns:1fr minmax(300px,440px) 1fr;grid-template-areas:"l c r";gap:36px;align-items:start;max-width:1240px;margin:7vh auto 0;padding:0 24px;}
+  .stage .card{grid-area:c;margin:0 auto;padding:0;max-width:440px;}
+  .samples{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .samples.l{grid-area:l;} .samples.r{grid-area:r;}
+  .samples a{display:block;border-radius:6px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--border),0 6px 16px rgba(51,57,63,0.12);transition:transform .15s,box-shadow .15s;cursor:zoom-in;}
+  .samples a:hover,.samples a:focus-visible{transform:translateY(-3px);box-shadow:0 0 0 1px var(--border),0 12px 24px rgba(51,57,63,0.18);}
+  .samples img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;}
+  .look{font-size:14px;color:var(--muted);margin:14px 0 0;}
+  .lb{position:fixed;inset:0;background:rgba(30,32,36,.88);display:none;align-items:center;justify-content:center;z-index:50;padding:56px 64px;}
+  .lb.on{display:flex;}
+  .lb img{max-width:100%;max-height:100%;border-radius:6px;background:#fff;box-shadow:0 20px 50px rgba(0,0,0,.4);}
+  .lb button{position:absolute;background:rgba(255,255,255,.14);color:#fff;border:0;border-radius:999px;width:48px;height:48px;font-size:26px;line-height:1;cursor:pointer;font-family:inherit;}
+  .lb button:hover,.lb button:focus-visible{background:rgba(255,255,255,.3);}
+  .lb .x{top:14px;right:14px;} .lb .pv{left:12px;top:50%;transform:translateY(-50%);} .lb .nx{right:12px;top:50%;transform:translateY(-50%);}
+  .lb .cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#eee;font-size:14px;}
+  @media (max-width:1100px){
+    .stage{grid-template-columns:1fr;grid-template-areas:"c" "l" "r";gap:22px;max-width:760px;margin-top:6vh;}
+    .samples{grid-template-columns:repeat(4,1fr);}
+  }
+  @media (max-width:600px){ .samples{grid-template-columns:1fr 1fr;gap:10px;} .lb{padding:56px 8px;} .lb .pv,.lb .nx{top:auto;bottom:8px;transform:none;} }
+/* samples:end */
 </style>
 <!-- books-ld -->
 <script type="application/ld+json">
@@ -258,6 +288,16 @@
 </div>
 <!-- /samples:r -->
 </div><!-- /stage -->
+<div class="series">
+  <h2>More in this series: Bold and Easy</h2>
+  <div class="series-row">
+    <div class="m">
+      <a class="t" href="../bold-and-easy-christmas/"><img src="../../covers/BE-002_bold_and_easy_christmas_front_600.jpg" alt="A Snowy Woodland Christmas, book cover" loading="lazy">A Snowy Woodland Christmas</a>
+      <a class="amz-buy" href="https://www.amazon.com/dp/B0HSL63X3C?tag=mossgrovepres-20" target="_blank" rel="sponsored noopener">Buy on Amazon</a>
+    </div>
+  </div>
+  <p class="amz-note">Amazon will take you to the store for your country.</p>
+</div>
 <!-- Anonymous visit counting, no cookies (GoatCounter, Dylan's yes 17 Oct 2026) -->
 <script data-goatcounter="https://mossgrovepress.goatcounter.com/count" async src="/js/goatcounter-count.js"></script>
 <!-- samples-js:start -->
